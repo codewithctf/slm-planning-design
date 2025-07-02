@@ -6,27 +6,27 @@ interface UrbanPlanningCarouselProps {
 
 const images = [
   {
-    src: "/Assets/urban planning.jpg",
+    src: "/Assets/urban planning.webp",
     title: "Urban Planning",
     desc: "Strategic planning solutions that shape sustainable, livable communities for current and future generations."
   },
   {
-    src: "/Assets/urban planning (2).jpg",
+    src: "/Assets/urban planning (2).webp",
     title: "Urban Planning",
     desc: "Strategic planning solutions that shape sustainable, livable communities for current and future generations."
   },
   {
-    src: "/Assets/urban planning (3).jpg",
+    src: "/Assets/urban planning (3).webp",
     title: "Urban Planning",
     desc: "Strategic planning solutions that shape sustainable, livable communities for current and future generations."
   },
   {
-    src: "/Assets/urban planning (4).jpg",
+    src: "/Assets/urban planning (4).webp",
     title: "Urban Planning",
     desc: "Strategic planning solutions that shape sustainable, livable communities for current and future generations."
   },
   {
-    src: "/Assets/urban planning (5).jpg",
+    src: "/Assets/urban planning (5).webp",
     title: "Urban Planning",
     desc: "Strategic planning solutions that shape sustainable, livable communities for current and future generations."
   }

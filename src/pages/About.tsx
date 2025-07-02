@@ -8,28 +8,28 @@ const About = () => {
     {
       name: "Michael Kimani",
       title: "Principal Urban Planner",
-      image: "/Assets/Team member 1.jpg",
+      image: "/Assets/Team member 1.webp",
       description: "15+ years of experience in sustainable urban development",
       gender: "man"
     },
     {
       name: "Samuel Otieno",
       title: "Lead Landscape Architect",
-      image: "/Assets/Team Member 2.jpg",
+      image: "/Assets/Team Member 2.webp",
       description: "Expert in ecological design and green infrastructure",
       gender: "woman"
     },
     {
       name: "Grace Mwende",
       title: "Senior Urban Designer",
-      image: "/Assets/Team Member 3.jpg",
+      image: "/Assets/Team Member 3.webp",
       description: "Specializes in community-centered design solutions",
       gender: "man"
     },
     {
       name: "Aisha Njeri",
       title: "3D Visualization Director",
-      image: "/Assets/Team Member 4.jpg",
+      image: "/Assets/Team Member 4.webp",
       description: "Award-winning expertise in architectural visualization",
       gender: "woman"
     }
@@ -178,7 +178,7 @@ const About = () => {
             {/* Image with overlay and quote */}
             <div className="relative w-full md:w-1/2 h-80 rounded-2xl overflow-hidden group mb-8 md:mb-0">
               <img
-                src="/Assets/Our story image.jpg"
+                src="/Assets/Our story image.webp"
                 alt="Our Story"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-95"
               />
@@ -288,7 +288,7 @@ const About = () => {
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/facebook-icon.png" alt="Facebook" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/X-icon.png" alt="X" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                    <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                    <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/instagram-icon.webp" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                   </div>
                   {/* White gradient overlay on image hover */}
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />

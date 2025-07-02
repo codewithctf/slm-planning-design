@@ -294,7 +294,7 @@ const Contact = () => {
                       <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" /> LinkedIn
                     </Button>
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" /> Instagram
+                      <img src="/Assets/instagram-icon.webp" alt="Instagram" className="w-5 h-5" /> Instagram
                     </Button>
                   </div>
                   <p className="font-inter text-gray-600 text-sm mt-4">

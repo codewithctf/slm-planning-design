@@ -124,7 +124,7 @@ const Services = () => {
         "Policy Development",
         "Community Engagement"
       ],
-      image: "/Assets/urban planning.jpg"
+      image: "/Assets/urban planning.webp"
     },
     {
       title: "Urban Design",
@@ -136,7 +136,7 @@ const Services = () => {
         "Accessibility Planning",
         "Wayfinding Systems"
       ],
-      image: "/Assets/Urban design.jpg"
+      image: "/Assets/Urban design.webp"
     },
     {
       title: "Landscape Architecture",
@@ -148,7 +148,7 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/Assets/Landscape Architecture.jpg"
+      image: "/Assets/Landscape Architecture.webp"
     },
     {
       title: "3D Rendering",
@@ -160,7 +160,7 @@ const Services = () => {
         "Design Presentations",
         "Marketing Materials"
       ],
-      image: "/Assets/3D render.jpg"
+      image: "/Assets/3D render.webp"
     }
   ];
 
