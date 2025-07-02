@@ -5,4 +5,4 @@ const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY!
 );
 
-// Removed. See _removed/submitQuote.ts.removed
+// Removed. No longer used. Quote form now submits directly to Supabase.
