@@ -1,7 +1,8 @@
-const {StructureBuilder} = require('sanity/structure');
-const {MdArticle, MdWork} = require('react-icons/md');
+// Custom Sanity Studio structure for clear Blog and Portfolio sections
+import {StructureBuilder} from 'sanity/structure'
+import {MdArticle, MdWork} from 'react-icons/md'
 
-const deskStructure = (S) =>
+const deskStructure = (S: StructureBuilder) =>
   S.list()
     .title('Content')
     .items([
@@ -28,6 +29,6 @@ const deskStructure = (S) =>
           return id && !['post', 'project'].includes(id);
         }
       ),
-    ]);
+    ])
 
-module.exports = deskStructure;
+export default deskStructure;

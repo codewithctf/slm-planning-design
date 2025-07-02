@@ -1,14 +1,13 @@
 {
-  "name": "slm",
+  "name": "slm-studio",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "prebuild": "tsc \"./npm run dev/deskStructure.ts\" --outDir \"./npm run dev/\" --module commonjs --esModuleInterop",
     "dev": "sanity dev",
     "start": "sanity start",
-    "build": "npm run prebuild && sanity build",
+    "build": "sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
   },
