@@ -246,17 +246,11 @@ const Services = () => {
       {/* Responsive Service Cards Grid */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {serviceCards.map((service, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-[620px] w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[48%] max-w-[520px] min-w-[320px]"
-                style={{ flex: '1 1 48%', minWidth: 320, maxWidth: 520 }}
-              >
-                <div className="h-1/3 min-h-[120px] w-full bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105" style={{ flex: '0 0 33%' }}>
-                  <img src={service.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                </div>
-                <div className="flex-1 p-6 flex flex-col h-2/3 justify-between" style={{ flex: '1 1 67%' }}>
+              <div key={idx} className="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full min-h-[420px]">
+                <div className="h-56 w-full bg-cover bg-center" style={{ backgroundImage: `url(${service.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')})` }} />
+                <div className="flex flex-col flex-1 p-6">
                   <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
                   <p className="font-inter text-gray-700 mb-4">{service.description}</p>
                   <div className="mb-3">
@@ -265,21 +259,17 @@ const Services = () => {
                       {service.features.map((f, i) => <li key={i}>{f}</li>)}
                     </ul>
                   </div>
-                  <Link
-                    to={
-                      service.title === "Urban Planning" ? "/urbanplanning" :
-                      service.title === "Urban Design" ? "/urbandesign" :
-                      service.title === "Landscape Architecture" ? "/landscapearchitecture" :
-                      service.title === "3D Rendering" ? "/threedrendering" :
-                      "/services"
-                    }
-                    className="absolute left-4 bottom-4 flex items-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center shadow-lg"
-                  >
-                    Learn More
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L21 12m0 0l-3.75 5.25M21 12H3" />
-                    </svg>
-                  </Link>
+                  <div className="mt-auto pt-4">
+                    <Link
+                      to={service.title === "Urban Planning" ? "/services/urban-planning" : `/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="w-full flex items-center justify-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center"
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L21 12m0 0l-3.75 5.25M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
