@@ -18,12 +18,12 @@ const urbanPlanningServices = [
 	},
 	{
 		title: "Community Engagement",
-		image: "/Assets/community engagement.png",
+		image: "/Assets/community engagement.webp",
 		desc: "Inclusive planning processes that meaningfully involve residents, stakeholders, and community organizations.",
 	},
 	{
 		title: "Policy Development",
-		image: "/Assets/Policy Development.png",
+		image: "/Assets/Policy Development.webp",
 		desc: "Research-based policy recommendations that address local challenges and promote sustainable development.",
 	},
 	{
@@ -33,7 +33,7 @@ const urbanPlanningServices = [
 	},
 	{
 		title: "Development Control & Planning Advisory",
-		image: "/Assets/Development Control & Planning Advisory.png",
+		image: "/Assets/Development Control & Planning Advisory.webp",
 		desc: "Guidance on development proposals, compliance, and regulatory frameworks for sustainable growth.",
 	},
 	{
