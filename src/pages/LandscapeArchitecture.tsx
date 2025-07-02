@@ -33,7 +33,7 @@ const landscapeServices = [
 	},
 	{
 		title: "Landscape Guidelines & Policy Support",
-		image: "/Assets/Policy Development.png",
+		image: "/Assets/Policy Development.webp",
 		desc: "Developing landscape standards, open space strategies, and regulatory documents to guide resilient and equitable development.",
 	},
 ];
