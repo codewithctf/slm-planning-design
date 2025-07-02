@@ -364,14 +364,14 @@ const Services = () => {
                 {/* Draw SVG connector except after last card */}
                 {idx < processSteps.length - 1 && (
                   <svg
-                    width="80" height="40" viewBox="0 0 80 40"
-                    className="block absolute top-1/2 left-full transform -translate-y-1/2 z-0"
-                    style={{ marginLeft: '-16px', pointerEvents: 'none' }}
+                    width="60" height="24" viewBox="0 0 60 24"
+                    className="hidden md:block absolute top-1/2 left-full transform -translate-y-1/2 md:-translate-x-1/2 z-0"
+                    style={{ marginLeft: '-24px' }}
                   >
-                    <path
+                    <line
                       ref={el => (connectorRefs.current[idx] = el)}
-                      d="M 0 20 Q 40 0 80 20"
-                      stroke="#047857" strokeWidth="6" fill="none" strokeLinecap="round"
+                      x1="0" y1="12" x2="60" y2="12"
+                      stroke="#A7F3D0" strokeWidth="4" strokeLinecap="round"
                     />
                   </svg>
                 )}
