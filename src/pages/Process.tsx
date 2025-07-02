@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const processImages = [
   "/Assets/Landscape Architecture (1).webp", // 01 Initial Consultation
-  "/Assets/Development Control & Planning Advisory.png",   // 02 Research & Analysis
+  "/Assets/Development Control & Planning Advisory.webp",   // 02 Research & Analysis
   "/Assets/Transit-Oriented Development.webp",      // 03 Conceptual Design
   "/Assets/urban planning (2).webp",       // 04 Detailed Planning
   "/Assets/3D render 1.webp",      // 05 Implementation Oversight
