@@ -138,26 +138,26 @@ const UrbanPlanning = () => (
 				</div>
 			</div>
 		</section>
-		{/* Urban Planning Services Section - full width soft pink bg */}
+		{/* Urban Planning Services Section - now matches 3D Rendering styling */}
 		<section
 			className="pt-10 pb-20 w-full"
-			style={{ background: "#FCEFEF" }}
+			style={{ background: "#F0F8F4" }}
 		>
 			<div className="max-w-7xl mx-auto mb-16 py-16 px-2 sm:px-4 rounded-3xl">
-				<h3 className="font-playfair text-4xl font-bold mb-8 text-center text-[#712B29]">
+				<h3 className="font-playfair text-4xl font-bold mb-8 text-center text-[#2B7151]">
 					Our Urban Planning Services
 				</h3>
 				<p className="font-inter text-base text-center text-slm-green-800 mb-8">
 					Comprehensive planning solutions tailored to your community's unique needs and vision.
 				</p>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 					{urbanPlanningServices.map((service, idx) => (
 						<Card
 							key={service.title}
-							className="group text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border-2 border-[#f7d6d6] rounded-2xl overflow-hidden flex flex-col p-0"
+							className="group text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border-2 border-[#b6e2c7] rounded-2xl overflow-hidden flex flex-col p-0"
 							style={{ minHeight: '370px' }}
 						>
-							<div className="h-40 w-full overflow-hidden">
+							<div className="h-40 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
 								<img
 									src={service.image}
 									alt={service.title}
@@ -165,9 +165,9 @@ const UrbanPlanning = () => (
 									style={{ maxWidth: '100%', height: '100%' }}
 								/>
 							</div>
-							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#712B29] bg-white">
+							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#2B7151] bg-white">
 								<CardHeader className="flex flex-col justify-end items-center px-2 pt-4 pb-2">
-									<CardTitle className="font-playfair text-lg transition-colors duration-300 group-hover:text-white text-[#712B29]">
+									<CardTitle className="font-playfair text-lg transition-colors duration-300 group-hover:text-white text-[#2B7151]">
 										{service.title}
 									</CardTitle>
 								</CardHeader>
