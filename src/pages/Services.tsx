@@ -246,9 +246,13 @@ const Services = () => {
       {/* Responsive Service Cards Grid */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="flex flex-wrap justify-center gap-10">
             {serviceCards.map((service, idx) => (
-              <div key={idx} className="relative group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+              <div
+                key={idx}
+                className="flex flex-col relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-[480px] w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[48%] max-w-[520px] min-w-[320px]"
+                style={{ flex: '1 1 48%', minWidth: 320, maxWidth: 520 }}
+              >
                 <div className="h-40 w-full bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105">
                   <img src={service.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
