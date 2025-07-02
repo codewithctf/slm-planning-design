@@ -133,16 +133,16 @@ const About = () => {
       {/* Vision & Mission Feature Carousel */}
       <section className="relative z-30 mb-12 -mt-24 md:-mt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center items-center">
             {/* Vision Card */}
-            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow p-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#712B29] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 320 }}>
+            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-14 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#712B29] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 420 }}>
               {/* Animated Icon */}
               <span className="mb-4 relative flex items-center justify-center">
                 <svg className="absolute animate-spin-slow w-14 h-14 text-[#712B29] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#712B29] relative z-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z" /><circle cx="12" cy="12" r="3.5" stroke="#712B29" strokeWidth="2" fill="#fff" /></svg>
               </span>
-              <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-2 tracking-wide">Our Vision</h3>
-              <p className="font-inter text-base text-[#4B2E1D] text-center mb-6">To shape resilient, inclusive, and beautiful environments where people, nature, and design thrive in harmony.</p>
+              <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-4 tracking-wide">Our Vision</h3>
+              <p className="font-inter text-base text-[#4B2E1D] text-center mb-8">To shape resilient, inclusive, and beautiful environments where people, nature, and design thrive in harmony.</p>
               {/* Decorative Dots */}
               <div className="flex gap-1 justify-center mt-auto mb-0">
                 {[...Array(10)].map((_, i) => (
@@ -151,14 +151,14 @@ const About = () => {
               </div>
             </div>
             {/* Mission Card */}
-            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow p-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 320 }}>
+            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-14 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 420 }}>
               {/* Animated Icon */}
               <span className="mb-4 relative flex items-center justify-center">
                 <svg className="absolute animate-spin-slow w-14 h-14 text-[#3B6B3B] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#3B6B3B] relative z-10"><circle cx="12" cy="12" r="10" stroke="#3B6B3B" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="6" stroke="#3B6B3B" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="2" stroke="#3B6B3B" fill="#3B6B3B" /></svg>
               </span>
-              <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-2 tracking-wide">Our Mission</h3>
-              <p className="font-inter text-base text-[#22543D] text-center mb-6">At SLM Planning & Design, we deliver integrated urban solutions that blend planning expertise, ecological sensitivity, and digital innovation to create sustainable spaces for communities, institutions, and ecosystems to flourish.</p>
+              <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-4 tracking-wide">Our Mission</h3>
+              <p className="font-inter text-base text-[#22543D] text-center mb-8">At SLM Planning & Design, we deliver integrated urban solutions that blend planning expertise, ecological sensitivity, and digital innovation to create sustainable spaces for communities, institutions, and ecosystems to flourish.</p>
               {/* Decorative Dots */}
               <div className="flex gap-1 justify-center mt-auto mb-0">
                 {[...Array(10)].map((_, i) => (
@@ -207,7 +207,7 @@ const About = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-20" style={{ background: "#FCEFEF" }}>
+      <section className="py-20" style={{ background: "#F0F8F4" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
@@ -221,7 +221,8 @@ const About = () => {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="text-center border-0 shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#f7e7e7] hover:scale-105 transform-gpu"
+                className="text-center border-0 shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white rounded-2xl hover:bg-[#e6f7ef] hover:scale-105 transform-gpu animate-card-fade-in-up"
+                style={{ animationDelay: `${index * 120}ms` }}
               >
                 <CardHeader>
                   <div className="flex justify-center mb-4">
@@ -247,11 +248,12 @@ const About = () => {
         <style>{`
           @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
           .animate-float { animation: float 2.5s ease-in-out infinite; }
-          .filter-green {
-            filter: brightness(0) saturate(100%) invert(36%) sepia(24%) saturate(749%) hue-rotate(66deg) brightness(0.95) contrast(1.2);
+          .animate-card-fade-in-up {
+            animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
           }
-          .filter-green-gradient {
-            filter: brightness(0) saturate(100%) invert(36%) sepia(24%) saturate(749%) hue-rotate(66deg) brightness(1.1) contrast(1.2) drop-shadow(0 0 8px #3B6B3B);
+          @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
           }
         `}</style>
       </section>
