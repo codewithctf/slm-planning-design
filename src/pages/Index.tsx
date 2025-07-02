@@ -134,9 +134,9 @@ const Index = () => {
       </section>
 
       {/* Our Expertise Section */}
-      <section className="py-20" style={{ background: "#FCEFEF" }}>
+      <section className="py-20" style={{ background: "#A7F3D0" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#712B29]">Our Expertise</h2>
+          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#065F46]">Our Expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {expertise.map((item, idx) => (
               <TimelineCard
