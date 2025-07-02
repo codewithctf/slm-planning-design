@@ -360,31 +360,6 @@ function NumberCard({ label, value, suffix, circleClass }) {
 // Add CoreValuesCards component with GSAP animation and inline SVG support
 const CoreValuesCards = ({ values }) => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [svgMarkup, setSvgMarkup] = useState<(string | null)[]>(Array(values.length).fill(null));
-
-  useEffect(() => {
-    // Fetch SVG markup for each icon
-    values.forEach((value, idx) => {
-      const svgPath = value.icon.replace(/\.(png|jpg|jpeg)$/i, ".svg");
-      fetch(svgPath)
-        .then(res => res.text())
-        .then(text => {
-          setSvgMarkup(prev => {
-            const next = [...prev];
-            next[idx] = text;
-            return next;
-          });
-        })
-        .catch(() => {
-          setSvgMarkup(prev => {
-            const next = [...prev];
-            next[idx] = null;
-            return next;
-          });
-        });
-    });
-  }, [values]);
-
   useEffect(() => {
     // Fade-in animation for cards
     gsap.from(cardsRef.current, {
@@ -394,61 +369,56 @@ const CoreValuesCards = ({ values }) => {
       duration: 1.1,
       ease: "power3.out",
     });
-    // Draw animation for SVG icons on hover
-    cardsRef.current.forEach((card, idx) => {
+    // Pop/bounce animation for icons
+    cardsRef.current.forEach((card) => {
       if (!card) return;
-      const icon = card.querySelector('.core-icon-inline');
-      if (icon && icon.tagName === 'svg') {
-        const paths = icon.querySelectorAll('path, circle, rect, line, polyline, polygon');
-        card.addEventListener("mouseenter", () => {
-          paths.forEach((path: any) => {
-            const length = path.getTotalLength ? path.getTotalLength() : 200;
-            path.style.strokeDasharray = length;
-            path.style.strokeDashoffset = length;
-            gsap.to(path, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" });
-          });
-        });
-        card.addEventListener("mouseleave", () => {
-          paths.forEach((path: any) => {
-            const length = path.getTotalLength ? path.getTotalLength() : 200;
-            gsap.to(path, { strokeDashoffset: length, duration: 0.7, ease: "power2.in" });
-          });
-        });
-      }
+      const icon = card.querySelector('.core-icon-pop');
+      if (!icon) return;
+      card.addEventListener("mouseenter", () => {
+        gsap.to(icon, { y: -10, scale: 1.13, duration: 0.28, ease: "back.out(2)" });
+      });
+      card.addEventListener("mouseleave", () => {
+        gsap.to(icon, { y: 0, scale: 1, duration: 0.28, ease: "back.in(2)" });
+      });
     });
-  }, [svgMarkup]);
+  }, [values]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {values.map((value, index) => (
-        <Card
-          key={index}
-          ref={el => (cardsRef.current[index] = el)}
-          className="core-card text-center border border-[#b6e2c7] shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#F0FDF4] hover:scale-105 transform-gpu"
-        >
-          <CardHeader>
-            <div className="flex justify-center mb-4">
-              {svgMarkup[index] ? (
-                <span
-                  className="core-icon-inline w-16 h-16 object-contain animate-float"
-                  style={{ display: 'inline-block' }}
-                  dangerouslySetInnerHTML={{ __html: svgMarkup[index] }}
-                />
-              ) : (
-                <span className="w-16 h-16 bg-gray-200 rounded-full" />
-              )}
-            </div>
-            <CardTitle className="font-playfair text-xl text-slm-green-700">
-              {value.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription className="font-inter text-gray-600">
-              {value.description}
-            </CardDescription>
-          </CardContent>
-        </Card>
-      ))}
+      {values.map((value, index) => {
+        // Use .svg if available, else fallback to original icon
+        const svgPath = value.icon.replace(/\.(png|jpg|jpeg)$/i, ".svg");
+        // Check if SVG exists in public/Assets (all your icons are there)
+        const iconSrc = svgPath.includes('svg') ? svgPath : value.icon;
+        return (
+          <Card
+            key={index}
+            ref={el => (cardsRef.current[index] = el)}
+            className="core-card text-center border border-[#b6e2c7] shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#F0FDF4] hover:scale-105 transform-gpu"
+          >
+            <CardHeader>
+              <div className="flex justify-center mb-4">
+                <span className="w-16 h-16 rounded-full bg-slm-green-600 flex items-center justify-center core-icon-pop transition-transform duration-200">
+                  <img
+                    src={iconSrc}
+                    alt={value.title + ' icon'}
+                    className="w-9 h-9 object-contain"
+                    draggable="false"
+                  />
+                </span>
+              </div>
+              <CardTitle className="font-playfair text-xl text-slm-green-700">
+                {value.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription className="font-inter text-gray-600">
+                {value.description}
+              </CardDescription>
+            </CardContent>
+          </Card>
+        );
+      })}
     </div>
   );
 };
