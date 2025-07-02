@@ -136,29 +136,29 @@ const Index = () => {
       {/* Our Expertise Section */}
       <section className="py-20 w-full" style={{ background: "#F0F8F4" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#2B7151]">Our Expertise</h2>
-          <p className="font-inter text-base text-center text-slm-green-800 mb-8">
+          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#2B7151] animate-fade-in-up">Our Expertise</h2>
+          <p className="font-inter text-base text-center text-slm-green-800 mb-8 animate-fade-in-up delay-100">
             Thoughtfully crafted to bring harmony between nature, people, and place.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {expertise.map((item, idx) => (
               <div
                 key={item.title}
-                className="relative flex flex-col items-center p-0 transition-all duration-300 ease-in-out shadow-md rounded-lg border border-[#b6e2c7] h-full bg-white cursor-pointer"
-                style={{ minHeight: 340 }}
+                className={`relative flex flex-col items-center p-0 transition-all duration-500 ease-in-out shadow-md rounded-lg border border-[#b6e2c7] h-full bg-white cursor-pointer animate-card-fade-in-up`}
+                style={{ minHeight: 340, animationDelay: `${idx * 120}ms` }}
               >
-                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-gray-100 flex items-center justify-center group">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-[5000ms] ease-in-out"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <div className="flex-1 flex flex-col justify-end px-6 pb-6 pt-2 w-full">
-                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46]">
+                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46] animate-fade-in-up delay-200">
                     {item.title}
                   </h3>
-                  <p className="font-inter text-base text-center text-black">
+                  <p className="font-inter text-base text-center text-black animate-fade-in-up delay-300">
                     {item.description}
                   </p>
                 </div>
@@ -166,6 +166,21 @@ const Index = () => {
             ))}
           </div>
         </div>
+        <style>{`
+          @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+          .animate-card-fade-in-up {
+            animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+          .delay-100 { animation-delay: 0.1s; }
+          .delay-200 { animation-delay: 0.2s; }
+          .delay-300 { animation-delay: 0.3s; }
+        `}</style>
       </section>
 
       {/* Why Choose Us Section */}
