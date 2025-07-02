@@ -33,7 +33,10 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ heightClass = "h-96" }) => 
   }, []);
 
   return (
-    <div className={`absolute inset-0 w-full ${heightClass} overflow-hidden`}>
+    <div
+      className={`absolute inset-0 w-full ${heightClass} overflow-hidden`}
+      style={{ backgroundColor: "#FCEFEF" }}
+    >
       {landscapeImages.map((src, idx) => (
         <img
           key={idx}

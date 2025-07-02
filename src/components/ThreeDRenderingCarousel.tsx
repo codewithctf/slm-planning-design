@@ -18,7 +18,10 @@ const ThreeDRenderingCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full select-none pt-20 md:pt-0">
+    <div
+      className="relative w-full h-full select-none pt-20 md:pt-0"
+      style={{ backgroundColor: "#FCEFEF" }}
+    >
       {images.map((img, idx) => (
         <div
           key={idx}
