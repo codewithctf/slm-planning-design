@@ -369,26 +369,28 @@ const CoreValuesCards = ({ values }) => {
       duration: 1.1,
       ease: "power3.out",
     });
-    // Icon pop/glow on hover
+    // Draw animation for SVG icons on hover
     cardsRef.current.forEach((card) => {
       if (!card) return;
       const icon = card.querySelector('.core-icon');
       if (!icon) return;
-      card.addEventListener("mouseenter", () => {
-        gsap.to(icon, {
-          scale: 1.2,
-          boxShadow: "0 0 16px #10B981, 0 0 32px #A7F3D0",
-          duration: 0.3,
-          ease: "back.out(2)"
+      // Only apply draw animation if icon is SVG
+      if (icon.tagName === 'svg') {
+        card.addEventListener("mouseenter", () => {
+          gsap.fromTo(icon, { strokeDasharray: 200, strokeDashoffset: 200 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.out" });
         });
-      });
-      card.addEventListener("mouseleave", () => {
-        gsap.to(icon, {
-          scale: 1,
-          boxShadow: "none",
-          duration: 0.3
+        card.addEventListener("mouseleave", () => {
+          gsap.to(icon, { strokeDashoffset: 200, duration: 0.6, ease: "power2.in" });
         });
-      });
+      } else {
+        // For non-SVG icons, just a slight pop
+        card.addEventListener("mouseenter", () => {
+          gsap.to(icon, { scale: 1.08, duration: 0.25, ease: "back.out(2)" });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(icon, { scale: 1, duration: 0.25 });
+        });
+      }
     });
   }, []);
   return (
@@ -397,16 +399,13 @@ const CoreValuesCards = ({ values }) => {
         <Card
           key={index}
           ref={el => (cardsRef.current[index] = el)}
-          className="core-card text-center border border-[#b6e2c7] shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#e6f7ef] hover:scale-105 transform-gpu"
+          className="core-card text-center border border-[#b6e2c7] shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#F0FDF4] hover:scale-105 transform-gpu"
         >
           <CardHeader>
             <div className="flex justify-center mb-4">
-              <img
-                src={value.icon}
-                alt={value.title + " icon"}
-                className={`core-icon w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 animate-float ${value.iconClass || ''}`.trim()}
-                style={{ willChange: 'transform' }}
-              />
+              <svg className="core-icon w-16 h-16 object-contain animate-float" style={{ willChange: 'transform, stroke-dashoffset' }}>
+                <use href={value.icon.replace(/\.(png|jpg|jpeg)$/i, '.svg') + '#icon'} />
+              </svg>
             </div>
             <CardTitle className="font-playfair text-xl text-slm-green-700">
               {value.title}
