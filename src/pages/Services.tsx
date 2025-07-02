@@ -290,7 +290,12 @@ const Services = () => {
             {additionalServiceCards.map((card, idx) => (
               <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105 relative">
                 <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group hover:scale-105">
-                  <img src={card.image} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className={`w-full h-full object-cover transition-transform duration-700 ${card.title === 'Project Management' ? 'object-top' : ''} group-hover:scale-110`}
+                    style={card.title === 'Project Management' ? { objectPosition: 'center 20%' } : {}}
+                  />
                 </div>
                 <div className="p-6 flex flex-col items-center w-full relative flex-1">
                   <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">{card.title}</h3>
