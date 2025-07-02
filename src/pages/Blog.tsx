@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import UrbanPlanningCarousel from "@/components/UrbanPlanningCarousel";
 import { Button } from "@/components/ui/button";
 import { client } from "../../react-router-slm/app/sanity/client";
+import { supabase } from "@/lib/supabaseClient";
 import intersection from "lodash/intersection";
 
 const blogTopics = [
@@ -58,17 +59,12 @@ const Blog = () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/subscribeNewsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: newsletterEmail }),
-      });
-      if (res.ok) {
+      const { error } = await supabase.from('subscribers').insert([{ email: newsletterEmail }]);
+      if (!error) {
         setNewsletterStatus("Thank you for subscribing!");
         setNewsletterEmail("");
       } else {
-        const data = await res.json();
-        setNewsletterStatus(data.error || "Subscription failed. Please try again.");
+        setNewsletterStatus(error.message || "Subscription failed. Please try again.");
       }
     } catch (err) {
       setNewsletterStatus("Network error. Please try again later.");
@@ -250,6 +246,9 @@ const Blog = () => {
               placeholder="Enter your email address"
               className="border border-slm-green-200 rounded-lg px-4 py-3 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-slm-green-400 text-base md:text-lg"
               required
+              autoComplete="email"
+              inputMode="email"
+              style={{maxWidth:'100%'}}
             />
             <Button type="submit" className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3 text-base md:text-lg">
               Subscribe
