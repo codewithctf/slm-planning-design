@@ -8,12 +8,15 @@ const trustedImages = [
   "/Trusted org assets/WFP.png",
 ];
 
+// Duplicate the array for seamless infinite scroll
+const images = [...trustedImages, ...trustedImages];
+
 const TrustedCarousel = () => {
   return (
     <div className="w-full py-8 bg-white">
       <div className="overflow-hidden relative">
         <div className="flex animate-scroll-x whitespace-nowrap items-center gap-8 md:gap-16">
-          {trustedImages.map((img, idx) => (
+          {images.map((img, idx) => (
             <div
               key={idx}
               className="flex-shrink-0 flex items-center justify-center h-20 md:h-28 px-6"
@@ -22,7 +25,7 @@ const TrustedCarousel = () => {
                 src={img}
                 alt="Trusted Organization Logo"
                 className="h-12 md:h-20 w-auto object-contain transition duration-300"
-                loading="lazy"
+                loading="eager"
               />
             </div>
           ))}
