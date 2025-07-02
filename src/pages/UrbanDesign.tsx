@@ -169,7 +169,7 @@ const UrbanDesign = () => (
 				<p className="font-inter text-base text-center text-slm-green-800 mb-8">
 					Place-led design strategies that shape beautiful, functional, and socially responsive environments.
 				</p>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 					{urbanDesignServices.map((service, idx) => (
 						<Card
 							key={service.title}
