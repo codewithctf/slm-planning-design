@@ -172,22 +172,22 @@ const Services = () => {
   const additionalServiceCards = [
     {
       title: "Community Engagement",
-      image: "/Assets/community engagement.webp",
+      image: "/Assets/community engagement-service.webp",
       description: "Facilitated workshops, public meetings, and stakeholder consultation processes."
     },
     {
       title: "Feasibility Studies",
-      image: "/Assets/Policy Development.webp",
+      image: "/Assets/Feasiblity-studies.webp",
       description: "Comprehensive analysis of project viability including financial and environmental factors."
     },
     {
       title: "Project Management",
-      image: "/Assets/Development Control & Planning Advisory.webp",
+      image: "/Assets/project management.webp",
       description: "End-to-end project coordination from initial concept through implementation."
     },
     {
       title: "Regulatory Compliance",
-      image: "/Assets/Zoning & Land Use.webp",
+      image: "/Assets/Regulatory-compliance.webp",
       description: "Ensuring all designs meet local building codes and environmental regulations."
     }
   ];
@@ -294,7 +294,7 @@ const Services = () => {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-slm-green-800 mb-2 animate-fade-in">Additional Services</h2>
             <p className="font-inter text-lg text-gray-700 animate-fade-in delay-100">Supporting services that complement our core offerings</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {additionalServiceCards.map((card, idx) => (
               <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105">
                 <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
