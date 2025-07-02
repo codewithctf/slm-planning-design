@@ -150,7 +150,7 @@ const UrbanPlanning = () => (
 				<p className="font-inter text-base text-center text-slm-green-800 mb-8">
 					Comprehensive planning solutions tailored to your community's unique needs and vision.
 				</p>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 					{urbanPlanningServices.map((service, idx) => (
 						<Card
 							key={service.title}
