@@ -134,18 +134,35 @@ const Index = () => {
       </section>
 
       {/* Our Expertise Section */}
-      <section className="py-20" style={{ background: "#A7F3D0" }}>
+      <section className="py-20 w-full" style={{ background: "#F0F8F4" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#065F46]">Our Expertise</h2>
+          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#2B7151]">Our Expertise</h2>
+          <p className="font-inter text-base text-center text-slm-green-800 mb-8">
+            Thoughtfully crafted to bring harmony between nature, people, and place.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {expertise.map((item, idx) => (
-              <TimelineCard
+              <div
                 key={item.title}
-                number={idx + 1}
-                title={item.title}
-                description={item.description}
-                image={item.image}
-              />
+                className="relative flex flex-col items-center p-0 transition-all duration-300 ease-in-out shadow-md rounded-lg border border-[#b6e2c7] h-full bg-white cursor-pointer"
+                style={{ minHeight: 340 }}
+              >
+                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-[5000ms] ease-in-out"
+                  />
+                </div>
+                <div className="flex-1 flex flex-col justify-end px-6 pb-6 pt-2 w-full">
+                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46]">
+                    {item.title}
+                  </h3>
+                  <p className="font-inter text-base text-center text-black">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
