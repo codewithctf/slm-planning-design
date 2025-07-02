@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React, { useRef, useEffect, useState } from "react";
+import gsap from "gsap";
 
 function useInView(ref, rootMargin = "-100px") {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -192,6 +193,27 @@ const Services = () => {
     }
   ];
 
+  const connectorRefs = useRef<(SVGLineElement | null)[]>([]);
+  const processSectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(processSectionRef, "-100px");
+
+  useEffect(() => {
+    if (isInView && connectorRefs.current.length) {
+      connectorRefs.current.forEach((line, i) => {
+        if (line) {
+          const length = line.getTotalLength();
+          gsap.set(line, { strokeDasharray: length, strokeDashoffset: length });
+          gsap.to(line, {
+            strokeDashoffset: 0,
+            duration: 0.7,
+            delay: 0.3 + i * 0.25,
+            ease: "power2.out"
+          });
+        }
+      });
+    }
+  }, [isInView]);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -320,7 +342,7 @@ const Services = () => {
       </section>
 
       {/* How We Work Section (now white bg) */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" ref={processSectionRef}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">How We Work</h2>
@@ -339,9 +361,19 @@ const Services = () => {
                   <h3 className="font-playfair text-xl font-bold text-slm-green-800 mb-2">{step.title}</h3>
                   <p className="font-inter text-gray-700">{step.desc}</p>
                 </div>
-                {/* Draw connector except after last card */}
+                {/* Draw SVG connector except after last card */}
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 left-full transform -translate-y-1/2 md:-translate-x-1/2 w-12 h-1 bg-slm-green-200 z-0" style={{marginLeft: '-24px'}} />
+                  <svg
+                    width="60" height="24" viewBox="0 0 60 24"
+                    className="hidden md:block absolute top-1/2 left-full transform -translate-y-1/2 md:-translate-x-1/2 z-0"
+                    style={{ marginLeft: '-24px' }}
+                  >
+                    <line
+                      ref={el => (connectorRefs.current[idx] = el)}
+                      x1="0" y1="12" x2="60" y2="12"
+                      stroke="#A7F3D0" strokeWidth="4" strokeLinecap="round"
+                    />
+                  </svg>
                 )}
               </React.Fragment>
             ))}
