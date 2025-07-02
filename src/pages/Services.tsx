@@ -227,10 +227,10 @@ const Services = () => {
       {/* Responsive Service Cards Grid */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {serviceCards.map((service, idx) => (
-              <div key={idx} className="relative group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-                <div className="h-56 w-full bg-cover bg-center" style={{ backgroundImage: `url(${service.image})` }} />
+              <div key={idx} className="relative group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+                <div className="h-56 w-full bg-cover bg-center" style={{ backgroundImage: `url(${service.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')})` }} />
                 <div className="p-6 flex flex-col h-full">
                   <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
                   <p className="font-inter text-gray-700 mb-4">{service.description}</p>
@@ -241,9 +241,18 @@ const Services = () => {
                     </ul>
                   </div>
                   <Link
-                    to={service.title === "Urban Planning" ? "/services/urban-planning" : `/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="mt-auto bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center block"
+                    to={
+                      service.title === "Urban Planning" ? "/urbanplanning" :
+                      service.title === "Urban Design" ? "/urbandesign" :
+                      service.title === "Landscape Architecture" ? "/landscapearchitecture" :
+                      service.title === "3D Rendering" ? "/threedrendering" :
+                      "/services"
+                    }
+                    className="absolute left-4 bottom-4 flex items-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center shadow-lg"
                   >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 mr-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L21 12m0 0l-3.75 5.25M21 12H3" />
+                    </svg>
                     Learn More
                   </Link>
                 </div>
@@ -253,8 +262,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Additional Services Section (standalone, bg-[#FCEFEF]) */}
-      <section className="py-16 bg-[#FCEFEF]">
+      {/* Additional Services Section (standalone, bg-[#F0F8F4]) */}
+      <section className="py-16" style={{ background: '#F0F8F4' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-slm-green-800 mb-2 animate-fade-in">Additional Services</h2>
@@ -263,19 +272,19 @@ const Services = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up additional-service-card">
               <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Community Engagement</h3>
-              <p className="font-inter text-gray-700">Facilitated workshops, public meetings, and stakeholder consultation processes.</p>
+              <p className="font-inter text-gray-800">Facilitated workshops, public meetings, and stakeholder consultation processes.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-100 additional-service-card">
               <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Feasibility Studies</h3>
-              <p className="font-inter text-gray-700">Comprehensive analysis of project viability including financial and environmental factors.</p>
+              <p className="font-inter text-gray-800">Comprehensive analysis of project viability including financial and environmental factors.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-200 additional-service-card">
               <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Project Management</h3>
-              <p className="font-inter text-gray-700">End-to-end project coordination from initial concept through implementation.</p>
+              <p className="font-inter text-gray-800">End-to-end project coordination from initial concept through implementation.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-300 additional-service-card">
               <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Regulatory Compliance</h3>
-              <p className="font-inter text-gray-700">Ensuring all designs meet local building codes and environmental regulations.</p>
+              <p className="font-inter text-gray-800">Ensuring all designs meet local building codes and environmental regulations.</p>
             </div>
           </div>
         </div>
