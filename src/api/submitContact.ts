@@ -5,4 +5,4 @@ const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY!
 );
 
-// Removed. See _removed/submitContact.ts.removed
+// Removed. No longer used. Contact form now submits directly to Supabase.
