@@ -2,6 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useRef, useState } from "react";
+// @ts-ignore
+import gsap from "gsap";
 
 const About = () => {
   const teamMembers = [
@@ -133,9 +136,9 @@ const About = () => {
       {/* Vision & Mission Feature Carousel */}
       <section className="relative z-30 mb-12 -mt-24 md:-mt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center items-center">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-28 justify-center items-center">
             {/* Vision Card */}
-            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-14 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#712B29] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 420 }}>
+            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#712B29] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
               {/* Animated Icon */}
               <span className="mb-4 relative flex items-center justify-center">
                 <svg className="absolute animate-spin-slow w-14 h-14 text-[#712B29] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
@@ -151,7 +154,7 @@ const About = () => {
               </div>
             </div>
             {/* Mission Card */}
-            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-14 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 420 }}>
+            <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
               {/* Animated Icon */}
               <span className="mb-4 relative flex items-center justify-center">
                 <svg className="absolute animate-spin-slow w-14 h-14 text-[#3B6B3B] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
@@ -217,45 +220,8 @@ const About = () => {
               These principles guide every project we undertake and every relationship we build.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card
-                key={index}
-                className="text-center border-0 shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white rounded-2xl hover:bg-[#e6f7ef] hover:scale-105 transform-gpu animate-card-fade-in-up"
-                style={{ animationDelay: `${index * 120}ms` }}
-              >
-                <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={value.icon}
-                      alt={value.title + " icon"}
-                      className={`w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 animate-float ${value.iconClass || ''}`.trim()}
-                    />
-                  </div>
-                  <CardTitle className="font-playfair text-xl text-slm-green-700">
-                    {value.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="font-inter text-gray-600">
-                    {value.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <CoreValuesCards values={values} />
         </div>
-        <style>{`
-          @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
-          .animate-float { animation: float 2.5s ease-in-out infinite; }
-          .animate-card-fade-in-up {
-            animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-          }
-          @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(40px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-        `}</style>
       </section>
 
       {/* Our Team */}
@@ -290,7 +256,7 @@ const About = () => {
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/facebook-icon.png" alt="Facebook" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/X-icon.png" alt="X" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                     <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                    <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/instagram-icon.webp" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                    <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                   </div>
                   {/* White gradient overlay on image hover */}
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
@@ -356,8 +322,6 @@ const About = () => {
 };
 
 // Animated Counter Card Component
-import React, { useEffect, useRef, useState } from "react";
-
 function NumberCard({ label, value, suffix, circleClass }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -392,5 +356,48 @@ function NumberCard({ label, value, suffix, circleClass }) {
     </div>
   );
 }
+
+// Add CoreValuesCards component with GSAP animation
+const CoreValuesCards = ({ values }) => {
+  const cardsRef = useRef([]);
+  useEffect(() => {
+    gsap.from(cardsRef.current, {
+      opacity: 0,
+      y: 60,
+      stagger: 0.15,
+      duration: 1.1,
+      ease: "power3.out",
+    });
+  }, []);
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {values.map((value, index) => (
+        <Card
+          key={index}
+          ref={el => (cardsRef.current[index] = el)}
+          className="text-center border border-[#b6e2c7] shadow-lg hover:shadow-2xl transition-shadow duration-300 group bg-white hover:bg-[#e6f7ef] hover:scale-105 transform-gpu"
+        >
+          <CardHeader>
+            <div className="flex justify-center mb-4">
+              <img
+                src={value.icon}
+                alt={value.title + " icon"}
+                className={`w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 animate-float ${value.iconClass || ''}`.trim()}
+              />
+            </div>
+            <CardTitle className="font-playfair text-xl text-slm-green-700">
+              {value.title}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="font-inter text-gray-600">
+              {value.description}
+            </CardDescription>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+};
 
 export default About;
