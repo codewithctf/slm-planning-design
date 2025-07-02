@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
+import { supabase } from "@/lib/supabaseClient";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,12 +23,10 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/submitContact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      if (res.ok) {
+      const { error } = await supabase.from('contacts').insert([
+        formData
+      ]);
+      if (!error) {
         toast({
           title: "Message Sent",
           description: "Thank you for contacting us. We'll get back to you within 24 hours.",
@@ -41,14 +40,14 @@ const Contact = () => {
       } else {
         toast({
           title: "Submission Failed",
-          description: "There was an error submitting your message. Please try again.",
+          description: error.message || "There was an error submitting your message. Please try again.",
           variant: "destructive"
         });
       }
     } catch (err) {
       toast({
         title: "Network Error",
-        description: "Could not connect to the server.",
+        description: "Could not connect to Supabase.",
         variant: "destructive"
       });
     }
