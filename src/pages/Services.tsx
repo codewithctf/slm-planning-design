@@ -144,7 +144,7 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/Assets/Landscape Architecture (2).webp"
+      image: "/Assets/Landscape Architecture.webp"
     },
     {
       title: "3D Rendering",
