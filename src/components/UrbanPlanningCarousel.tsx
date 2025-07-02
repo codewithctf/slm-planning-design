@@ -55,7 +55,7 @@ const UrbanPlanningCarousel: React.FC<UrbanPlanningCarouselProps> = ({ heightCla
   }, []);
 
   return (
-    <div className={`relative w-full ${heightClass} flex items-center justify-center pt-20 md:pt-0`}>
+    <div className={`relative w-full ${heightClass} flex items-center justify-center pt-20 md:pt-0`} style={{ backgroundColor: "#FCEFEF" }}>
       {images.map((img, idx) => (
         <div
           key={idx}

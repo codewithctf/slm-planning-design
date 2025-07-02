@@ -18,6 +18,7 @@ const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {
   return (
     <div
       className={`relative w-full ${heightClass} flex items-center justify-center pt-20 md:pt-0`}
+      style={{ backgroundColor: "#FCEFEF" }}
     >
       {images.map((img, idx) => (
         <img

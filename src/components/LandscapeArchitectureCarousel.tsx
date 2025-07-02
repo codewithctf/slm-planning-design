@@ -33,7 +33,7 @@ const LandscapeArchitectureCarousel: React.FC<CarouselProps> = ({ heightClass = 
   }, []);
 
   return (
-    <div className={`relative w-full ${heightClass} overflow-hidden`} style={{minHeight: '100%', height: '100%'}}>
+    <div className={`relative w-full ${heightClass} overflow-hidden`} style={{ backgroundColor: "#FCEFEF", minHeight: '100%', height: '100%' }}>
       {images.map((src, idx) => (
         <img
           key={idx}
