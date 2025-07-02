@@ -210,7 +210,7 @@ const About = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-20" style={{ background: "#F0F8F4" }}>
+      <section className="py-20" style={{ background: "#fff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
@@ -369,16 +369,20 @@ const CoreValuesCards = ({ values }) => {
       duration: 1.1,
       ease: "power3.out",
     });
-    // Pop/bounce animation for icons
+  }, [values]);
+
+  useEffect(() => {
+    // Continuous bounce animation for icons
     cardsRef.current.forEach((card) => {
       if (!card) return;
       const icon = card.querySelector('.core-icon-pop');
       if (!icon) return;
-      card.addEventListener("mouseenter", () => {
-        gsap.to(icon, { y: -10, scale: 1.13, duration: 0.28, ease: "back.out(2)" });
-      });
-      card.addEventListener("mouseleave", () => {
-        gsap.to(icon, { y: 0, scale: 1, duration: 0.28, ease: "back.in(2)" });
+      gsap.to(icon, {
+        y: -10,
+        repeat: -1,
+        yoyo: true,
+        duration: 1.2,
+        ease: "power1.inOut"
       });
     });
   }, [values]);
