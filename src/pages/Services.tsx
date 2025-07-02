@@ -249,7 +249,9 @@ const Services = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {serviceCards.map((service, idx) => (
               <div key={idx} className="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full min-h-[420px]">
-                <div className="h-56 w-full bg-cover bg-center" style={{ backgroundImage: `url(${service.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')})` }} />
+                <div className="h-56 w-full bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                </div>
                 <div className="flex flex-col flex-1 p-6">
                   <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
                   <p className="font-inter text-gray-700 mb-4">{service.description}</p>
