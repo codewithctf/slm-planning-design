@@ -4,7 +4,7 @@ const trustedImages = [
   "/Trusted org assets/amref.png",
   "/Trusted org assets/ukaid.png",
   "/Trusted org assets/Un habitat.png",
-  "/Trusted org assets/Un nation.webp",
+  "/Trusted org assets/Un nation.jpg",
   "/Trusted org assets/WFP.png",
 ];
 
