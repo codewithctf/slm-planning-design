@@ -357,9 +357,34 @@ function NumberCard({ label, value, suffix, circleClass }) {
   );
 }
 
-// Add CoreValuesCards component with GSAP animation
+// Add CoreValuesCards component with GSAP animation and inline SVG support
 const CoreValuesCards = ({ values }) => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [svgMarkup, setSvgMarkup] = useState<(string | null)[]>(Array(values.length).fill(null));
+
+  useEffect(() => {
+    // Fetch SVG markup for each icon
+    values.forEach((value, idx) => {
+      const svgPath = value.icon.replace(/\.(png|jpg|jpeg)$/i, ".svg");
+      fetch(svgPath)
+        .then(res => res.text())
+        .then(text => {
+          setSvgMarkup(prev => {
+            const next = [...prev];
+            next[idx] = text;
+            return next;
+          });
+        })
+        .catch(() => {
+          setSvgMarkup(prev => {
+            const next = [...prev];
+            next[idx] = null;
+            return next;
+          });
+        });
+    });
+  }, [values]);
+
   useEffect(() => {
     // Fade-in animation for cards
     gsap.from(cardsRef.current, {
@@ -370,29 +395,29 @@ const CoreValuesCards = ({ values }) => {
       ease: "power3.out",
     });
     // Draw animation for SVG icons on hover
-    cardsRef.current.forEach((card) => {
+    cardsRef.current.forEach((card, idx) => {
       if (!card) return;
-      const icon = card.querySelector('.core-icon');
-      if (!icon) return;
-      // Only apply draw animation if icon is SVG
-      if (icon.tagName === 'svg') {
+      const icon = card.querySelector('.core-icon-inline');
+      if (icon && icon.tagName === 'svg') {
+        const paths = icon.querySelectorAll('path, circle, rect, line, polyline, polygon');
         card.addEventListener("mouseenter", () => {
-          gsap.fromTo(icon, { strokeDasharray: 200, strokeDashoffset: 200 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.out" });
+          paths.forEach((path: any) => {
+            const length = path.getTotalLength ? path.getTotalLength() : 200;
+            path.style.strokeDasharray = length;
+            path.style.strokeDashoffset = length;
+            gsap.to(path, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" });
+          });
         });
         card.addEventListener("mouseleave", () => {
-          gsap.to(icon, { strokeDashoffset: 200, duration: 0.6, ease: "power2.in" });
-        });
-      } else {
-        // For non-SVG icons, just a slight pop
-        card.addEventListener("mouseenter", () => {
-          gsap.to(icon, { scale: 1.08, duration: 0.25, ease: "back.out(2)" });
-        });
-        card.addEventListener("mouseleave", () => {
-          gsap.to(icon, { scale: 1, duration: 0.25 });
+          paths.forEach((path: any) => {
+            const length = path.getTotalLength ? path.getTotalLength() : 200;
+            gsap.to(path, { strokeDashoffset: length, duration: 0.7, ease: "power2.in" });
+          });
         });
       }
     });
-  }, []);
+  }, [svgMarkup]);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {values.map((value, index) => (
@@ -403,9 +428,15 @@ const CoreValuesCards = ({ values }) => {
         >
           <CardHeader>
             <div className="flex justify-center mb-4">
-              <svg className="core-icon w-16 h-16 object-contain animate-float" style={{ willChange: 'transform, stroke-dashoffset' }}>
-                <use href={value.icon.replace(/\.(png|jpg|jpeg)$/i, '.svg') + '#icon'} />
-              </svg>
+              {svgMarkup[index] ? (
+                <span
+                  className="core-icon-inline w-16 h-16 object-contain animate-float"
+                  style={{ display: 'inline-block' }}
+                  dangerouslySetInnerHTML={{ __html: svgMarkup[index] }}
+                />
+              ) : (
+                <span className="w-16 h-16 bg-gray-200 rounded-full" />
+              )}
             </div>
             <CardTitle className="font-playfair text-xl text-slm-green-700">
               {value.title}
