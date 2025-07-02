@@ -8,12 +8,12 @@ import UrbanPlanningCarousel from "@/components/UrbanPlanningCarousel";
 const urbanPlanningServices = [
 	{
 		title: "Master Planning",
-		image: "/Assets/master_planning.jpg",
+		image: "/Assets/master_planning.webp",
 		desc: "Comprehensive long-range planning for communities, districts, and regions that balance growth with sustainability.",
 	},
 	{
 		title: "Zoning & Land Use",
-		image: "/Assets/Zoning & Land Use.jpg",
+		image: "/Assets/Zoning & Land Use.webp",
 		desc: "Strategic land use planning and zoning code development that supports community vision and economic development.",
 	},
 	{
@@ -28,7 +28,7 @@ const urbanPlanningServices = [
 	},
 	{
 		title: "Spatial Analysis & GIS Mapping",
-		image: "/Assets/Spatial Analysis & GIS Mapping.jpg",
+		image: "/Assets/Spatial Analysis & GIS Mapping.webp",
 		desc: "Advanced spatial data analysis and mapping to inform evidence-based planning decisions.",
 	},
 	{
@@ -38,12 +38,12 @@ const urbanPlanningServices = [
 	},
 	{
 		title: "Training, Research & Capacity Building",
-		image: "/Assets/training and capacity building.jpg",
+		image: "/Assets/training and capacity building.webp",
 		desc: "Workshops, research, and training programs to empower communities and professionals.",
 	},
 	{
 		title: "Environmental & Sustainable Planning",
-		image: "/Assets/Environmental & Sustainable Planning.jpg",
+		image: "/Assets/Environmental & Sustainable Planning.webp",
 		desc: "Planning solutions that prioritize environmental stewardship and long-term sustainability.",
 	},
 ];
@@ -134,7 +134,7 @@ const UrbanPlanning = () => (
 					</Button>
 				</div>
 				<div className="flex-1 flex justify-center items-center relative">
-					<img src="/Assets/urban planning (2).jpg" alt="Urban Planning Team" className="w-full max-w-md rounded-2xl shadow-2xl urban-img-animate border-4 border-[#FCEFEF]" />
+					<img src="/Assets/urban planning (2).webp" alt="Urban Planning Team" className="w-full max-w-md rounded-2xl shadow-2xl urban-img-animate border-4 border-[#FCEFEF]" />
 				</div>
 			</div>
 		</section>
@@ -196,7 +196,7 @@ const UrbanPlanning = () => (
 		<section className="py-20 bg-white">
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0">
 				<div className="flex-1 order-2 md:order-1 flex justify-center items-center relative">
-					<img src="/Assets/urban planning (3).jpg" alt="Urban Planning Benefits" className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up" />
+					<img src="/Assets/urban planning (3).webp" alt="Urban Planning Benefits" className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up" />
 				</div>
 				<div className="flex-1 order-1 md:order-2">
 					<h3 className="font-playfair text-3xl md:text-4xl font-bold text-slm-green-700 mb-4">Benefits of Professional Planning</h3>
