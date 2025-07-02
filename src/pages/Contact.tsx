@@ -205,7 +205,7 @@ const Contact = () => {
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/address.png" alt="Address" className="w-6 h-6" />
+                        <img src="/Assets/address.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Address</p>
@@ -218,7 +218,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" />
+                        <img src="/Assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Phone</p>
@@ -227,7 +227,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/email.png" alt="Email" className="w-6 h-6" />
+                        <img src="/Assets/email.png" alt="Email" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Email</p>
@@ -236,7 +236,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/time.png" alt="Office Hours" className="w-6 h-6" />
+                        <img src="/Assets/time.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Office Hours</p>
@@ -284,16 +284,16 @@ const Contact = () => {
                 <CardContent>
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5" /> Facebook
+                      <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Facebook
                     </Button>
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" /> X
+                      <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                     </Button>
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" /> LinkedIn
+                      <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                     </Button>
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" /> Instagram
+                      <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
                     </Button>
                   </div>
                   <p className="font-inter text-gray-600 text-sm mt-4">

@@ -312,19 +312,19 @@ const Quote = () => {
                   <div className="space-y-2">
                     <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                       <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/email.png" alt="Email" className="w-5 h-5" />
+                        <img src="/Assets/email.png" alt="Email" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       quotes@slmplanning.com
                     </p>
                     <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                       <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/phone icone.png" alt="Phone" className="w-5 h-5" />
+                        <img src="/Assets/phone icone.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       +1 (555) 123-4567
                     </p>
                     <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                       <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                        <img src="/Assets/time.png" alt="Office Hours" className="w-5 h-5" />
+                        <img src="/Assets/time.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                       </span>
                       Monday - Friday, 9AM - 6PM EST
                     </p>
