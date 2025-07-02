@@ -290,7 +290,7 @@ const Services = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {additionalServiceCards.map((card, idx) => (
-              <div key={idx} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden">
+              <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105">
                 <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
                 </div>
@@ -313,13 +313,6 @@ const Services = () => {
           .delay-100 { animation-delay: 0.1s; }
           .delay-200 { animation-delay: 0.2s; }
           .delay-300 { animation-delay: 0.3s; }
-          .additional-service-card:hover {
-            background: #712B29 !important;
-          }
-          .additional-service-card:hover h3,
-          .additional-service-card:hover p {
-            color: #fff !important;
-          }
         `}</style>
       </section>
 
@@ -372,17 +365,16 @@ const Services = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="font-inter text-lg md:text-xl text-slm-green-100 mb-8">Let's discuss how our services can help bring your vision to life.</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button asChild size="lg" className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3 w-full sm:w-auto">
-              <Link to="/quote">Request a Quote</Link>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button asChild size="lg" className="bg-white text-slm-green-700 font-semibold px-8 py-3 border-2 border-slm-green-600 hover:bg-slm-green-50">
+              <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-slm-green-200 text-white hover:bg-white hover:text-slm-green-600 font-semibold px-8 py-3 w-full sm:w-auto">
-              <Link to="/contact">Schedule Consultation</Link>
+            <Button asChild size="lg" className="bg-slm-green-700 text-white font-semibold px-8 py-3 hover:bg-slm-green-800">
+              <Link to="/quote">Request a Quote</Link>
             </Button>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
