@@ -41,7 +41,6 @@ const Services = () => {
   const services = [
     {
       title: "Urban Design",
-      icon: "🏙️",
       description: "Creating vibrant, functional, and sustainable urban environments that enhance quality of life for all residents.",
       features: [
         "Mixed-use development planning",
@@ -59,7 +58,6 @@ const Services = () => {
     },
     {
       title: "Urban Planning",
-      icon: "📊",
       description: "Strategic planning solutions that balance economic growth with environmental sustainability and community needs.",
       features: [
         "Comprehensive planning",
@@ -77,7 +75,6 @@ const Services = () => {
     },
     {
       title: "3D Rendering",
-      icon: "🎨",
       description: "Cutting-edge visualization services that bring your vision to life with photorealistic accuracy and detail.",
       features: [
         "Architectural visualization",
@@ -95,7 +92,6 @@ const Services = () => {
     },
     {
       title: "Landscape Architecture",
-      icon: "🌿",
       description: "Harmonizing natural environments with built spaces to create sustainable, beautiful, and functional landscapes.",
       features: [
         "Ecological restoration",
@@ -171,6 +167,29 @@ const Services = () => {
     "Urban Design",
     "Landscape Architecture",
     "3D Rendering"
+  ];
+
+  const additionalServiceCards = [
+    {
+      title: "Community Engagement",
+      image: "/Assets/community engagement.webp",
+      description: "Facilitated workshops, public meetings, and stakeholder consultation processes."
+    },
+    {
+      title: "Feasibility Studies",
+      image: "/Assets/Policy Development.webp",
+      description: "Comprehensive analysis of project viability including financial and environmental factors."
+    },
+    {
+      title: "Project Management",
+      image: "/Assets/Development Control & Planning Advisory.webp",
+      description: "End-to-end project coordination from initial concept through implementation."
+    },
+    {
+      title: "Regulatory Compliance",
+      image: "/Assets/Zoning & Land Use.webp",
+      description: "Ensuring all designs meet local building codes and environmental regulations."
+    }
   ];
 
   return (
@@ -269,23 +288,18 @@ const Services = () => {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-slm-green-800 mb-2 animate-fade-in">Additional Services</h2>
             <p className="font-inter text-lg text-gray-700 animate-fade-in delay-100">Supporting services that complement our core offerings</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up additional-service-card">
-              <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Community Engagement</h3>
-              <p className="font-inter text-gray-800">Facilitated workshops, public meetings, and stakeholder consultation processes.</p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-100 additional-service-card">
-              <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Feasibility Studies</h3>
-              <p className="font-inter text-gray-800">Comprehensive analysis of project viability including financial and environmental factors.</p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-200 additional-service-card">
-              <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Project Management</h3>
-              <p className="font-inter text-gray-800">End-to-end project coordination from initial concept through implementation.</p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center text-center animate-fade-in-up delay-300 additional-service-card">
-              <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">Regulatory Compliance</h3>
-              <p className="font-inter text-gray-800">Ensuring all designs meet local building codes and environmental regulations.</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {additionalServiceCards.map((card, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden">
+                <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6 flex flex-col items-center">
+                  <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">{card.title}</h3>
+                  <p className="font-inter text-gray-800">{card.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <style>{`
