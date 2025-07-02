@@ -286,13 +286,23 @@ const Services = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {additionalServiceCards.map((card, idx) => (
-              <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105">
+              <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105 relative">
                 <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-6 flex flex-col items-center">
+                <div className="p-6 flex flex-col items-center w-full relative flex-1">
                   <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">{card.title}</h3>
-                  <p className="font-inter text-gray-800">{card.description}</p>
+                  <p className="font-inter text-gray-800 mb-8">{card.description}</p>
+                  <Link
+                    to={"/services#" + card.title.toLowerCase().replace(/\s+/g, '-')}
+                    className="absolute left-6 bottom-6 flex items-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-md px-3 py-1.5 text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 shadow"
+                    style={{ width: 'auto', minWidth: 'unset', maxWidth: '160px' }}
+                  >
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L21 12m0 0l-3.75 5.25M21 12H3" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             ))}
