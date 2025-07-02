@@ -144,11 +144,11 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/Assets/Landscape Architecture.webp"
+      image: "/Assets/Landscape Architecture (2).webp"
     },
     {
       title: "3D Rendering",
-      description: "Bringing your vision to life with photorealistic visualizations and immersive experiences.",
+      description: "Bringing your vision to life with photorealistic visualizations and immersive experiences. Our 3D rendering services include architectural visualization, urban landscape rendering, virtual reality tours, interactive 3D models, design presentations, and marketing materials to help you communicate your ideas with clarity and impact.",
       features: [
         "Architectural Visualization",
         "Virtual Reality Tours",
@@ -250,13 +250,13 @@ const Services = () => {
             {serviceCards.map((service, idx) => (
               <div
                 key={idx}
-                className="flex flex-col relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-[480px] w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[48%] max-w-[520px] min-w-[320px]"
+                className="flex flex-col relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-[520px] w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[48%] max-w-[520px] min-w-[320px]"
                 style={{ flex: '1 1 48%', minWidth: 320, maxWidth: 520 }}
               >
-                <div className="h-1/2 min-h-[190px] w-full bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105" style={{ flex: '0 0 50%' }}>
+                <div className="h-1/3 min-h-[120px] w-full bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105" style={{ flex: '0 0 33%' }}>
                   <img src={service.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
-                <div className="flex-1 p-6 flex flex-col h-1/2 justify-between" style={{ flex: '1 1 50%' }}>
+                <div className="flex-1 p-6 flex flex-col h-2/3 justify-between" style={{ flex: '1 1 67%' }}>
                   <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
                   <p className="font-inter text-gray-700 mb-4">{service.description}</p>
                   <div className="mb-3">
