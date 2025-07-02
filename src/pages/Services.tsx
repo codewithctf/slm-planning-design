@@ -358,24 +358,6 @@ const Services = () => {
                   <h3 className="font-playfair text-xl font-bold text-slm-green-800 mb-2">{step.title}</h3>
                   <p className="font-inter text-gray-700">{step.desc}</p>
                 </div>
-                {/* Draw SVG connector except after last card */}
-                {idx < processSteps.length - 1 && (
-                  <svg
-                    width="80" height="40" viewBox="0 0 80 40"
-                    className="block absolute top-1/2 left-full transform -translate-y-1/2 z-0"
-                    style={{ marginLeft: '-16px', pointerEvents: 'none' }}
-                  >
-                    <path
-                      d="M 0 20 Q 40 0 80 20"
-                      stroke="#047857" strokeWidth="6" fill="none" strokeLinecap="round"
-                      style={{
-                        strokeDasharray: 120,
-                        strokeDashoffset: processInView ? 0 : 120,
-                        transition: 'stroke-dashoffset 0.8s cubic-bezier(0.4,0,0.2,1)'
-                      }}
-                    />
-                  </svg>
-                )}
               </React.Fragment>
             ))}
           </div>
