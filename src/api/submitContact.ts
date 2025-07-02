@@ -5,13 +5,4 @@ const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY!
 );
 
-export async function POST(request: Request) {
-  const data = await request.json();
-  const { data: result, error } = await supabase
-    .from('messages')
-    .insert([data]);
-  if (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
-  }
-  return new Response(JSON.stringify({ success: true, result }), { status: 200 });
-}
+// Removed. See _removed/submitContact.ts.removed

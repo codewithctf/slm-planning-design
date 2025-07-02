@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
+import { supabase } from "@/lib/supabaseClient";
 
 const Quote = () => {
   const [formData, setFormData] = useState({
@@ -27,14 +28,10 @@ const Quote = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/submitQuote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to submit quote request");
-      }
+      const { error } = await supabase.from('quote_requests').insert([
+        formData
+      ]);
+      if (error) throw error;
       toast({
         title: "Quote Request Submitted",
         description: "We'll review your request and get back to you within 24-48 hours.",
