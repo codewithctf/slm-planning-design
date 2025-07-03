@@ -1,6 +1,35 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+// Social buttons for author if present
+const authorSocials = (author?: any) => {
+  if (!author) return null;
+  const links = [
+    author.twitter && { href: author.twitter, icon: "/Assets/X-icon.png", label: "X" },
+    author.linkedin && { href: author.linkedin, icon: "/Assets/LinkedIn-icon.png", label: "LinkedIn" },
+    author.facebook && { href: author.facebook, icon: "/Assets/facebook-icon.png", label: "Facebook" },
+    author.instagram && { href: author.instagram, icon: "/Assets/instagram-icon.jpg", label: "Instagram" },
+    author.website && { href: author.website, icon: null, label: "Website" },
+  ].filter(Boolean);
+  if (!links.length) return null;
+  return (
+    <div className="mt-8">
+      <h3 className="font-playfair font-semibold text-lg mb-2 text-white">Connect with the Author</h3>
+      <div className="flex flex-wrap gap-2">
+        {links.map(({ href, icon, label }) => (
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="border border-white bg-white text-slm-green-700 hover:bg-slm-green-50 font-semibold rounded px-3 py-1 flex items-center gap-2 transition">
+            {icon && <img src={icon} alt={label} className="w-5 h-5" />} {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+interface FooterProps {
+  author?: any;
+}
+
+const Footer = ({ author }: FooterProps) => {
   return (
     <footer className="bg-slm-green-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -64,7 +93,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
+        {authorSocials(author)}
         <div className="border-t border-slm-green-700 mt-8 pt-8 text-center text-slm-green-100">
           <p>&copy; {new Date().getFullYear()} SLM Planning Firm. All rights reserved.</p>
         </div>
