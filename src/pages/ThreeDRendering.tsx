@@ -46,16 +46,15 @@ const ThreeDRendering = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>
-			<div
-				className="absolute inset-0 z-10 pointer-events-none"
-				style={{
-					background:
-						"linear-gradient(180deg, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.25) 100%)",
-				}}
-			/>
-			<div className="w-full h-full flex items-center justify-center z-0">
-				<ThreeDRenderingCarousel />
+		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full" style={{ backgroundColor: '#000' }}>
+			<ThreeDRenderingCarousel />
+			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center text-white px-4">
+				<h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+					3D Rendering & Visualization
+				</h1>
+				<p className="font-inter text-xl md:text-2xl animate-fade-in">
+					Bringing Ideas to Life with Precision, Emotion, and Clarity
+				</p>
 			</div>
 			<div
 				className="absolute left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center"

@@ -42,20 +42,16 @@ const LandscapeArchitecture = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0">
-			{/* Gradient overlay for text readability */}
-			<div
-				className="absolute inset-0 z-10 pointer-events-none"
-				style={{
-					background:
-						"linear-gradient(180deg, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.25) 100%)",
-				}}
-			/>
-			{/* LandscapeArchitectureCarousel */}
-			<div className="w-full h-full flex items-center justify-center z-0">
-				<LandscapeArchitectureCarousel />
+		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full" style={{ backgroundColor: '#000' }}>
+			<LandscapeArchitectureCarousel />
+			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center text-white px-4">
+				<h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+					Landscape Architecture
+				</h1>
+				<p className="font-inter text-xl md:text-2xl animate-fade-in">
+					Designing Ecological Landscapes That Heal, Connect, and Inspire
+				</p>
 			</div>
-			{/* Animated Scroll Indicator */}
 			<div
 				className="absolute left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center"
 				style={{ bottom: "36px" }}
