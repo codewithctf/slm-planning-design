@@ -40,6 +40,31 @@ export default defineType({
         },
       ],
     }),
+    // Social media fields
+    defineField({
+      name: 'twitter',
+      title: 'Twitter',
+      type: 'url',
+      description: 'Link to Twitter profile',
+    }),
+    defineField({
+      name: 'linkedin',
+      title: 'LinkedIn',
+      type: 'url',
+      description: 'Link to LinkedIn profile',
+    }),
+    defineField({
+      name: 'facebook',
+      title: 'Facebook',
+      type: 'url',
+      description: 'Link to Facebook profile',
+    }),
+    defineField({
+      name: 'instagram',
+      title: 'Instagram',
+      type: 'url',
+      description: 'Link to Instagram profile',
+    }),
   ],
   preview: {
     select: {
