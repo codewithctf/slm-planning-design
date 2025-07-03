@@ -1,13 +1,14 @@
+// Import navigation bar, footer, and hero carousel components
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
+// Import UI card components for service cards
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React, { useRef, useEffect, useState } from "react";
 
-// Remove gsap import
-
+// Custom hook to check if an element is in view
 function useInView(ref, rootMargin = "-100px") {
   const [isIntersecting, setIntersecting] = useState(false);
   useEffect(() => {
@@ -21,7 +22,7 @@ function useInView(ref, rootMargin = "-100px") {
   return isIntersecting;
 }
 
-// Add a simple in-view hook for the section
+// Custom hook to check if a section is in view
 function useSectionInView() {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -36,6 +37,7 @@ function useSectionInView() {
   return [ref, inView] as const;
 }
 
+// List of process steps for the services page
 const processSteps = [
   {
     number: 1,

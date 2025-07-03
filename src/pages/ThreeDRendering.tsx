@@ -1,10 +1,14 @@
+// Import navigation bar and footer components
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+// Import UI card components for service cards
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import React from "react";
+// Import custom carousel for 3D rendering images
 import ThreeDRenderingCarousel from "../components/ThreeDRenderingCarousel";
 
+// List of 3D rendering services to display on the page
 const renderingServices = [
 	{
 		title: "Photorealistic 3D Renders",

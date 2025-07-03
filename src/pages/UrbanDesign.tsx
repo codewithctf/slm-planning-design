@@ -1,10 +1,14 @@
+// Import navigation bar and footer components
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+// Import UI card components for service cards
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import React from "react";
+// Import custom carousel for urban design images
 import UrbanDesignCarousel from "@/components/UrbanDesignCarousel";
 
+// List of urban design services to display on the page
 const urbanDesignServices = [
 	{
 		title: "Public Realm Design",

@@ -1,10 +1,14 @@
+// Import navigation bar and footer components
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+// Import UI card components for service cards
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import React from "react";
+// Import custom carousel for urban planning images
 import UrbanPlanningCarousel from "@/components/UrbanPlanningCarousel";
 
+// List of urban planning services to display on the page
 const urbanPlanningServices = [
 	{
 		title: "Master Planning",
