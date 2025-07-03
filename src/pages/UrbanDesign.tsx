@@ -57,15 +57,6 @@ const UrbanDesign = () => (
 		<Navigation />
 		{/* Hero Carousel Section */}
 		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>
-			{/* Headline and Description Text (centered, above carousel) */}
-			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
-				<h1 className="font-playfair text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg mb-4">
-					Urban Design
-				</h1>
-				<p className="font-inter text-base xs:text-lg sm:text-xl md:text-2xl text-white text-center drop-shadow-md max-w-xs xs:max-w-md sm:max-w-2xl">
-					Crafting Human-Centered Urban Spaces That Inspire, Connect, and Thrive.
-				</p>
-			</div>
 			{/* Home page style overlay for readability */}
 			<div
 				className="absolute inset-0 z-10 pointer-events-none"
