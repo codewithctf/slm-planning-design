@@ -34,23 +34,11 @@ const images = [
 
 const UrbanPlanningCarousel: React.FC<UrbanPlanningCarouselProps> = ({ heightClass = "h-[38rem]" }) => {
   const [current, setCurrent] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    setLoaded(false);
-    timeoutRef.current = setTimeout(() => {
-      setLoaded(true);
-    }, 100);
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [current]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -59,11 +47,12 @@ const UrbanPlanningCarousel: React.FC<UrbanPlanningCarouselProps> = ({ heightCla
       {images.map((img, idx) => (
         <div
           key={idx}
-          className={`absolute w-full h-full top-0 left-0 transition-opacity duration-1000 ${idx === current && loaded ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+          className={`absolute w-full h-full top-0 left-0 transition-opacity duration-400 ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
         >
           <img
             src={img.src}
             alt={img.title}
+            loading="eager"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.35) 100%)"}} />

@@ -12,7 +12,7 @@ const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
   return (
@@ -20,10 +20,11 @@ const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {
       className={`relative w-full ${heightClass} flex items-center justify-center`}
     >
       {images.map((img, idx) => (
-        <div key={idx} className={`absolute w-full h-full top-0 left-0 transition-opacity duration-1000 ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+        <div key={idx} className={`absolute w-full h-full top-0 left-0 transition-opacity duration-400 ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
           <img
             src={img}
             alt={`Urban Design ${idx + 1}`}
+            loading="eager"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.35) 100%)"}} />

@@ -56,7 +56,7 @@ const UrbanDesign = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 px-2 sm:px-4">
+		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>
 			{/* Headline and Description Text (centered, above carousel) */}
 			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
 				<h1 className="font-playfair text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg mb-4">
@@ -237,7 +237,7 @@ const UrbanDesign = () => (
 					Ready to Reimagine Urban Spaces?
 				</h3>
 				<p className="font-inter text-xl text-slm-green-100 mb-8">
-					Let’s co-create environments that reflect your community’s values and
+					Let's co-create environments that reflect your community's values and
 					your vision for the future.
 				</p>
 				<div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

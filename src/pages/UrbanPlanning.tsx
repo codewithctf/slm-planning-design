@@ -56,7 +56,7 @@ const UrbanPlanning = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 px-2 sm:px-4">
+		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>
 			{/* Gradient overlay for text readability */}
 			<div className="absolute inset-0 z-10 pointer-events-none" style={{background: "linear-gradient(180deg, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.25) 100%)"}} />
 			<UrbanPlanningCarousel heightClass="h-[38rem]" />

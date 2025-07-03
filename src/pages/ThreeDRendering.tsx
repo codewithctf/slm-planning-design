@@ -46,7 +46,7 @@ const ThreeDRendering = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 px-2 sm:px-4">
+		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>
 			<div
 				className="absolute inset-0 z-10 pointer-events-none"
 				style={{
@@ -201,7 +201,7 @@ const ThreeDRendering = () => (
 					<p className="font-inter text-base text-gray-700 mb-4">
 						Visualization transforms complex ideas into clear, persuasive stories.
 						It accelerates approvals, builds trust, and helps clients and
-						communities see the true value of your project before it’s built.
+						communities see the true value of your project before it's built.
 					</p>
 					<ul className="list-disc list-inside text-gray-700 font-inter text-base space-y-2 mb-4">
 						<li>Communicate complex designs with ease</li>
@@ -218,7 +218,7 @@ const ThreeDRendering = () => (
 		<section className="py-20 bg-slm-green-600">
 			<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<h3 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
-					Let’s Visualize Your Next Project
+					Let's Visualize Your Next Project
 				</h3>
 				<p className="font-inter text-xl text-slm-green-100 mb-8">
 					Showcase your vision with precision-crafted visuals that resonate with

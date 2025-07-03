@@ -13,7 +13,7 @@ const ThreeDRenderingCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5200);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,13 +24,14 @@ const ThreeDRenderingCarousel = () => {
       {images.map((img, idx) => (
         <div
           key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-400 ease-in-out ${
             idx === current ? "opacity-100 z-20" : "opacity-0 z-10"
           }`}
         >
           <img
             src={img}
             alt="3D Rendering"
+            loading="eager"
             className="w-full h-full object-cover object-center transition-transform duration-1000 scale-105"
             draggable={false}
           />

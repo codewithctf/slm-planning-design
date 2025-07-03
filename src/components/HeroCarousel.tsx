@@ -12,23 +12,11 @@ interface HeroCarouselProps {
 
 const HeroCarousel: React.FC<HeroCarouselProps> = ({ heightClass = "h-96" }) => {
   const [current, setCurrent] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    setLoaded(false);
-    timeoutRef.current = setTimeout(() => {
-      setLoaded(true);
-    }, 100);
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [current]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % landscapeImages.length);
-    }, 5000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -41,12 +29,13 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ heightClass = "h-96" }) => 
           key={idx}
           src={src}
           alt="Landscape"
-          className={`transition-opacity duration-700 ease-in-out w-full h-full object-cover absolute top-0 left-0 
-            ${idx === current && loaded ? "opacity-100 scale-105 animate-zoom" : "opacity-0 scale-100"}
+          loading="eager"
+          className={`transition-opacity duration-400 ease-in-out w-full h-full object-cover absolute top-0 left-0 
+            ${idx === current ? "opacity-100 scale-105 animate-zoom" : "opacity-0 scale-100"}
           `}
           style={{
             zIndex: idx === current ? 2 : 1,
-            transition: "opacity 0.7s, transform 5s cubic-bezier(0.4,0,0.2,1)",
+            transition: "opacity 0.4s, transform 2.5s cubic-bezier(0.4,0,0.2,1)",
           }}
         />
       ))}
