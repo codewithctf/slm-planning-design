@@ -137,7 +137,8 @@ const Services = () => {
         "Policy Development",
         "Community Engagement"
       ],
-      image: "/Assets/urban planning.webp"
+      image: "/Assets/urban planning.webp",
+      link: "/services/urban-planning"
     },
     {
       title: "Urban Design",
@@ -149,7 +150,8 @@ const Services = () => {
         "Accessibility Planning",
         "Wayfinding Systems"
       ],
-      image: "/Assets/Urban design.webp"
+      image: "/Assets/Urban design.webp",
+      link: "/services/urban-design"
     },
     {
       title: "Landscape Architecture",
@@ -161,7 +163,8 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/Assets/Landscape Architecture.webp"
+      image: "/Assets/Landscape Architecture.webp",
+      link: "/services/landscape-architecture"
     },
     {
       title: "3D Rendering",
@@ -173,7 +176,8 @@ const Services = () => {
         "Design Presentations",
         "Marketing Materials"
       ],
-      image: "/Assets/3D render.webp"
+      image: "/Assets/3D render.webp",
+      link: "/services/3d-rendering"
     }
   ];
 
@@ -282,7 +286,7 @@ const Services = () => {
                   </div>
                   <div className="mt-auto pt-4">
                     <Link
-                      to={service.title === "Urban Planning" ? "/services/urban-planning" : `/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      to={service.link}
                       className="w-full flex items-center justify-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center"
                     >
                       Learn More
