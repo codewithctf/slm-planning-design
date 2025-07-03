@@ -38,6 +38,8 @@ export default defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Underline', value: 'underline'},
+          {title: 'Code', value: 'code'},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -53,6 +55,32 @@ export default defineType({
               },
             ],
           },
+          {
+            title: 'Color',
+            name: 'color',
+            type: 'object',
+            fields: [
+              {
+                title: 'Color',
+                name: 'hex',
+                type: 'string',
+                description: 'Hex color code (e.g. #ff0000)',
+              },
+            ],
+          },
+          {
+            title: 'Font Family',
+            name: 'fontFamily',
+            type: 'object',
+            fields: [
+              {
+                title: 'Font Family',
+                name: 'family',
+                type: 'string',
+                description: 'CSS font-family value',
+              },
+            ],
+          },
         ],
       },
     }),
@@ -62,6 +90,16 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true
+          }
+        }
+      ]
     }),
   ],
 })
