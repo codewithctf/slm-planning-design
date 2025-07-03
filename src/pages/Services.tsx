@@ -280,7 +280,7 @@ const Services = () => {
                   <p className="font-inter text-gray-700 mb-4">{service.description}</p>
                   <div className="mb-3">
                     <h4 className="font-playfair text-lg font-semibold text-slm-brown-600 mb-1">Key Features:</h4>
-                    <ul className="list-disc list-inside text-gray-600 font-inter text-base space-y-1">
+                    <ul className="list-disc list-inside text-gray-600 font-inter text-lg sm:text-base space-y-1">
                       {service.features.map((f, i) => <li key={i}>{f}</li>)}
                     </ul>
                   </div>

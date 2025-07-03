@@ -163,7 +163,7 @@ const LandscapeArchitecture = () => (
 									</CardTitle>
 								</CardHeader>
 								<CardContent className="pb-2 sm:pb-4 px-2 md:px-4">
-									<CardDescription className="font-inter text-gray-700 transition-colors duration-300 group-hover:text-white text-xs sm:text-base">
+									<CardDescription className="font-inter text-gray-700 transition-colors duration-300 group-hover:text-white text-sm xs:text-base sm:text-lg md:text-base">
 										{service.desc}
 									</CardDescription>
 								</CardContent>
