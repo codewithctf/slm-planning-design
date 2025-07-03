@@ -4,12 +4,12 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const processImages = [
-  "/Assets/Landscape Architecture (1).webp", // 01 Initial Consultation
-  "/Assets/Development Control & Planning Advisory.webp",   // 02 Research & Analysis
-  "/Assets/Transit-Oriented Development.webp",      // 03 Conceptual Design
-  "/Assets/urban planning (2).webp",       // 04 Detailed Planning
-  "/Assets/3D render 1.webp",      // 05 Implementation Oversight
-  "/Assets/urban planning.webp"         // 06 Post-Completion Review
+  "/Assets/Feasiblity-studies.webp", // 01 Initial Consultation
+  "/Assets/community engagement-service.webp", // 02 Research & Analysis
+  "/Assets/Concept Sketch Renders.webp", // 03 Conceptual Design
+  "/Assets/urban planning.webp", // 04 Detailed Planning
+  "/Assets/3D render 1.webp", // 05 Implementation Oversight
+  "/Assets/Post-completion.webp" // 06 Post-Completion Review
 ];
 
 const principleIcons = [
