@@ -57,10 +57,10 @@ const Footer = () => {
           <div>
             <h3 className="font-playfair font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-slm-green-100">
-              <li>Urban Design</li>
-              <li>Urban Planning</li>
-              <li>3D Rendering</li>
-              <li>Landscape Architecture</li>
+              <li><Link to="/urban-design" className="hover:text-white transition-colors">Urban Design</Link></li>
+              <li><Link to="/urban-planning" className="hover:text-white transition-colors">Urban Planning</Link></li>
+              <li><Link to="/3d-rendering" className="hover:text-white transition-colors">3D Rendering</Link></li>
+              <li><Link to="/landscape-architecture" className="hover:text-white transition-colors">Landscape Architecture</Link></li>
             </ul>
           </div>
         </div>

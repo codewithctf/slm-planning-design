@@ -5,11 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const processImages = [
   "/Assets/Feasiblity-studies.webp", // 01 Initial Consultation
-  "/Assets/community engagement-service.webp", // 02 Research & Analysis
-  "/Assets/Concept Sketch Renders.webp", // 03 Conceptual Design
-  "/Assets/urban planning.webp", // 04 Detailed Planning
-  "/Assets/3D render 1.webp", // 05 Implementation Oversight
-  "/Assets/Post-completion.webp" // 06 Post-Completion Review
+  "/Assets/community engagement-service.webp", // 02 Research & Analysis (valid)
+  "/Assets/Design Research & Prototyping.webp", // 03 Conceptual Design (valid)
+  "/Assets/urban planning (2).webp", // 04 Detailed Planning (valid)
+  "/Assets/3D render 2.webp", // 05 Implementation Oversight (valid)
+  "/Assets/Post-completion.webp" // 06 Post-Completion Review (valid)
 ];
 
 const principleIcons = [
@@ -229,12 +229,18 @@ const Process = () => {
                   </Card>
                 </div>
                 <div className="lg:w-1/2 w-full flex justify-center items-center relative">
-                  <div 
-                    className="h-80 w-full max-w-xl bg-cover bg-center rounded-lg shadow-xl animate-process-img-fade"
-                    style={{
-                      backgroundImage: `url(${processImages[index]})`
-                    }}
-                  />
+                  {processImages[index] ? (
+                    <div
+                      className="h-80 w-full max-w-xl bg-cover bg-center rounded-lg shadow-xl animate-process-img-fade"
+                      style={{ backgroundImage: `url('${processImages[index]}')` }}
+                      role="img"
+                      aria-label={step.title + ' image'}
+                    />
+                  ) : (
+                    <div className="h-80 w-full max-w-xl bg-gray-200 rounded-lg shadow-xl flex items-center justify-center">
+                      <span className="text-gray-400">No image available</span>
+                    </div>
+                  )}
                   {/* Draw an arrow to the next step except for the last step */}
                   {index < processSteps.length - 1 && (
                     <div className={`hidden lg:block absolute ${index % 2 === 0 ? 'right-[-40px]' : 'left-[-40px]'} top-1/2 z-10`} style={{transform: 'translateY(-50%)'}}>
@@ -273,13 +279,13 @@ const Process = () => {
       </section>
 
       {/* Core Principles */}
-      <section className="py-20" style={{ background: "#FCEFEF" }}>
+      <section className="py-20" style={{ background: "#F0F8F4" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
               Our Core Principles
             </h2>
-            <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-inter text-lg text-slm-green-800 max-w-2xl mx-auto">
               These fundamental values guide our approach and ensure consistent, 
               high-quality outcomes for every client.
             </p>
@@ -290,7 +296,7 @@ const Process = () => {
                 <div className="flex flex-col items-center justify-center pt-8 pb-4 px-4">
                   <div className="w-20 h-20 mb-4 flex items-center justify-center relative">
                     {/* Spinning rectangle border */}
-                    <span className="absolute inset-0 rounded-lg border-2 border-[#712B29] animate-spin-slow z-0" style={{borderStyle:'solid'}}></span>
+                    <span className="absolute inset-0 rounded-lg border-2 border-slm-green-700 animate-spin-slow z-0" style={{borderStyle:'solid'}}></span>
                     <span className="relative z-10 w-16 h-16 flex items-center justify-center bg-white rounded-lg">
                       <img src={principle.icon} alt={principle.title + ' icon'} className="w-12 h-12 object-contain" />
                     </span>
@@ -301,49 +307,34 @@ const Process = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="font-inter text-gray-600 group-hover:text-white transition-colors duration-300">
+                    <CardDescription className="font-inter text-base text-slm-green-800 group-hover:text-white transition-colors duration-300">
                       {principle.description}
                     </CardDescription>
                   </CardContent>
                 </div>
-                {/* Card hover: brown bg, white text */}
-                <style>{`
-                  .group:hover {
-                    background: #712B29 !important;
-                  }
-                  .group:hover .text-slm-green-700,
-                  .group:hover .text-gray-600 {
-                    color: #fff !important;
-                  }
-                `}</style>
               </Card>
             ))}
           </div>
         </div>
         <style>{`
-          @keyframes principle-pop {
-            0% { opacity: 0; transform: scale(0.92) rotate(-2deg); }
-            60% { opacity: 1; transform: scale(1.04) rotate(2deg); }
-            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+          .group:hover .border-slm-green-700 {
+            border-color: #2B7151 !important;
           }
-          .animate-principle-pop {
-            animation: principle-pop 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+          .group:hover .text-slm-green-700, .group:hover .text-slm-green-800 {
+            color: #fff !important;
           }
-          .animate-spin-slow {
-            animation: spin 2.5s linear infinite;
-          }
-          @keyframes spin {
-            100% { transform: rotate(360deg); }
+          .group:hover {
+            background: #2B7151 !important;
           }
         `}</style>
       </section>
 
       {/* Project Timeline */}
-      <section className="py-20 bg-slm-green-50">
+      <section className="py-20 bg-slm-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-8 relative inline-block">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-8 relative inline-block">
             Typical <span className="relative">Project
-              <span className="absolute left-0 right-0 -bottom-2 h-1 w-full bg-[#712B29] animate-underline-brown" style={{borderRadius:'2px'}}></span>
+              <span className="absolute left-0 right-0 -bottom-2 h-1 w-full bg-white animate-underline-green" style={{borderRadius:'2px'}}></span>
             </span> Timeline
           </h2>
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -371,14 +362,14 @@ const Process = () => {
           </div>
         </div>
         <style>{`
-          @keyframes underline-brown {
+          @keyframes underline-green {
             0% { width: 0; left: 50%; right: 50%; opacity: 0.5; }
             40% { width: 100%; left: 0; right: 0; opacity: 1; }
             60% { width: 100%; left: 0; right: 0; opacity: 1; }
             100% { width: 0; left: 50%; right: 50%; opacity: 0.5; }
           }
-          .animate-underline-brown {
-            animation: underline-brown 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+          .animate-underline-green {
+            animation: underline-green 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
           }
         `}</style>
       </section>
