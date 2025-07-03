@@ -42,7 +42,7 @@ const LandscapeArchitecture = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[38rem] flex items-center justify-center overflow-hidden pt-20 md:pt-0 px-2 sm:px-4">
+		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 px-2 sm:px-4">
 			{/* Gradient overlay for text readability */}
 			<div
 				className="absolute inset-0 z-10 pointer-events-none"
@@ -132,47 +132,38 @@ const LandscapeArchitecture = () => (
 				</div>
 			</div>
 		</section>
-		{/* Landscape Architecture Services Section - full width soft green bg */}
-		<section
-			className="pt-10 pb-20 w-full"
-			style={{ background: "#F0F8F4" }}
-		>
-			<div className="max-w-7xl mx-auto mb-16 py-16 px-2 sm:px-4 rounded-3xl">
-				<h3 className="font-playfair text-4xl font-bold mb-8 text-center text-[#2B7151]">
+		{/* Landscape Services Section */}
+		<section className="pt-6 md:pt-10 pb-10 md:pb-20 w-full" style={{ background: "#F0F8F4" }}>
+			<div className="max-w-7xl mx-auto mb-10 md:mb-16 py-8 md:py-16 px-2 sm:px-4 rounded-3xl">
+				<h3 className="font-playfair text-2xl sm:text-4xl font-bold mb-4 md:mb-8 text-center text-[#2B7151]">
 					Our Landscape Architecture Services
 				</h3>
-				<p className="font-inter text-base text-center text-slm-green-800 mb-8">
-					Thoughtfully crafted to bring harmony between nature, people, and place.
+				<p className="font-inter text-sm sm:text-base text-center text-slm-green-800 mb-4 md:mb-8">
+					Design solutions tailored to your project's unique needs and vision.
 				</p>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				<div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
 					{landscapeServices.map((service, idx) => (
 						<Card
 							key={service.title}
 							className="group text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border-2 border-[#b6e2c7] rounded-2xl overflow-hidden flex flex-col p-0"
-							style={{ minHeight: '370px' }}
+							style={{ minHeight: '320px' }}
 						>
-							<div className="h-40 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
-								{service.image ? (
-									<img
-										src={service.image}
-										alt={service.title}
-										className="w-full h-full object-cover service-img-animate group-hover:scale-105 transition-transform duration-500"
-										style={{ maxWidth: '100%', height: '100%' }}
-									/>
-								) : (
-									<span className="text-gray-400 font-inter">
-										Image coming soon
-									</span>
-								)}
+							<div className="h-32 sm:h-40 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+								<img
+									src={service.image}
+									alt={service.title}
+									className="w-full h-full object-cover service-img-animate group-hover:scale-105 transition-transform duration-500"
+									style={{ maxWidth: '100%', height: '100%' }}
+								/>
 							</div>
 							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#2B7151] bg-white">
 								<CardHeader className="flex flex-col justify-end items-center px-2 pt-4 pb-2">
-									<CardTitle className="font-playfair text-lg transition-colors duration-300 group-hover:text-white text-[#2B7151]">
+									<CardTitle className="font-playfair text-base sm:text-lg transition-colors duration-300 group-hover:text-white text-[#2B7151]">
 										{service.title}
 									</CardTitle>
 								</CardHeader>
-								<CardContent className="pb-4 px-2 md:px-4">
-									<CardDescription className="font-inter text-gray-700 transition-colors duration-300 group-hover:text-white text-base">
+								<CardContent className="pb-2 sm:pb-4 px-2 md:px-4">
+									<CardDescription className="font-inter text-gray-700 transition-colors duration-300 group-hover:text-white text-xs sm:text-base">
 										{service.desc}
 									</CardDescription>
 								</CardContent>
@@ -181,16 +172,6 @@ const LandscapeArchitecture = () => (
 					))}
 				</div>
 			</div>
-			<style>{`
-        .service-img-animate {
-          animation: serviceImgPop 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        @keyframes serviceImgPop {
-          0% { transform: scale(0.92) rotate(-2deg); opacity: 0; }
-          60% { transform: scale(1.04) rotate(2deg); opacity: 1; }
-          100% { transform: scale(1) rotate(0deg); opacity: 1; }
-        }
-      `}</style>
 		</section>
 		{/* Section 3: Benefits + Image */}
 		<section className="py-20 bg-white">
