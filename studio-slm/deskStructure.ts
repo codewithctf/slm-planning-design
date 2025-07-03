@@ -1,6 +1,7 @@
 // Custom Sanity Studio structure for clear Blog and Portfolio sections
 import {StructureBuilder} from 'sanity/structure'
 import {MdArticle, MdWork} from 'react-icons/md'
+import type { FunctionComponent } from 'react'
 
 const deskStructure = (S: StructureBuilder) =>
   S.list()
@@ -8,7 +9,7 @@ const deskStructure = (S: StructureBuilder) =>
     .items([
       S.listItem()
         .title('Blog Posts')
-        .icon(MdArticle)
+        .icon(MdArticle as FunctionComponent)
         .child(
           S.documentTypeList('post')
             .title('Blog Posts')
@@ -16,7 +17,7 @@ const deskStructure = (S: StructureBuilder) =>
         ),
       S.listItem()
         .title('Portfolio Projects')
-        .icon(MdWork)
+        .icon(MdWork as FunctionComponent)
         .child(
           S.documentTypeList('project')
             .title('Portfolio Projects')
