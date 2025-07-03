@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/react/', // Set base path for deployment in /react subdirectory
   server: {
     host: "::",
     port: 8080,
