@@ -275,16 +275,16 @@ const Services = () => {
                 <div className="h-56 w-full bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
-                <div className="flex flex-col flex-1 p-6">
+                <div className="flex flex-col flex-1 p-4 sm:p-6">
                   <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
-                  <p className="font-inter text-gray-700 mb-4">{service.description}</p>
-                  <div className="mb-3">
+                  <p className="font-inter text-gray-700 mb-3">{service.description}</p>
+                  <div className="mb-2">
                     <h4 className="font-playfair text-lg font-semibold text-slm-brown-600 mb-1">Key Features:</h4>
                     <ul className="list-disc list-inside text-gray-600 font-inter text-lg sm:text-base space-y-1">
                       {service.features.map((f, i) => <li key={i}>{f}</li>)}
                     </ul>
                   </div>
-                  <div className="mt-auto pt-4">
+                  <div className="mt-auto pt-3">
                     <Link
                       to={service.link}
                       className="w-full flex items-center justify-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center"

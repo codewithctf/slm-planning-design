@@ -181,7 +181,7 @@ const UrbanDesign = () => (
 									style={{ maxWidth: '100%', height: '100%' }}
 								/>
 							</div>
-							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#2B7151] bg-white">
+							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#2B7151] bg-white p-4 sm:p-6">
 								<CardHeader className="flex flex-col justify-end items-center px-2 pt-4 pb-2">
 									<CardTitle className="font-playfair text-base sm:text-lg transition-colors duration-300 group-hover:text-white text-[#2B7151]">
 										{service.title}
