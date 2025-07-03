@@ -42,7 +42,7 @@ const LandscapeArchitecture = () => (
 	<div className="min-h-screen bg-white">
 		<Navigation />
 		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 px-2 sm:px-4">
+		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0">
 			{/* Gradient overlay for text readability */}
 			<div
 				className="absolute inset-0 z-10 pointer-events-none"
@@ -208,7 +208,7 @@ const LandscapeArchitecture = () => (
 					Ready to Create Lasting Landscapes?
 				</h3>
 				<p className="font-inter text-xl text-slm-green-100 mb-8">
-					Let’s design outdoor spaces that inspire, protect, and serve your
+					Let's design outdoor spaces that inspire, protect, and serve your
 					community.
 				</p>
 				<div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

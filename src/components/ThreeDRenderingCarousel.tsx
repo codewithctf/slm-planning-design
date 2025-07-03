@@ -19,8 +19,7 @@ const ThreeDRenderingCarousel = () => {
 
   return (
     <div
-      className="relative w-full h-full select-none pt-20 md:pt-0"
-      style={{ backgroundColor: "#FCEFEF" }}
+      className="relative w-full h-full select-none"
     >
       {images.map((img, idx) => (
         <div
@@ -36,15 +35,15 @@ const ThreeDRenderingCarousel = () => {
             draggable={false}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center z-30 text-center w-full px-2 sm:px-4 pointer-events-none">
-            <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold text-[#fff] mb-2 animate-fade-in-up">
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold text-[#fff] mb-2 animate-fade-in-up" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
               3D Rendering & Visualization
             </h2>
-            <p className="font-inter text-base sm:text-lg md:text-xl text-[#fff] max-w-2xl mx-auto animate-fade-in-up delay-150">
+            <p className="font-inter text-base sm:text-lg md:text-xl text-[#fff] max-w-2xl mx-auto animate-fade-in-up delay-150" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
               Bringing Ideas to Life with Precision, Emotion, and Clarity
             </p>
           </div>
-          {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent z-10" />
+          {/* Stronger overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent z-10" />
         </div>
       ))}
       {/* Carousel indicators */}

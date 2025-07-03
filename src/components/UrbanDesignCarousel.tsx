@@ -17,19 +17,17 @@ const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {
   }, []);
   return (
     <div
-      className={`relative w-full ${heightClass} flex items-center justify-center pt-20 md:pt-0`}
-      style={{ backgroundColor: "#FCEFEF" }}
+      className={`relative w-full ${heightClass} flex items-center justify-center`}
     >
       {images.map((img, idx) => (
-        <img
-          key={idx}
-          src={img}
-          alt={`Urban Design ${idx + 1}`}
-          className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-            idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-          style={{ borderRadius: "0 0 2.5rem 2.5rem" }}
-        />
+        <div key={idx} className={`absolute w-full h-full top-0 left-0 transition-opacity duration-1000 ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+          <img
+            src={img}
+            alt={`Urban Design ${idx + 1}`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.35) 100%)"}} />
+        </div>
       ))}
       {/* Carousel dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
@@ -41,6 +39,15 @@ const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {
             } transition-all duration-300`}
           />
         ))}
+      </div>
+      {/* Text overlay (above overlay) */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center w-full px-2 sm:px-4 pointer-events-none">
+        <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold text-[#fff] mb-2 animate-fade-in-up" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
+          Urban Design
+        </h2>
+        <p className="font-inter text-base sm:text-lg md:text-xl text-[#fff] max-w-2xl mx-auto animate-fade-in-up delay-150" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
+          Shaping Cities for People, Nature, and the Future
+        </p>
       </div>
     </div>
   );

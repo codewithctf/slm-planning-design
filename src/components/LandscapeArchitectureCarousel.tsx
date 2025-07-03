@@ -33,7 +33,7 @@ const LandscapeArchitectureCarousel: React.FC<CarouselProps> = ({ heightClass = 
   }, []);
 
   return (
-    <div className={`relative w-full ${heightClass} overflow-hidden`} style={{ backgroundColor: "#FCEFEF", minHeight: '100%', height: '100%' }}>
+    <div className={`relative w-full ${heightClass} overflow-hidden`} style={{ minHeight: '100%', height: '100%', backgroundColor: '#000' }}>
       {images.map((src, idx) => (
         <img
           key={idx}
@@ -53,17 +53,17 @@ const LandscapeArchitectureCarousel: React.FC<CarouselProps> = ({ heightClass = 
         className="absolute inset-0 w-full h-full"
         style={{
           background:
-            "linear-gradient(120deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.55) 100%)",
+            "linear-gradient(120deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%)",
           zIndex: 10,
           pointerEvents: "none",
         }}
       />
       {/* Text overlay (above overlay) */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center w-full px-2 sm:px-4 pointer-events-none">
-        <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold text-[#fff] mb-2 animate-fade-in-up" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
+        <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold text-[#fff] mb-2 animate-fade-in-up" style={{textShadow: '0 4px 24px rgba(0,0,0,0.48), 0 2px 8px rgba(0,0,0,0.32)'}}>
           Landscape Architecture
         </h2>
-        <p className="font-inter text-base sm:text-lg md:text-xl text-[#fff] max-w-2xl mx-auto animate-fade-in-up delay-150" style={{textShadow: '0 2px 16px rgba(0,0,0,0.32), 0 1.5px 4px rgba(0,0,0,0.18)'}}>
+        <p className="font-inter text-base sm:text-lg md:text-xl text-[#fff] max-w-2xl mx-auto animate-fade-in-up delay-150" style={{textShadow: '0 4px 24px rgba(0,0,0,0.48), 0 2px 8px rgba(0,0,0,0.32)'}}>
           Designing Ecological Landscapes That Heal, Connect, and Inspire
         </p>
       </div>
