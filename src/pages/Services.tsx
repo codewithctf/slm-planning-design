@@ -393,7 +393,7 @@ const Services = () => {
             <Button asChild size="lg" className="bg-white text-slm-green-700 font-semibold px-8 py-3 border-2 border-slm-green-600 hover:bg-slm-green-50">
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" className="bg-slm-green-700 text-white font-semibold px-8 py-3 hover:bg-slm-green-800">
+            <Button asChild size="lg" className="bg-white text-slm-green-700 font-semibold px-8 py-3 hover:bg-slm-green-50">
               <Link to="/quote">Request a Quote</Link>
             </Button>
           </div>

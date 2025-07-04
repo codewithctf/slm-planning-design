@@ -212,7 +212,7 @@ const UrbanPlanning = () => (
 					<Button asChild size="lg" className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-6 md:px-8 py-2 md:py-3 w-full sm:w-auto text-sm md:text-base">
 						<a href="/contact">Request Planning Consultation</a>
 					</Button>
-					<Button asChild size="lg" variant="outline" className="border-white text-white font-semibold px-6 md:px-8 py-2 md:py-3 w-full sm:w-auto text-sm md:text-base">
+					<Button asChild size="lg" className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-6 md:px-8 py-2 md:py-3 w-full sm:w-auto text-sm md:text-base">
 						<a href="/portfolio">View Planning Projects</a>
 					</Button>
 				</div>
