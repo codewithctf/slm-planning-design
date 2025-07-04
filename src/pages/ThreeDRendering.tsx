@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 // Import custom carousel for 3D rendering images
 import ThreeDRenderingCarousel from "../components/ThreeDRenderingCarousel";
+import { Helmet } from 'react-helmet-async';
 
 // List of 3D rendering services to display on the page
 const renderingServices = [
@@ -44,6 +45,19 @@ const renderingServices = [
 
 const ThreeDRendering = () => (
 	<div className="min-h-screen bg-white">
+		<Helmet>
+        <title>3D Rendering | SLM Planning & Design</title>
+        <meta name="description" content="Experience photorealistic 3D rendering and visualization services from SLM Planning & Design for your next project." />
+        <meta property="og:title" content="3D Rendering | SLM Planning & Design" />
+        <meta property="og:description" content="Experience photorealistic 3D rendering and visualization services from SLM Planning & Design for your next project." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:url" content="https://slmplanning.com/services/3d-rendering" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="3D Rendering | SLM Planning & Design" />
+        <meta name="twitter:description" content="Experience photorealistic 3D rendering and visualization services from SLM Planning & Design for your next project." />
+        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+      </Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
 		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full" style={{ backgroundColor: '#000' }}>

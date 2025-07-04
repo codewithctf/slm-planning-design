@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import React from "react";
 import LandscapeArchitectureCarousel from "@/components/LandscapeArchitectureCarousel";
+import { Helmet } from 'react-helmet-async';
 
 const landscapeServices = [
 	{
@@ -40,6 +41,19 @@ const landscapeServices = [
 
 const LandscapeArchitecture = () => (
 	<div className="min-h-screen bg-white">
+		<Helmet>
+			<title>Landscape Architecture | SLM Planning & Design</title>
+			<meta name="description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
+			<meta property="og:title" content="Landscape Architecture | SLM Planning & Design" />
+			<meta property="og:description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
+			<meta property="og:type" content="website" />
+			<meta property="og:image" content="/Assets/slm-logo.png" />
+			<meta property="og:url" content="https://slmplanning.com/services/landscape-architecture" />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:title" content="Landscape Architecture | SLM Planning & Design" />
+			<meta name="twitter:description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
+			<meta name="twitter:image" content="/Assets/slm-logo.png" />
+		</Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
 		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full" style={{ backgroundColor: '#000' }}>

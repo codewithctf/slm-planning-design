@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 // Import custom carousel for urban design images
 import UrbanDesignCarousel from "@/components/UrbanDesignCarousel";
+import { Helmet } from 'react-helmet-async';
 
 // List of urban design services to display on the page
 const urbanDesignServices = [
@@ -54,6 +55,19 @@ const urbanDesignServices = [
 
 const UrbanDesign = () => (
 	<div className="min-h-screen bg-white">
+		<Helmet>
+        <title>Urban Design | SLM Planning & Design</title>
+        <meta name="description" content="See how SLM Planning & Design creates vibrant, sustainable urban environments through innovative urban design services." />
+        <meta property="og:title" content="Urban Design | SLM Planning & Design" />
+        <meta property="og:description" content="See how SLM Planning & Design creates vibrant, sustainable urban environments through innovative urban design services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:url" content="https://slmplanning.com/services/urban-design" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Urban Design | SLM Planning & Design" />
+        <meta name="twitter:description" content="See how SLM Planning & Design creates vibrant, sustainable urban environments through innovative urban design services." />
+        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+      </Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
 		<section className="relative h-[28rem] md:h-[38rem] flex items-center justify-center overflow-hidden pt-24 md:pt-0 w-full" style={{ backgroundColor: '#000' }}>

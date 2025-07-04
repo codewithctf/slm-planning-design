@@ -5,6 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../../react-router-slm/app/sanity/client";
 import { FaUserCircle, FaCalendarAlt, FaClock, FaShareAlt } from "react-icons/fa";
 import Footer from "@/components/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const builder = imageUrlBuilder(client);
 
@@ -76,41 +77,56 @@ const BlogArticle = () => {
 
   return (
     <>
-      <main className="container mx-auto min-h-screen max-w-3xl p-4 sm:p-8 flex flex-col gap-4">
-        <div className={`sticky top-2 z-10 mb-2 w-fit transition-opacity duration-300 ${showBack ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-          <Link to="/blog" className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-slm-green-700 hover:bg-slm-green-50 border border-slm-green-200 transition font-semibold shadow"><span className="text-lg">←</span> Back to Blog</Link>
-        </div>
-        <section className="bg-white rounded-xl p-4 sm:p-8 mb-4 shadow flex flex-col gap-4">
-          {post.mainImage && (
-            <img
-              src={builder.image(post.mainImage).width(800).url()}
-              alt={post.title}
-              className="aspect-video rounded-xl mb-2 w-full object-cover"
-            />
-          )}
-          <h1 className="text-3xl sm:text-5xl font-bold mb-2 leading-tight">{post.title}</h1>
-          <div className="flex flex-wrap items-center gap-3 text-sm text-slm-green-800 mb-2">
-            <span className="flex items-center gap-1"><FaCalendarAlt /> {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ""}</span>
-            {post.author?.name && <span className="flex items-center gap-1"><FaUserCircle /> {post.author.name}</span>}
-            <span className="flex items-center gap-1"><FaClock /> {readingTime} min read</span>
+      <Helmet>
+        <title>Blog Article | SLM Planning & Design</title>
+        <meta name="description" content="Read this article from SLM Planning & Design for insights on urban planning, landscape architecture, and 3D visualization." />
+        <meta property="og:title" content="Blog Article | SLM Planning & Design" />
+        <meta property="og:description" content="Read this article from SLM Planning & Design for insights on urban planning, landscape architecture, and 3D visualization." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:url" content="https://slmplanning.com/blog/article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog Article | SLM Planning & Design" />
+        <meta name="twitter:description" content="Read this article from SLM Planning & Design for insights on urban planning, landscape architecture, and 3D visualization." />
+        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <main className="container mx-auto min-h-screen max-w-3xl p-4 sm:p-8 flex flex-col gap-4">
+          <div className={`sticky top-2 z-10 mb-2 w-fit transition-opacity duration-300 ${showBack ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <Link to="/blog" className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-slm-green-700 hover:bg-slm-green-50 border border-slm-green-200 transition font-semibold shadow"><span className="text-lg">←</span> Back to Blog</Link>
           </div>
-          {post.author?.image && (
-            <img src={builder.image(post.author.image).width(48).height(48).url()} alt={post.author.name} className="w-12 h-12 rounded-full border-2 border-slm-green-300" />
-          )}
-          <div className="flex flex-wrap gap-2 mt-2">
-            {post.tags && post.tags.map((tag) => (
-              <span key={tag} className="bg-slm-green-100 text-slm-green-700 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1"># {tag}</span>
-            ))}
-          </div>
-          <div className="flex gap-3 mt-2">
-            <button className="flex items-center gap-1 px-3 py-1 rounded bg-slm-green-600 text-white hover:bg-slm-green-700 transition" onClick={() => navigator.share ? navigator.share({ title: post.title, url: window.location.href }) : window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`)}><FaShareAlt /> Share</button>
-          </div>
-        </section>
-        <article className="prose max-w-none prose-lg prose-slate">
-          {Array.isArray(post.body) && <PortableText value={post.body} components={portableTextComponents} />}
-        </article>
-      </main>
-      <Footer author={post.author} />
+          <section className="bg-white rounded-xl p-4 sm:p-8 mb-4 shadow flex flex-col gap-4">
+            {post.mainImage && (
+              <img
+                src={builder.image(post.mainImage).width(800).url()}
+                alt={post.title}
+                className="aspect-video rounded-xl mb-2 w-full object-cover"
+              />
+            )}
+            <h1 className="text-3xl sm:text-5xl font-bold mb-2 leading-tight">{post.title}</h1>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-slm-green-800 mb-2">
+              <span className="flex items-center gap-1"><FaCalendarAlt /> {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ""}</span>
+              {post.author?.name && <span className="flex items-center gap-1"><FaUserCircle /> {post.author.name}</span>}
+              <span className="flex items-center gap-1"><FaClock /> {readingTime} min read</span>
+            </div>
+            {post.author?.image && (
+              <img src={builder.image(post.author.image).width(48).height(48).url()} alt={post.author.name} className="w-12 h-12 rounded-full border-2 border-slm-green-300" />
+            )}
+            <div className="flex flex-wrap gap-2 mt-2">
+              {post.tags && post.tags.map((tag) => (
+                <span key={tag} className="bg-slm-green-100 text-slm-green-700 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1"># {tag}</span>
+              ))}
+            </div>
+            <div className="flex gap-3 mt-2">
+              <button className="flex items-center gap-1 px-3 py-1 rounded bg-slm-green-600 text-white hover:bg-slm-green-700 transition" onClick={() => navigator.share ? navigator.share({ title: post.title, url: window.location.href }) : window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`)}><FaShareAlt /> Share</button>
+            </div>
+          </section>
+          <article className="prose max-w-none prose-lg prose-slate">
+            {Array.isArray(post.body) && <PortableText value={post.body} components={portableTextComponents} />}
+          </article>
+        </main>
+        <Footer author={post.author} />
+      </div>
     </>
   );
 };
