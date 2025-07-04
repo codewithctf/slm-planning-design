@@ -210,9 +210,9 @@ const Contact = () => {
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Address</p>
                         <p className="font-inter text-gray-600">
-                          123 Urban Plaza<br />
-                          Green City, GC 12345<br />
-                          United States
+                          Indianapolis<br />
+                          Indiana<br />
+                          USA
                         </p>
                       </div>
                     </div>
@@ -222,7 +222,7 @@ const Contact = () => {
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Phone</p>
-                        <p className="font-inter text-gray-600">+1 (555) 123-4567</p>
+                        <p className="font-inter text-gray-600">(703) 947-7885</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
@@ -231,7 +231,7 @@ const Contact = () => {
                       </span>
                       <div>
                         <p className="font-inter font-semibold text-gray-800">Email</p>
-                        <p className="font-inter text-gray-600">info@slmplanning.com</p>
+                        <p className="font-inter text-gray-600">sandy@slmplanning.com</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
@@ -291,9 +291,11 @@ const Contact = () => {
                         <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                       </Button>
                     </a>
-                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
-                    </Button>
+                    <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                        <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
+                      </Button>
+                    </a>
                     <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
                         <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram

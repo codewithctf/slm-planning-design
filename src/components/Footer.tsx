@@ -66,7 +66,7 @@ const Footer = ({ author }: FooterProps) => {
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                   <img src="/Assets/address.png" alt="Address" className="w-5 h-5" />
                 </span>
-                123 Urban Plaza, Green City, GC 12345
+                Indianapolis, Indiana, USA
               </p>
             </div>
           </div>
