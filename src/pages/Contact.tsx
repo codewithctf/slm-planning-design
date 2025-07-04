@@ -286,15 +286,19 @@ const Contact = () => {
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
                       <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Facebook
                     </Button>
-                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
-                    </Button>
+                    <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                        <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
+                      </Button>
+                    </a>
                     <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
                       <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                     </Button>
-                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
-                      <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
-                    </Button>
+                    <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                        <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
+                      </Button>
+                    </a>
                   </div>
                   <p className="font-inter text-gray-600 text-sm mt-4">
                     Follow us for updates on our latest projects and industry insights.

@@ -54,13 +54,13 @@ const Footer = ({ author }: FooterProps) => {
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                   <img src="/Assets/email.png" alt="Email" className="w-5 h-5" />
                 </span>
-                info@slmplanning.com
+                sandy@slmplanning.com
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                   <img src="/Assets/phone icone.png" alt="Phone" className="w-5 h-5" />
                 </span>
-                +1 (555) 123-4567
+                (703) 947-7885
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
