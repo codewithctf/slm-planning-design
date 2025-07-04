@@ -12,7 +12,7 @@ import { supabase } from "@/lib/supabaseClient";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    full_name: "",
     email: "",
     subject: "",
     message: ""
@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { error } = await supabase.from('messages').insert([
+      const { error } = await supabase.from('contacts').insert([
         formData
       ]);
       if (!error) {
@@ -32,7 +32,7 @@ const Contact = () => {
           description: "Thank you for contacting us. We'll get back to you within 24 hours.",
         });
         setFormData({
-          name: "",
+          full_name: "",
           email: "",
           subject: "",
           message: ""
@@ -132,8 +132,8 @@ const Contact = () => {
                         </Label>
                         <Input
                           id="name"
-                          value={formData.name}
-                          onChange={(e) => handleChange("name", e.target.value)}
+                          value={formData.full_name}
+                          onChange={(e) => handleChange("full_name", e.target.value)}
                           required
                           className="border-slm-green-300 focus:border-slm-green-500"
                         />

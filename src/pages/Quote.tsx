@@ -13,14 +13,14 @@ import { supabase } from "@/lib/supabaseClient";
 
 const Quote = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    full_name: "",
     email: "",
-    phone: "",
-    company: "",
-    projectType: "",
-    projectScope: "",
+    phone_number: "",
+    organization: "",
+    project_type: "",
+    project_description: "",
     timeline: "",
-    budgetRange: ""
+    budget_range: ""
   });
 
   const { toast } = useToast();
@@ -37,14 +37,14 @@ const Quote = () => {
         description: "We'll review your request and get back to you within 24-48 hours.",
       });
       setFormData({
-        name: "",
+        full_name: "",
         email: "",
-        phone: "",
-        company: "",
-        projectType: "",
-        projectScope: "",
+        phone_number: "",
+        organization: "",
+        project_type: "",
+        project_description: "",
         timeline: "",
-        budgetRange: ""
+        budget_range: ""
       });
     } catch (error) {
       toast({
@@ -134,8 +134,8 @@ const Quote = () => {
                         </Label>
                         <Input
                           id="name"
-                          value={formData.name}
-                          onChange={(e) => handleChange("name", e.target.value)}
+                          value={formData.full_name}
+                          onChange={(e) => handleChange("full_name", e.target.value)}
                           required
                           className="border-slm-green-300 focus:border-slm-green-500"
                         />
@@ -162,8 +162,8 @@ const Quote = () => {
                         </Label>
                         <Input
                           id="phone"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
+                          value={formData.phone_number}
+                          onChange={(e) => handleChange("phone_number", e.target.value)}
                           className="border-slm-green-300 focus:border-slm-green-500"
                         />
                       </div>
@@ -173,8 +173,8 @@ const Quote = () => {
                         </Label>
                         <Input
                           id="company"
-                          value={formData.company}
-                          onChange={(e) => handleChange("company", e.target.value)}
+                          value={formData.organization}
+                          onChange={(e) => handleChange("organization", e.target.value)}
                           className="border-slm-green-300 focus:border-slm-green-500"
                         />
                       </div>
@@ -184,7 +184,7 @@ const Quote = () => {
                       <Label htmlFor="projectType" className="font-inter font-medium text-slm-green-700">
                         Project Type *
                       </Label>
-                      <Select value={formData.projectType} onValueChange={(value) => handleChange("projectType", value)}>
+                      <Select value={formData.project_type} onValueChange={(value) => handleChange("project_type", value)}>
                         <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
                           <SelectValue placeholder="Select project type" />
                         </SelectTrigger>
@@ -205,8 +205,8 @@ const Quote = () => {
                       </Label>
                       <Textarea
                         id="projectScope"
-                        value={formData.projectScope}
-                        onChange={(e) => handleChange("projectScope", e.target.value)}
+                        value={formData.project_description}
+                        onChange={(e) => handleChange("project_description", e.target.value)}
                         rows={4}
                         placeholder="Please describe your project in detail, including size, location, objectives, and any specific requirements..."
                         required
@@ -234,10 +234,10 @@ const Quote = () => {
                         </Select>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="budgetRange" className="font-inter font-medium text-slm-green-700">
+                        <Label htmlFor="budget_range" className="font-inter font-medium text-slm-green-700">
                           Budget Range (Optional)
                         </Label>
-                        <Select value={formData.budgetRange} onValueChange={(value) => handleChange("budgetRange", value)}>
+                        <Select value={formData.budget_range} onValueChange={(value) => handleChange("budget_range", value)}>
                           <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
                             <SelectValue placeholder="Select budget range" />
                           </SelectTrigger>
