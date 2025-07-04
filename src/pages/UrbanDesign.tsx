@@ -242,8 +242,7 @@ const UrbanDesign = () => (
 					<Button
 						asChild
 						size="lg"
-						variant="outline"
-						className="border-white text-white font-semibold px-8 py-3 w-full sm:w-auto"
+						className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3 w-full sm:w-auto"
 					>
 						<a href="/portfolio">View Our Urban Design Projects</a>
 					</Button>
