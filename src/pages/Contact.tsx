@@ -283,9 +283,11 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 sm:gap-3 md:flex-row md:flex-nowrap md:gap-4 w-full">
-                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
-                      <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Facebook
-                    </Button>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center justify-center gap-2 w-full sm:w-auto">
+                        <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5 min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] object-contain shrink-0" loading="lazy" width="20" height="20" /> Facebook
+                      </Button>
+                    </a>
                     <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                       <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
                         <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
