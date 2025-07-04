@@ -282,23 +282,28 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 md:flex-row md:flex-nowrap md:gap-4 w-full">
+                    <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
                       <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Facebook
                     </Button>
-                    <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                    <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
                         <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                       </Button>
                     </a>
-                    <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                    <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
                         <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                       </Button>
                     </a>
-                    <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2">
+                    <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
                         <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
+                      </Button>
+                    </a>
+                    <a href="https://www.tiktok.com/@slm.planning?_t=ZP-8xktNGfhS50&_r=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
+                        <img src="/Assets/tiktok icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
                       </Button>
                     </a>
                   </div>
