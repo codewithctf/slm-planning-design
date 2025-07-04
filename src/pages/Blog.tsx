@@ -59,7 +59,7 @@ const Blog = () => {
       return;
     }
     try {
-      const { error } = await supabase.from('subscribers').insert([{ email: newsletterEmail }]);
+      const { error } = await supabase.from('newsletter_subscribers').insert([{ email: newsletterEmail }]);
       if (!error) {
         setNewsletterStatus("Thank you for subscribing!");
         setNewsletterEmail("");

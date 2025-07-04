@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { error } = await supabase.from('contacts').insert([
+      const { error } = await supabase.from('messages').insert([
         formData
       ]);
       if (!error) {
