@@ -155,10 +155,10 @@ const Index = () => {
                   />
                 </div>
                 <div className="flex-1 flex flex-col justify-end px-6 pb-6 pt-2 w-full">
-                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46] animate-fade-in-up delay-200">
+                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46]">
                     {item.title}
                   </h3>
-                  <p className="font-inter text-base text-center text-black animate-fade-in-up delay-300">
+                  <p className="font-inter text-base text-center text-[#444444]">
                     {item.description}
                   </p>
                 </div>
