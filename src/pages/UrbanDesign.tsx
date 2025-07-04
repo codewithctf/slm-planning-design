@@ -118,7 +118,7 @@ const UrbanDesign = () => (
 		</section>
 		{/* Section 1: Design Philosophy */}
 		<section className="py-20 bg-white">
-			<div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-16">
+			<div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-16 px-4 sm:px-6">
 				<div className="flex-1 order-1 md:order-1">
 					<h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-4">
 						Designing Livable Environments for All:
@@ -195,7 +195,7 @@ const UrbanDesign = () => (
 		</section>
 		{/* Section 3: Benefits + Image */}
 		<section className="py-20 bg-white">
-			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0">
+			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0 px-4 sm:px-6">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
 						src="/Assets/urban design (3).webp"
