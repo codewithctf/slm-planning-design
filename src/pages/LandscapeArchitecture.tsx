@@ -218,8 +218,7 @@ const LandscapeArchitecture = () => (
 					<Button
 						asChild
 						size="lg"
-						variant="outline"
-						className="border-white text-white font-semibold px-8 py-3 w-full sm:w-auto"
+						className="bg-white text-[#2B7151] hover:bg-green-50 font-semibold px-8 py-3 w-full sm:w-auto"
 					>
 						<a href="/portfolio">Explore Landscape Projects</a>
 					</Button>

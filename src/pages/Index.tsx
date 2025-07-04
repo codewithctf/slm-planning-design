@@ -247,10 +247,9 @@ const Index = () => {
               <Link to="/quote">Get Started</Link>
             </Button>
             <Button 
-              asChild 
-              variant="outline" 
+              asChild  
               size="lg" 
-              className="border-2 border-white text-white hover:bg-white hover:text-slm-green-600 font-semibold px-8 py-3"
+              className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
