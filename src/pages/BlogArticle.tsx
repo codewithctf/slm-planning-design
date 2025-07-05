@@ -83,12 +83,12 @@ const BlogArticle = () => {
         <meta property="og:title" content="Blog Article | SLM Planning & Design" />
         <meta property="og:description" content="Read this article from SLM Planning & Design for insights on urban planning, landscape architecture, and 3D visualization." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/blog/article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog Article | SLM Planning & Design" />
         <meta name="twitter:description" content="Read this article from SLM Planning & Design for insights on urban planning, landscape architecture, and 3D visualization." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <main className="container mx-auto min-h-screen max-w-3xl p-4 sm:p-8 flex flex-col gap-4">

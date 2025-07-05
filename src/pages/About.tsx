@@ -12,28 +12,28 @@ const About = () => {
     {
       name: "Michael Kimani",
       title: "Principal Urban Planner",
-      image: "/Assets/Team member 1.webp",
+      image: "/assets/Team member 1.webp",
       description: "15+ years of experience in sustainable urban development",
       gender: "man"
     },
     {
       name: "Samuel Otieno",
       title: "Lead Landscape Architect",
-      image: "/Assets/Team Member 2.webp",
+      image: "/assets/Team Member 2.webp",
       description: "Expert in ecological design and green infrastructure",
       gender: "woman"
     },
     {
       name: "Grace Mwende",
       title: "Senior Urban Designer",
-      image: "/Assets/Team Member 3.webp",
+      image: "/assets/Team Member 3.webp",
       description: "Specializes in community-centered design solutions",
       gender: "man"
     },
     {
       name: "Aisha Njeri",
       title: "3D Visualization Director",
-      image: "/Assets/Team Member 4.webp",
+      image: "/assets/Team Member 4.webp",
       description: "Award-winning expertise in architectural visualization",
       gender: "woman"
     }
@@ -43,43 +43,43 @@ const About = () => {
     {
       title: "Sustainability First",
       description: "Every project prioritizes environmental stewardship and long-term ecological health.",
-      icon: "/Assets/Sustainability icon.png"
+      icon: "/assets/Sustainability icon.png"
     },
     {
       title: "Purpose Driven",
       description: "Guided by a clear mission to create lasting, positive impact.",
-      icon: "/Assets/purpose_driven-icon.png"
+      icon: "/assets/purpose_driven-icon.png"
     },
     {
       title: "Collaborative Approach",
       description: "Working closely with clients, communities, and stakeholders throughout every project.",
-      icon: "/Assets/collaborative approach.png"
+      icon: "/assets/collaborative approach.png"
     },
     {
       title: "Innovation-Driven",
       description: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges.",
-      icon: "/Assets/innovation icon.png"
+      icon: "/assets/innovation icon.png"
     },
     {
       title: "Data Driven Solutions",
       description: "We harness data and analytics to inform smart, impactful decisions for our clients.",
-      icon: "/Assets/data_driven-icon.png"
+      icon: "/assets/data_driven-icon.png"
     },
     {
       title: "Operational Excellence",
       description: "Delivering projects efficiently, effectively, and to the highest standards.",
-      icon: "/Assets/operational_excellence-icon.png",
+      icon: "/assets/operational_excellence-icon.png",
       iconClass: "filter-green"
     },
     {
       title: "Intergrated Approach",
       description: "Seamlessly blending disciplines for holistic, future-ready solutions.",
-      icon: "/Assets/Intergrated-approach icon.png"
+      icon: "/assets/Intergrated-approach icon.png"
     },
     {
       title: "Community-Centered",
       description: "We design with people at the heart, creating spaces that serve diverse communities.",
-      icon: "/Assets/community centered.png"
+      icon: "/assets/community centered.png"
     }
   ];
 
@@ -91,12 +91,12 @@ const About = () => {
         <meta property="og:title" content="About Us | SLM Planning & Design" />
         <meta property="og:description" content="Meet the team and discover the values behind SLM Planning & Design, a leader in sustainable urban planning, landscape architecture, and 3D visualization." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/about" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Us | SLM Planning & Design" />
         <meta name="twitter:description" content="Meet the team and discover the values behind SLM Planning & Design, a leader in sustainable urban planning, landscape architecture, and 3D visualization." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -196,7 +196,7 @@ const About = () => {
               {/* Image with overlay and quote */}
               <div className="relative w-full md:w-1/2 h-80 rounded-2xl overflow-hidden group mb-8 md:mb-0">
                 <img
-                  src="/Assets/Our story image.webp"
+                  src="/assets/Our story image.webp"
                   alt="Our Story"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-95"
                 />
@@ -268,10 +268,10 @@ const About = () => {
                     />
                     {/* Social icons at image bottom, hidden by default, shown on hover */}
                     <div className="absolute left-0 bottom-3 w-full flex flex-row gap-3 justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/facebook-icon.png" alt="Facebook" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/X-icon.png" alt="X" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/facebook-icon.png" alt="Facebook" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/X-icon.png" alt="X" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/LinkedIn-icon.png" alt="LinkedIn" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
+                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/instagram-icon.jpg" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
                     </div>
                     {/* White gradient overlay on image hover */}
                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
@@ -408,7 +408,7 @@ const CoreValuesCards = ({ values }) => {
       {values.map((value, index) => {
         // Use .svg if available, else fallback to original icon
         const svgPath = value.icon.replace(/\.(png|jpg|jpeg)$/i, ".svg");
-        // Check if SVG exists in public/Assets (all your icons are there)
+        // Check if SVG exists in public/assets (all your icons are there)
         const iconSrc = svgPath.includes('svg') ? svgPath : value.icon;
         return (
           <Card

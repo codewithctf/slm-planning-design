@@ -30,7 +30,7 @@ const NotFound = () => {
           content="Sorry, the page you are looking for does not exist at SLM Planning & Design."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/404" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -41,7 +41,7 @@ const NotFound = () => {
           name="twitter:description"
           content="Sorry, the page you are looking for does not exist at SLM Planning & Design."
         />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <div className="min-h-screen flex items-center justify-center bg-gray-100">

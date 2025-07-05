@@ -5,19 +5,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Helmet } from 'react-helmet-async';
 
 const processImages = [
-  "/Assets/Feasiblity-studies.webp", // 01 Initial Consultation
-  "/Assets/community engagement-service.webp", // 02 Research & Analysis (valid)
-  "/Assets/Design Research & Prototyping.webp", // 03 Conceptual Design (valid)
-  "/Assets/urban planning (2).webp", // 04 Detailed Planning (valid)
-  "/Assets/3D render 2.webp", // 05 Implementation Oversight (valid)
-  "/Assets/Post-completion.webp" // 06 Post-Completion Review (valid)
+  "/assets/Feasiblity-studies.webp", // 01 Initial Consultation
+  "/assets/community engagement-service.webp", // 02 Research & Analysis (valid)
+  "/assets/Design Research & Prototyping.webp", // 03 Conceptual Design (valid)
+  "/assets/urban planning (2).webp", // 04 Detailed Planning (valid)
+  "/assets/3D render 2.webp", // 05 Implementation Oversight (valid)
+  "/assets/Post-completion.webp" // 06 Post-Completion Review (valid)
 ];
 
 const principleIcons = [
-  "/Assets/transparency icon.png",
-  "/Assets/collaborative approach.png",
-  "/Assets/innovation icon.png",
-  "/Assets/Sustainability icon.png"
+  "/assets/transparency icon.png",
+  "/assets/collaborative approach.png",
+  "/assets/innovation icon.png",
+  "/assets/Sustainability icon.png"
 ];
 
 const Process = () => {
@@ -127,12 +127,12 @@ const Process = () => {
         <meta property="og:title" content="Process | SLM Planning & Design" />
         <meta property="og:description" content="Learn about SLM Planning & Design's collaborative process for delivering successful urban design and planning projects." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/process" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Process | SLM Planning & Design" />
         <meta name="twitter:description" content="Learn about SLM Planning & Design's collaborative process for delivering successful urban design and planning projects." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />

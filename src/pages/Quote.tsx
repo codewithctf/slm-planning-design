@@ -68,12 +68,12 @@ const Quote = () => {
         <meta property="og:title" content="Quote Request | SLM Planning & Design" />
         <meta property="og:description" content="Request a custom quote for your urban planning, landscape architecture, or 3D rendering project with SLM Planning & Design." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/quote" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Quote Request | SLM Planning & Design" />
         <meta name="twitter:description" content="Request a custom quote for your urban planning, landscape architecture, or 3D rendering project with SLM Planning & Design." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -327,19 +327,19 @@ const Quote = () => {
                     <div className="space-y-2">
                       <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/email.png" alt="Email" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/email.png" alt="Email" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         sandy@slmplanning.com
                       </p>
                       <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/phone icone.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/phone icone.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         (703) 947-7885
                       </p>
                       <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/time.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/time.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         Monday - Friday, 9AM - 6PM EST
                       </p>

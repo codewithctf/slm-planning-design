@@ -62,12 +62,12 @@ const Portfolio = () => {
         <meta property="og:title" content="Portfolio | SLM Planning & Design" />
         <meta property="og:description" content="View our portfolio of urban design, landscape architecture, and 3D rendering projects from SLM Planning & Design." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/portfolio" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Portfolio | SLM Planning & Design" />
         <meta name="twitter:description" content="View our portfolio of urban design, landscape architecture, and 3D rendering projects from SLM Planning & Design." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />

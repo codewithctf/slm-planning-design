@@ -12,22 +12,22 @@ const Index = () => {
     {
       title: "Integrated Urban Solutions",
       description: "Holistic planning that unites infrastructure, mobility, and community for thriving cities.",
-      image: "/Assets/intergrated urban solutions.webp",
+      image: "/assets/intergrated urban solutions.webp",
     },
     {
       title: "Contextual Landscape Design",
       description: "Designs rooted in local ecology and culture, creating sustainable, beautiful outdoor spaces.",
-      image: "/Assets/contextual landscape design.webp",
+      image: "/assets/contextual landscape design.webp",
     },
     {
       title: "3D Storytelling",
       description: "Immersive visualizations that bring your vision to life and communicate ideas powerfully.",
-      image: "/Assets/3D storytelling.webp",
+      image: "/ssets/3D storytelling.webp",
     },
     {
       title: "Collaborative Design Thinking",
       description: "Engaging stakeholders at every step to co-create innovative, people-centered solutions.",
-      image: "/Assets/collaborative design thinking.webp",
+      image: "/assets/collaborative design thinking.webp",
     },
   ];
 
@@ -212,7 +212,7 @@ const Index = () => {
             </ul>
           </div>
           <div className="flex-1 flex justify-center">
-            <img src="/Assets/A Team Collaborating on an Urban Masterplan.webp" alt="A Team Collaborating on an Urban Masterplan" className="rounded-xl shadow-lg w-full max-w-md object-cover" />
+            <img src="/assets/A Team Collaborating on an Urban Masterplan.webp" alt="A Team Collaborating on an Urban Masterplan" className="rounded-xl shadow-lg w-full max-w-md object-cover" />
           </div>
         </div>
       </section>

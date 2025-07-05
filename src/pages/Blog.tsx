@@ -80,12 +80,12 @@ const Blog = () => {
         <meta property="og:title" content="Blog | SLM Planning & Design" />
         <meta property="og:description" content="Read the latest articles and insights from SLM Planning & Design on urban planning, landscape architecture, and 3D visualization." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog | SLM Planning & Design" />
         <meta name="twitter:description" content="Read the latest articles and insights from SLM Planning & Design on urban planning, landscape architecture, and 3D visualization." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -119,7 +119,7 @@ const Blog = () => {
                     src={
                       featuredArticle.image
                         ? featuredArticle.image.asset?.url
-                        : "/Assets/urban planning.webp"
+                        : "/assets/urban planning.webp"
                     }
                     alt={featuredArticle.title}
                     className="w-full h-full object-cover md:rounded-l-2xl"
@@ -204,7 +204,7 @@ const Blog = () => {
                   >
                     <div className="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
                       <img
-                        src={article.image ? article.image.asset?.url : "/Assets/urban planning.webp"}
+                        src={article.image ? article.image.asset?.url : "/assets/urban planning.webp"}
                         alt={article.title}
                         className="w-full h-full object-cover"
                       />

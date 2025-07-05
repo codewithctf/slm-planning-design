@@ -140,7 +140,7 @@ const Services = () => {
         "Policy Development",
         "Community Engagement"
       ],
-      image: "/Assets/urban planning.webp",
+      image: "/assets/urban planning.webp",
       link: "/services/urban-planning"
     },
     {
@@ -153,7 +153,7 @@ const Services = () => {
         "Accessibility Planning",
         "Wayfinding Systems"
       ],
-      image: "/Assets/Urban design.webp",
+      image: "/assets/Urban design.webp",
       link: "/services/urban-design"
     },
     {
@@ -166,7 +166,7 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/Assets/Landscape Architecture.webp",
+      image: "/assets/Landscape Architecture.webp",
       link: "/services/landscape-architecture"
     },
     {
@@ -179,7 +179,7 @@ const Services = () => {
         "Design Presentations",
         "Marketing Materials"
       ],
-      image: "/Assets/3D render.webp",
+      image: "/assets/3D render.webp",
       link: "/services/3d-rendering"
     }
   ];
@@ -196,22 +196,22 @@ const Services = () => {
   const additionalServiceCards = [
     {
       title: "Community Engagement",
-      image: "/Assets/community engagement-service.webp",
+      image: "/assets/community engagement-service.webp",
       description: "Facilitated workshops, public meetings, and stakeholder consultation processes."
     },
     {
       title: "Feasibility Studies",
-      image: "/Assets/Feasiblity-studies.webp",
+      image: "/assets/Feasiblity-studies.webp",
       description: "Comprehensive analysis of project viability including financial and environmental factors."
     },
     {
       title: "Project Management",
-      image: "/Assets/project management.webp",
+      image: "/assets/project management.webp",
       description: "End-to-end project coordination from initial concept through implementation."
     },
     {
       title: "Regulatory Compliance",
-      image: "/Assets/Regulatory-compliance.webp",
+      image: "/assets/Regulatory-compliance.webp",
       description: "Ensuring all designs meet local building codes and environmental regulations."
     }
   ];
@@ -226,12 +226,12 @@ const Services = () => {
         <meta property="og:title" content="Services | SLM Planning & Design" />
         <meta property="og:description" content="Explore our range of services including urban planning, landscape architecture, 3D rendering, and more at SLM Planning & Design." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/services" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services | SLM Planning & Design" />
         <meta name="twitter:description" content="Explore our range of services including urban planning, landscape architecture, 3D rendering, and more at SLM Planning & Design." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />

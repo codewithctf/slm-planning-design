@@ -13,17 +13,17 @@ import { Helmet } from 'react-helmet-async';
 const renderingServices = [
 	{
 		title: "Photorealistic 3D Renders",
-		image: "/Assets/3D render 3.webp",
+		image: "/assets/3D render 3.webp",
 		desc: "Stunning, detail-rich visualizations of buildings, landscapes, and spaces that showcase lighting, texture, and realism.",
 	},
 	{
 		title: "Aerial Views & Masterplan Renderings",
-		image: "/Assets/Aerial Views & Masterplan Renderings.webp",
+		image: "/assets/Aerial Views & Masterplan Renderings.webp",
 		desc: "Large-scale overviews that highlight context, scale, and layout for urban plans, campuses, or mixed-use developments.",
 	},
 	{
 		title: "Concept Sketch Renders",
-		image: "/Assets/Concept Sketch Renders.webp",
+		image: "/assets/Concept Sketch Renders.webp",
 		desc: "Artistic, styled renderings that bring early design ideas to life while maintaining flexibility and creative intent.",
 	},
 	{
@@ -33,12 +33,12 @@ const renderingServices = [
 	},
 	{
 		title: "Interactive Design Presentations",
-		image: "/Assets/Interactive Design Presentations.webp",
+		image: "/assets/Interactive Design Presentations.webp",
 		desc: "Custom-rendered assets for slide decks, investor pitches, public exhibitions, and community engagements.",
 	},
 	{
 		title: "Augmented & Virtual Reality Ready Assets",
-		image: "/Assets/Augmented & Virtual Reality Ready Assets.webp",
+		image: "/assets/Augmented & Virtual Reality Ready Assets.webp",
 		desc: "Future-proof renderings compatible with AR/VR platforms for immersive presentations and digital co-design sessions.",
 	},
 ];
@@ -51,12 +51,12 @@ const ThreeDRendering = () => (
         <meta property="og:title" content="3D Rendering | SLM Planning & Design" />
         <meta property="og:description" content="Experience photorealistic 3D rendering and visualization services from SLM Planning & Design for your next project." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/services/3d-rendering" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="3D Rendering | SLM Planning & Design" />
         <meta name="twitter:description" content="Experience photorealistic 3D rendering and visualization services from SLM Planning & Design for your next project." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
@@ -138,7 +138,7 @@ const ThreeDRendering = () => (
 				</div>
 				<div className="flex-1 order-2 md:order-2 flex justify-center items-center relative">
 					<img
-						src="/Assets/3D render.webp"
+						src="/assets/3D render.webp"
 						alt="3D Rendering"
 						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl border-4 border-[#FCEFEF] object-cover object-center"
 					/>
@@ -202,7 +202,7 @@ const ThreeDRendering = () => (
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0 px-2 sm:px-4">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
-						src="/Assets/Aerial Views & Masterplan Renderings.webp"
+						src="/assets/Aerial Views & Masterplan Renderings.webp"
 						alt="Why Visualization Matters"
 						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-lg animate-fade-in-up object-cover object-center"
 					/>

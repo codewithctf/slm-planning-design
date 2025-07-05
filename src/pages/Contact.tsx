@@ -66,12 +66,12 @@ const Contact = () => {
         <meta property="og:title" content="Contact | SLM Planning & Design" />
         <meta property="og:description" content="Contact SLM Planning & Design for inquiries about urban planning, landscape architecture, or 3D rendering services." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/Assets/slm-logo.png" />
+        <meta property="og:image" content="/assets/slm-logo.png" />
         <meta property="og:url" content="https://slmplanning.com/contact" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact | SLM Planning & Design" />
         <meta name="twitter:description" content="Contact SLM Planning & Design for inquiries about urban planning, landscape architecture, or 3D rendering services." />
-        <meta name="twitter:image" content="/Assets/slm-logo.png" />
+        <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -220,7 +220,7 @@ const Contact = () => {
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/address.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/address.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Address</p>
@@ -233,7 +233,7 @@ const Contact = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Phone</p>
@@ -242,7 +242,7 @@ const Contact = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/email.png" alt="Email" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/email.png" alt="Email" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Email</p>
@@ -251,7 +251,7 @@ const Contact = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/Assets/time.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/time.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Office Hours</p>
@@ -300,27 +300,27 @@ const Contact = () => {
                     <div className="flex flex-wrap gap-2 sm:gap-3 md:flex-row md:flex-nowrap md:gap-4 w-full">
                       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center justify-center gap-2 w-full sm:w-auto">
-                          <img src="/Assets/facebook-icon.png" alt="Facebook" className="w-5 h-5 min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] object-contain shrink-0" loading="lazy" width="20" height="20" /> Facebook
+                          <img src="/assets/facebook-icon.png" alt="Facebook" className="w-5 h-5 min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] object-contain shrink-0" loading="lazy" width="20" height="20" /> Facebook
                         </Button>
                       </a>
                       <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/Assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
+                          <img src="/assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                         </Button>
                       </a>
                       <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/Assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
+                          <img src="/assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                         </Button>
                       </a>
                       <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/Assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
+                          <img src="/assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
                         </Button>
                       </a>
                       <a href="https://www.tiktok.com/@slm.planning?_t=ZP-8xktNGfhS50&_r=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-slm-green-300 text-slm-green-600 hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/Assets/tiktok icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
+                          <img src="/assets/tiktok icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
                         </Button>
                       </a>
                     </div>

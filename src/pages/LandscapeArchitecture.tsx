@@ -9,32 +9,32 @@ import { Helmet } from 'react-helmet-async';
 const landscapeServices = [
 	{
 		title: "Park & Open Space Design",
-		image: "/Assets/Park & Open Space Design.webp",
+		image: "/assets/Park & Open Space Design.webp",
 		desc: "Designing inclusive public parks, urban plazas, and recreational green spaces that enhance livability and wellbeing.",
 	},
 	{
 		title: "Ecological Restoration",
-		image: "/Assets/Ecological Restoration.webp",
+		image: "/assets/Ecological Restoration.webp",
 		desc: "Rehabilitating degraded landscapes by reintroducing native ecosystems and improving natural hydrology and habitat function.",
 	},
 	{
 		title: "Green Infrastructure Design",
-		image: "/Assets/Green Infrastructure Design.webp",
+		image: "/assets/Green Infrastructure Design.webp",
 		desc: "Implementing nature-based solutions like bioswales, green roofs, and permeable surfaces to manage stormwater and reduce urban heat.",
 	},
 	{
 		title: "Native Plant Design",
-		image: "/Assets/Native Plant Design.webp",
+		image: "/assets/Native Plant Design.webp",
 		desc: "Using indigenous plant palettes to support local ecology, reduce maintenance costs, and enhance visual identity.",
 	},
 	{
 		title: "Corporate & Commercial Landscaping",
-		image: "/Assets/Corporate & Commercial Landscaping.webp",
+		image: "/assets/Corporate & Commercial Landscaping.webp",
 		desc: "Designing branded, functional outdoor spaces for offices, retail centers, institutions, and mixed-use developments.",
 	},
 	{
 		title: "Landscape Guidelines & Policy Support",
-		image: "/Assets/Policy Development.webp",
+		image: "/assets/Policy Development.webp",
 		desc: "Developing landscape standards, open space strategies, and regulatory documents to guide resilient and equitable development.",
 	},
 ];
@@ -47,12 +47,12 @@ const LandscapeArchitecture = () => (
 			<meta property="og:title" content="Landscape Architecture | SLM Planning & Design" />
 			<meta property="og:description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
 			<meta property="og:type" content="website" />
-			<meta property="og:image" content="/Assets/slm-logo.png" />
+			<meta property="og:image" content="/assets/slm-logo.png" />
 			<meta property="og:url" content="https://slmplanning.com/services/landscape-architecture" />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:title" content="Landscape Architecture | SLM Planning & Design" />
 			<meta name="twitter:description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
-			<meta name="twitter:image" content="/Assets/slm-logo.png" />
+			<meta name="twitter:image" content="/assets/slm-logo.png" />
 		</Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
@@ -135,7 +135,7 @@ const LandscapeArchitecture = () => (
 				</div>
 				<div className="flex-1 order-2 md:order-2 flex justify-center items-center relative">
 					<img
-						src="/Assets/Landscape Architecture (1).webp"
+						src="/assets/Landscape Architecture (1).webp"
 						alt="Nature-Led Design for Impactful Outdoor Environments"
 						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl border-4 border-[#FCEFEF] object-cover object-center"
 					/>
@@ -188,7 +188,7 @@ const LandscapeArchitecture = () => (
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10 mb-0 px-2 xs:px-4">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
-						src="/Assets/Green Infrastructure Design.webp"
+						src="/assets/Green Infrastructure Design.webp"
 						alt="Landscape Benefits"
 						className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up"
 					/>
