@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   base: './', // Ensures relative paths work in static hosting
   build: {
-    assetsDir: 'Assets', //  Puts JS/CSS/etc. inside /Assets instead of default /assets
+    assetsDir: 'assets', //  Puts JS/CSS/etc. inside /Assets instead of default /assets
   },
   server: {
     host: "::",

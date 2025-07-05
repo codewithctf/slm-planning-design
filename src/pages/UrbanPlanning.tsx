@@ -13,42 +13,42 @@ import { Helmet } from 'react-helmet-async';
 const urbanPlanningServices = [
 	{
 		title: "Master Planning",
-		image: "/Assets/master_planning.webp",
+		image: "/assets/master_planning.webp",
 		desc: "Comprehensive long-range planning for communities, districts, and regions that balance growth with sustainability.",
 	},
 	{
 		title: "Zoning & Land Use",
-		image: "/Assets/Zoning & Land Use.webp",
+		image: "/assets/Zoning & Land Use.webp",
 		desc: "Strategic land use planning and zoning code development that supports community vision and economic development.",
 	},
 	{
 		title: "Community Engagement",
-		image: "/Assets/community engagement.webp",
+		image: "/assets/community engagement.webp",
 		desc: "Inclusive planning processes that meaningfully involve residents, stakeholders, and community organizations.",
 	},
 	{
 		title: "Policy Development",
-		image: "/Assets/Policy Development.webp",
+		image: "/assets/Policy Development.webp",
 		desc: "Research-based policy recommendations that address local challenges and promote sustainable development.",
 	},
 	{
 		title: "Spatial Analysis & GIS Mapping",
-		image: "/Assets/Spatial Analysis & GIS Mapping.webp",
+		image: "/assets/Spatial Analysis & GIS Mapping.webp",
 		desc: "Advanced spatial data analysis and mapping to inform evidence-based planning decisions.",
 	},
 	{
 		title: "Development Control & Planning Advisory",
-		image: "/Assets/Development Control & Planning Advisory.webp",
+		image: "/assets/Development Control & Planning Advisory.webp",
 		desc: "Guidance on development proposals, compliance, and regulatory frameworks for sustainable growth.",
 	},
 	{
 		title: "Training, Research & Capacity Building",
-		image: "/Assets/training and capacity building.webp",
+		image: "/assets/training and capacity building.webp",
 		desc: "Workshops, research, and training programs to empower communities and professionals.",
 	},
 	{
 		title: "Environmental & Sustainable Planning",
-		image: "/Assets/Environmental & Sustainable Planning.webp",
+		image: "/assets/Environmental & Sustainable Planning.webp",
 		desc: "Planning solutions that prioritize environmental stewardship and long-term sustainability.",
 	},
 ];
@@ -61,12 +61,12 @@ const UrbanPlanning = () => (
 			<meta property="og:title" content="Urban Planning | SLM Planning & Design" />
 			<meta property="og:description" content="Discover SLM's urban planning expertise, delivering sustainable, people-centered solutions for cities and communities worldwide." />
 			<meta property="og:type" content="website" />
-			<meta property="og:image" content="/Assets/slm-logo.png" />
+			<meta property="og:image" content="/assets/slm-logo.png" />
 			<meta property="og:url" content="https://slmplanning.com/services/urban-planning" />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:title" content="Urban Planning | SLM Planning & Design" />
 			<meta name="twitter:description" content="Discover SLM's urban planning expertise, delivering sustainable, people-centered solutions for cities and communities worldwide." />
-			<meta name="twitter:image" content="/Assets/slm-logo.png" />
+			<meta name="twitter:image" content="/assets/slm-logo.png" />
 		</Helmet>
 		<Navigation />
 		{/* Hero Carousel Section */}
@@ -152,7 +152,7 @@ const UrbanPlanning = () => (
 					</Button>
 				</div>
 				<div className="flex-1 flex justify-center items-center relative mt-8 md:mt-0">
-					<img src="/Assets/urban planning (2).webp" alt="Urban Planning Team" className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl urban-img-animate border-4 border-[#FCEFEF]" />
+					<img src="/assets/urban planning (2).webp" alt="Urban Planning Team" className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl urban-img-animate border-4 border-[#FCEFEF]" />
 				</div>
 			</div>
 		</section>
@@ -201,7 +201,7 @@ const UrbanPlanning = () => (
 		<section className="py-10 md:py-20 bg-white">
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10 mb-0 px-2 xs:px-4">
 				<div className="flex-1 order-2 md:order-1 flex justify-center items-center relative mt-8 md:mt-0">
-					<img src="/Assets/urban planning (3).webp" alt="Urban Planning Benefits" className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-lg animate-fade-in-up" />
+					<img src="/assets/urban planning (3).webp" alt="Urban Planning Benefits" className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-lg animate-fade-in-up" />
 				</div>
 				<div className="flex-1 order-1 md:order-2">
 					<h3 className="font-playfair text-xl sm:text-3xl md:text-4xl font-bold text-slm-green-700 mb-4">Benefits of Professional Planning</h3>

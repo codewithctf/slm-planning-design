@@ -7,14 +7,14 @@ module.exports = {
     '\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
     '\.(png|jpg|jpeg|svg)$': '<rootDir>/__mocks__/fileMock.js',
-    '^@/Assets/(.*)$': '<rootDir>/__mocks__/fileMock.js',
+    '^@/assets/(.*)$': '<rootDir>/__mocks__/fileMock.js',
   },
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   transformIgnorePatterns: [
     '/node_modules/',
-    '<rootDir>/src/Assets/.*\\.(png|jpg|jpeg|svg)$',
+    '<rootDir>/src/assets/.*\\.(png|jpg|jpeg|svg)$',
     '/dist/'
   ],
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
