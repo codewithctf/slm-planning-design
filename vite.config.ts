@@ -4,8 +4,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: './', // Set base path for deployment in the root directory
-  // If deploying in a subdirectory, change to './react/' or similar 
+  base: './', // Ensures relative paths work in static hosting
+  build: {
+    assetsDir: 'Assets', //  Puts JS/CSS/etc. inside /Assets instead of default /assets
+  },
   server: {
     host: "::",
     port: 8080,
