@@ -22,7 +22,7 @@ const Index = () => {
     {
       title: "3D Storytelling",
       description: "Immersive visualizations that bring your vision to life and communicate ideas powerfully.",
-      image: "/ssets/3D storytelling.webp",
+      image: "/assets/3D storytelling.webp",
     },
     {
       title: "Collaborative Design Thinking",
