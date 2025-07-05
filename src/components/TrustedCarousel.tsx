@@ -1,11 +1,11 @@
 import React from "react";
 
 const trustedImages = [
-  "/Trusted org assets/amref.png",
-  "/Trusted org assets/ukaid.png",
-  "/Trusted org assets/Un habitat.png",
-  "/Trusted org assets/Un nation.jpg",
-  "/Trusted org assets/WFP.png",
+  "/assets/amref.png",
+  "/assets/ukaid.png",
+  "/assets/Un habitat.png",
+  "/assets/Un nation.jpg",
+  "/assets/WFP.png",
 ];
 
 // Duplicate the array for seamless infinite scroll

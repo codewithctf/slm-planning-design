@@ -47,7 +47,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/Assets/slm-logo.png"
+              src="/assets/slm-logo.png"
               alt="SLM Logo"
               className="w-12 h-12 object-contain rounded-lg shadow bg-white"
               style={{ maxWidth: "48px", maxHeight: "48px" }}

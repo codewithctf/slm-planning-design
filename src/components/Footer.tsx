@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const authorSocials = (author?: any) => {
   if (!author) return null;
   const links = [
-    author.twitter && { href: author.twitter, icon: "/Assets/X-icon.png", label: "X" },
-    author.linkedin && { href: author.linkedin, icon: "/Assets/LinkedIn-icon.png", label: "LinkedIn" },
-    author.facebook && { href: author.facebook, icon: "/Assets/facebook-icon.png", label: "Facebook" },
-    author.instagram && { href: author.instagram, icon: "/Assets/instagram-icon.jpg", label: "Instagram" },
+    author.twitter && { href: author.twitter, icon: "/assets/X-icon.png", label: "X" },
+    author.linkedin && { href: author.linkedin, icon: "/assets/LinkedIn-icon.png", label: "LinkedIn" },
+    author.facebook && { href: author.facebook, icon: "/assets/facebook-icon.png", label: "Facebook" },
+    author.instagram && { href: author.instagram, icon: "/assets/instagram-icon.jpg", label: "Instagram" },
     author.website && { href: author.website, icon: null, label: "Website" },
   ].filter(Boolean);
   if (!links.length) return null;
@@ -38,7 +38,7 @@ const Footer = ({ author }: FooterProps) => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src="/Assets/slm-logo.png"
+                src="/assets/slm-logo.png"
                 alt="SLM Logo"
                 className="w-10 h-10 object-contain rounded-lg shadow bg-white"
                 style={{ maxWidth: "40px", maxHeight: "40px" }}
@@ -52,19 +52,19 @@ const Footer = ({ author }: FooterProps) => {
             <div className="space-y-2 text-slm-green-100">
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                  <img src="/Assets/email.png" alt="Email" className="w-5 h-5" />
+                  <img src="/assets/email.png" alt="Email" className="w-5 h-5" />
                 </span>
                 sandy@slmplanning.com
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                  <img src="/Assets/phone icone.png" alt="Phone" className="w-5 h-5" />
+                  <img src="/assets/phone icone.png" alt="Phone" className="w-5 h-5" />
                 </span>
                 (703) 947-7885
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                  <img src="/Assets/address.png" alt="Address" className="w-5 h-5" />
+                  <img src="/assets/address.png" alt="Address" className="w-5 h-5" />
                 </span>
                 Indianapolis, Indiana, USA
               </p>
