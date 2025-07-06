@@ -41,7 +41,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#e4dbca]/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -49,10 +49,10 @@ const Navigation = () => {
             <img
               src="/assets/slm-logo.png"
               alt="SLM Logo"
-              className="w-12 h-12 object-contain rounded-lg shadow bg-white"
+              className="w-12 h-12 object-contain rounded-lg shadow bg-[#e4dbca]"
               style={{ maxWidth: "48px", maxHeight: "48px" }}
             />
-            <span className="font-playfair font-bold text-2xl text-slm-green-600">
+            <span className="font-playfair font-bold text-2xl text-[#0d0904]">
               SLM Planning & Design
             </span>
           </Link>
@@ -75,10 +75,10 @@ const Navigation = () => {
                       to="/services"
                       className={`font-inter font-medium relative transition-colors duration-200 px-1 flex items-center gap-1 ${
                         location.pathname === item.path
-                          ? "text-slm-green-600 after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:transition-all after:duration-300"
-                          : "text-gray-700 hover:text-slm-green-600 after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+                          ? "text-[#0d0904] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:transition-all after:duration-300"
+                          : "text-[#0d0904] hover:text-[#0d0904] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
                       } ${
-                        dropdownOpen ? "text-slm-green-600" : ""
+                        dropdownOpen ? "text-[#0d0904]" : ""
                       }`}
                       onClick={() => setDropdownOpen(false)}
                       aria-haspopup="listbox"
@@ -90,7 +90,7 @@ const Navigation = () => {
                       type="button"
                       aria-label="Open Services dropdown"
                       className={`ml-1 p-1 rounded transition-colors duration-200 ${
-                        dropdownOpen ? "bg-slm-green-50" : ""
+                        dropdownOpen ? "bg-[#e4dbca]" : ""
                       }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -117,11 +117,11 @@ const Navigation = () => {
                   </div>
                   {dropdownOpen && (
                     <ul
-                      className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg z-40 border border-gray-200 animate-fade-in"
+                      className="absolute left-0 mt-2 w-56 bg-[#e4dbca] rounded-lg shadow-lg z-40 border border-gray-200 animate-fade-in"
                       role="listbox"
                     >
                       <li
-                        className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                        className="px-4 py-2 cursor-pointer hover:bg-white"
                         role="option"
                         onClick={() => {
                           setDropdownOpen(false);
@@ -130,7 +130,7 @@ const Navigation = () => {
                         <Link to="/services/urban-planning">Urban Planning</Link>
                       </li>
                       <li
-                        className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                        className="px-4 py-2 cursor-pointer hover:bg-white"
                         role="option"
                         onClick={() => {
                           setDropdownOpen(false);
@@ -139,7 +139,7 @@ const Navigation = () => {
                         <Link to="/services/urban-design">Urban Design</Link>
                       </li>
                       <li
-                        className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                        className="px-4 py-2 cursor-pointer hover:bg-white"
                         role="option"
                         onClick={() => {
                           setDropdownOpen(false);
@@ -150,7 +150,7 @@ const Navigation = () => {
                         </Link>
                       </li>
                       <li
-                        className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                        className="px-4 py-2 cursor-pointer hover:bg-white"
                         role="option"
                         onClick={() => {
                           setDropdownOpen(false);
@@ -168,8 +168,8 @@ const Navigation = () => {
                   className={`font-inter font-medium relative transition-colors duration-200 px-1
                     ${
                       location.pathname === item.path
-                        ? "text-slm-green-600 after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:transition-all after:duration-300"
-                        : "text-gray-700 hover:text-slm-green-600 after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+                        ? "text-[#0d0904] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:transition-all after:duration-300"
+                        : "text-[#0d0904] hover:text-[#0d0904] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-1 after:bg-[#712B29] after:rounded-full after:content-[''] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
                     }`}
                   style={{ display: "inline-block" }}
                 >
@@ -179,7 +179,7 @@ const Navigation = () => {
             )}
             <Button
               asChild
-              className="bg-slm-green-600 hover:bg-slm-green-700 text-white"
+              className="bg-[#36251e] hover:bg-[#36251e] text-white"
             >
               <Link to="/quote">Get Quote</Link>
             </Button>
@@ -191,7 +191,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700"
+              className="text-[#0d0904]"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -211,7 +211,7 @@ const Navigation = () => {
                     ref={mobileDropdownRef}
                   >
                     <button
-                      className="font-inter font-medium flex items-center gap-1 transition-colors duration-200 text-gray-700 hover:text-slm-green-600 w-full text-left px-0"
+                      className="font-inter font-medium flex items-center gap-1 transition-colors duration-200 text-[#0d0904] hover:text-[#0d0904] w-full text-left px-0"
                       onClick={() => setServicesDropdownOpen((v) => !v)}
                       aria-haspopup="listbox"
                       aria-expanded={servicesDropdownOpen}
@@ -237,11 +237,11 @@ const Navigation = () => {
                     {/* Only show dropdown if servicesDropdownOpen is true */}
                     {servicesDropdownOpen && (
                       <ul
-                        className="mt-2 w-full bg-white rounded-lg shadow-lg z-40 border border-gray-200"
+                        className="mt-2 w-full bg-[#e4dbca] rounded-lg shadow-lg z-40 border border-gray-200"
                         role="listbox"
                       >
                         <li
-                          className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                          className="px-4 py-2 cursor-pointer hover:bg-white"
                           role="option"
                           onClick={() => {
                             setIsOpen(false);
@@ -251,7 +251,7 @@ const Navigation = () => {
                           <Link to="/services/urban-planning">Urban Planning</Link>
                         </li>
                         <li
-                          className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                          className="px-4 py-2 cursor-pointer hover:bg-white"
                           role="option"
                           onClick={() => {
                             setIsOpen(false);
@@ -261,7 +261,7 @@ const Navigation = () => {
                           <Link to="/services/urban-design">Urban Design</Link>
                         </li>
                         <li
-                          className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                          className="px-4 py-2 cursor-pointer hover:bg-white"
                           role="option"
                           onClick={() => {
                             setIsOpen(false);
@@ -273,7 +273,7 @@ const Navigation = () => {
                           </Link>
                         </li>
                         <li
-                          className="px-4 py-2 cursor-pointer hover:bg-slm-green-50"
+                          className="px-4 py-2 cursor-pointer hover:bg-white"
                           role="option"
                           onClick={() => {
                             setIsOpen(false);
@@ -295,8 +295,8 @@ const Navigation = () => {
                     }}
                     className={`font-inter font-medium transition-colors duration-200 ${
                       location.pathname === item.path
-                        ? "text-slm-green-600"
-                        : "text-gray-700 hover:text-slm-green-600"
+                        ? "text-[#0d0904]"
+                        : "text-[#0d0904] hover:text-[#0d0904]"
                     }`}
                   >
                     {item.name}
@@ -305,7 +305,7 @@ const Navigation = () => {
               )}
               <Button
                 asChild
-                className="bg-slm-green-600 hover:bg-slm-green-700 text-white w-full"
+                className="bg-[#36251e] hover:bg-[#36251e] text-white w-full"
                 onClick={() => {
                   setIsOpen(false);
                   setServicesDropdownOpen(false);
