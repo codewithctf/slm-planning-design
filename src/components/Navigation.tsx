@@ -41,7 +41,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#e4dbca]/95 backdrop-blur-sm shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#dabc9a]/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -49,7 +49,7 @@ const Navigation = () => {
             <img
               src="/assets/slm-logo.png"
               alt="SLM Logo"
-              className="w-12 h-12 object-contain rounded-lg shadow bg-[#e4dbca]"
+              className="w-12 h-12 object-contain rounded-lg shadow bg-white"
               style={{ maxWidth: "48px", maxHeight: "48px" }}
             />
             <span className="font-playfair font-bold text-2xl text-[#0d0904]">

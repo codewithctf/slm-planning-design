@@ -102,7 +102,7 @@ const Index = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold px-8 py-3"
+              className="bg-[#b86a28] hover:bg-[#b86a28] text-white font-semibold px-8 py-3"
             >
               <Link to="/services">Explore Our Services</Link>
             </Button>
@@ -119,12 +119,12 @@ const Index = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#584632]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-8">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#fdfdfa] mb-8">
             Welcome to SLM Planning
           </h2>
-          <p className="font-inter text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-inter text-lg md:text-xl text-[#fdfdfa] max-w-3xl mx-auto leading-relaxed">
             At SLM, we believe in creating spaces that not only serve today's needs but 
             anticipate tomorrow's challenges. Our integrated approach to urban design, 
             planning, and landscape architecture ensures sustainable, innovative solutions
@@ -134,20 +134,20 @@ const Index = () => {
       </section>
 
       {/* Our Expertise Section */}
-      <section className="py-20 w-full" style={{ background: "#F0F8F4" }}>
+      <section className="py-20 w-full" style={{ background: "#f2ece0" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#2B7151] animate-fade-in-up">Our Expertise</h2>
-          <p className="font-inter text-base text-center text-slm-green-800 mb-8 animate-fade-in-up delay-100">
+          <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#0d0a09] animate-fade-in-up">Our Expertise</h2>
+          <p className="font-inter text-base text-center text-[#4d4942] mb-8 animate-fade-in-up delay-100">
             Thoughtfully crafted to bring harmony between nature, people, and place.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {expertise.map((item, idx) => (
               <div
                 key={item.title}
-                className={`relative flex flex-col items-center p-0 transition-all duration-500 ease-in-out shadow-md rounded-lg border border-[#b6e2c7] h-full bg-white cursor-pointer animate-card-fade-in-up`}
+                className={`relative flex flex-col items-center p-0 transition-all duration-500 ease-in-out shadow-md rounded-lg border border-[#fbf0de] h-full bg-[#fbf0de] cursor-pointer animate-card-fade-in-up`}
                 style={{ minHeight: 340, animationDelay: `${idx * 120}ms` }}
               >
-                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-gray-100 flex items-center justify-center group">
+                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-[#fbf0de] flex items-center justify-center group">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -155,10 +155,10 @@ const Index = () => {
                   />
                 </div>
                 <div className="flex-1 flex flex-col justify-end px-6 pb-6 pt-2 w-full">
-                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#065F46]">
+                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#040401]">
                     {item.title}
                   </h3>
-                  <p className="font-inter text-base text-center text-[#444444]">
+                  <p className="font-inter text-base text-center text-[#4d4942]">
                     {item.description}
                   </p>
                 </div>
@@ -187,10 +187,10 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 mb-8 md:mb-0 flex flex-col justify-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-slm-green-800">Why Choose Us?</h2>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-[#040401]">Why Choose Us?</h2>
             <div className="w-24 h-1 bg-[#712B29] rounded-full mb-8 mt-6" />
             <p className="font-inter text-lg md:text-xl text-[#444444] mb-6">
-              Partnering with SLM means more than just great design—it's a commitment to visionary thinking, sustainable impact, and a collaborative journey from concept to completion. We don't just plan spaces; we help shape communities and futures.
+              Partnering with SLM means more than just great design, it's a commitment to visionary thinking, sustainable impact, and a collaborative journey from concept to completion. We don't just plan spaces; we help shape communities and futures.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
@@ -220,7 +220,7 @@ const Index = () => {
       {/* Trusted by Leading Organizations Section (moved below Why Choose Us, no client name placeholders) */}
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slm-green-700 mb-2">Trusted by Leading Organizations</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#040401] mb-2">Trusted by Leading Organizations</h2>
           <p className="font-inter text-lg text-gray-700 mb-8">We're proud to partner with forward-thinking organizations worldwide.</p>
           <TrustedCarousel />
         </div>
