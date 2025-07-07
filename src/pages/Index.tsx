@@ -12,17 +12,17 @@ const Index = () => {
     {
       title: "Integrated Urban Solutions",
       description: "Holistic planning that unites infrastructure, mobility, and community for thriving cities.",
-      image: "/assets/intergrated urban solutions.webp",
+      image: "/assets/expertise-sec1.webp",
     },
     {
       title: "Contextual Landscape Design",
       description: "Designs rooted in local ecology and culture, creating sustainable, beautiful outdoor spaces.",
-      image: "/assets/contextual landscape design.webp",
+      image: "/assets/expertise-sec2.webp",
     },
     {
       title: "3D Storytelling",
       description: "Immersive visualizations that bring your vision to life and communicate ideas powerfully.",
-      image: "/assets/3D storytelling.webp",
+      image: "/assets/expertise-sec.webp",
     },
     {
       title: "Collaborative Design Thinking",
