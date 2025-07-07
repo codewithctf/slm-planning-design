@@ -140,46 +140,39 @@ const Index = () => {
           <p className="font-inter text-base text-center text-[#4d4942] mb-8 animate-fade-in-up delay-100">
             Thoughtfully crafted to bring harmony between nature, people, and place.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {expertise.map((item, idx) => (
               <div
                 key={item.title}
-                className={`relative flex flex-col items-center p-0 transition-all duration-500 ease-in-out shadow-md rounded-lg border border-[#fbf0de] h-full bg-[#fbf0de] cursor-pointer animate-card-fade-in-up`}
-                style={{ minHeight: 340, animationDelay: `${idx * 120}ms` }}
+                className="relative group rounded-2xl overflow-hidden shadow-lg border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105"
+                style={{ aspectRatio: "1/1", minHeight: 220 }}
               >
-                <div className="w-full h-40 rounded-t-lg overflow-hidden relative bg-[#fbf0de] flex items-center justify-center group">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                  />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                  style={{ background: "#b86a28" }}
+                />
+                {/* Title at bottom */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#b86a28ee] to-transparent px-3 py-2">
+                  <h3 className="font-playfair text-lg font-bold text-white drop-shadow">{item.title}</h3>
                 </div>
-                <div className="flex-1 flex flex-col justify-end px-6 pb-6 pt-2 w-full">
-                  <h3 className="font-playfair text-xl font-bold mb-2 text-center text-[#040401]">
-                    {item.title}
-                  </h3>
-                  <p className="font-inter text-base text-center text-[#4d4942]">
-                    {item.description}
-                  </p>
+                {/* Overlay on hover/tap */}
+                <div className="absolute inset-0 flex flex-col justify-end items-center bg-[#712B29cc] bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">
+                  <h3 className="font-playfair text-lg font-bold text-white mb-2">{item.title}</h3>
+                  <p className="font-inter text-base text-white text-center">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
         <style>{`
-          @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(40px); }
-            100% { opacity: 1; transform: translateY(0); }
+          @media (max-width: 640px) {
+            .group:hover .group-hover\\:opacity-100,
+            .group:active .group-hover\\:opacity-100 {
+              opacity: 1 !important;
+            }
           }
-          .animate-fade-in-up {
-            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-          }
-          .animate-card-fade-in-up {
-            animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-          }
-          .delay-100 { animation-delay: 0.1s; }
-          .delay-200 { animation-delay: 0.2s; }
-          .delay-300 { animation-delay: 0.3s; }
         `}</style>
       </section>
 
