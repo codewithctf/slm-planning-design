@@ -16,7 +16,7 @@ const authorSocials = (author?: any) => {
       <h3 className="font-playfair font-semibold text-lg mb-2 text-white">Connect with the Author</h3>
       <div className="flex flex-wrap gap-2">
         {links.map(({ href, icon, label }) => (
-          <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="border border-white bg-white text-slm-green-700 hover:bg-slm-green-50 font-semibold rounded px-3 py-1 flex items-center gap-2 transition">
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="border border-white bg-white text-black hover:bg-slm-green-50 font-semibold rounded px-3 py-1 flex items-center gap-2 transition">
             {icon && <img src={icon} alt={label} className="w-5 h-5" />} {label}
           </a>
         ))}
@@ -31,7 +31,7 @@ interface FooterProps {
 
 const Footer = ({ author }: FooterProps) => {
   return (
-    <footer className="bg-slm-green-800 text-white">
+    <footer className="bg-[#312117] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -94,7 +94,7 @@ const Footer = ({ author }: FooterProps) => {
           </div>
         </div>
         {authorSocials(author)}
-        <div className="border-t border-slm-green-700 mt-8 pt-8 text-center text-slm-green-100">
+        <div className="border-t border-white mt-8 pt-8 text-center text-slm-green-100">
           <p>&copy; {new Date().getFullYear()} SLM Planning Firm. All rights reserved.</p>
         </div>
       </div>

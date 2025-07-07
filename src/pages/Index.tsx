@@ -278,7 +278,7 @@ const Index = () => {
       </section>
 
       {/* Trusted by Leading Organizations Section (moved below Why Choose Us, no client name placeholders) */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#e3dbc8]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#040401] mb-2">Trusted by Leading Organizations</h2>
           <p className="font-inter text-lg text-gray-700 mb-8">We're proud to partner with forward-thinking organizations worldwide.</p>
@@ -289,7 +289,7 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* Call to Action */}
-      <section className="py-20 bg-slm-green-600">
+      <section className="py-20 bg-[#472c1b]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Vision?
@@ -302,14 +302,14 @@ const Index = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3"
+              className="bg-white text-black hover:bg-slm-cream font-semibold px-8 py-3"
             >
               <Link to="/quote">Get Started</Link>
             </Button>
             <Button 
               asChild  
               size="lg" 
-              className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3"
+              className="bg-white text-black hover:bg-slm-cream font-semibold px-8 py-3"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
