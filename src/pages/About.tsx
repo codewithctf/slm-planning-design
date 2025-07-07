@@ -151,45 +151,43 @@ const About = () => {
         {/* Vision & Mission Feature Carousel */}
         <section className="relative z-30 mb-12 -mt-24 md:-mt-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row gap-12 md:gap-28 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center items-center">
               {/* Vision Card */}
-              <div className="w-full md:w-1/2 bg-[#e3dac9] rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#754322] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
+              <div className="w-full md:w-1/2 bg-[#f7ede5] rounded-2xl shadow-lg py-10 px-8 flex flex-col items-center justify-between border-l-8 border-[#7b4b2a] relative group transition-shadow duration-300 hover:shadow-2xl" style={{ minHeight: 300 }}>
                 {/* Animated Icon */}
                 <span className="mb-4 relative flex items-center justify-center">
-                  <svg className="absolute animate-spin-slow w-14 h-14 text-[#712B29] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#712B29] relative z-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z" /><circle cx="12" cy="12" r="3.5" stroke="#712B29" strokeWidth="2" fill="#fff" /></svg>
+                  <svg className="absolute animate-spin-slow w-14 h-14 text-[#b86a28] opacity-20" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#7b4b2a] relative z-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z" /><circle cx="12" cy="12" r="3.5" stroke="#7b4b2a" strokeWidth="2" fill="#fff" /></svg>
                 </span>
-                <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-4 tracking-wide">Our Vision</h3>
-                <p className="font-inter text-base text-[#4B2E1D] text-center mb-8">To shape resilient, inclusive, and beautiful environments where people, nature, and design thrive in harmony.</p>
-                {/* Decorative Dots */}
+                <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-black mb-4 tracking-wide">Our Vision</h3>
+                <p className="font-inter text-base text-[#3e2211] text-center mb-8">To shape resilient, inclusive, and beautiful environments where people, nature, and design thrive in harmony.</p>
                 <div className="flex gap-1 justify-center mt-auto mb-0">
                   {[...Array(10)].map((_, i) => (
-                    <span key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#712B29]' : 'bg-[#FCEFEF]'}`}></span>
+                    <span key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#7b4b2a]' : 'bg-[#f7ede5]'}`}></span>
                   ))}
                 </div>
               </div>
               {/* Mission Card */}
-              <div className="w-full md:w-1/2 bg-[#e3dac9] rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
+              <div className="w-full md:w-1/2 bg-[#f7ede5] rounded-2xl shadow-lg py-10 px-8 flex flex-col items-center justify-between border-l-8 border-[#b86a28] relative group transition-shadow duration-300 hover:shadow-2xl" style={{ minHeight: 300 }}>
                 {/* Animated Icon */}
                 <span className="mb-4 relative flex items-center justify-center">
-                  <svg className="absolute animate-spin-slow w-14 h-14 text-[#3B6B3B] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#3B6B3B] relative z-10"><circle cx="12" cy="12" r="10" stroke="#3B6B3B" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="6" stroke="#3B6B3B" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="2" stroke="#3B6B3B" fill="#3B6B3B" /></svg>
+                  <svg className="absolute animate-spin-slow w-14 h-14 text-[#7b4b2a] opacity-20" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-[#b86a28] relative z-10"><circle cx="12" cy="12" r="10" stroke="#b86a28" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="6" stroke="#b86a28" strokeWidth="2" fill="#fff" /><circle cx="12" cy="12" r="2" stroke="#b86a28" fill="#b86a28" /></svg>
                 </span>
-                <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-[#3E3E3E] mb-4 tracking-wide">Our Mission</h3>
-                <p className="font-inter text-base text-[#22543D] text-center mb-8">At SLM Planning & Design, we deliver integrated urban solutions that blend planning expertise, ecological sensitivity, and digital innovation to create sustainable spaces for communities, institutions, and ecosystems to flourish.</p>
-                {/* Decorative Dots */}
+                <h3 className="font-playfair text-2xl md:text-3xl font-extrabold uppercase text-black mb-4 tracking-wide">Our Mission</h3>
+                <p className="font-inter text-base text-[#3e2211] text-center mb-8">At SLM Planning & Design, we deliver integrated urban solutions that blend planning expertise, ecological sensitivity, and digital innovation to create sustainable spaces for communities, institutions, and ecosystems to flourish.</p>
                 <div className="flex gap-1 justify-center mt-auto mb-0">
                   {[...Array(10)].map((_, i) => (
-                    <span key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#3B6B3B]' : 'bg-[#FCEFEF]'}`}></span>
+                    <span key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#b86a28]' : 'bg-[#f7ede5]'}`}></span>
                   ))}
                 </div>
               </div>
             </div>
+            <style>{`.animate-spin-slow { animation: spin 3s linear infinite; } @keyframes spin { 100% { transform: rotate(360deg); } }`}</style>
           </div>
-          <style>{`.animate-spin-slow { animation: spin 3s linear infinite; } @keyframes spin { 100% { transform: rotate(360deg); } }`}</style>
         </section>
 
-        {/* Our Story Section - Refined Overlay */}
+        {/* Our Story Section - Gentle Chocolate Overlay */}
         <section
           className="relative py-20 w-full flex items-center justify-center min-h-[420px]"
           style={{
@@ -199,8 +197,8 @@ const About = () => {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          {/* Subtle gradient only at bottom for text readability */}
-          <div className="absolute inset-0 pointer-events-none" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 60%, rgba(30,20,10,0.55) 100%)', zIndex:1}} />
+          {/* Gentle chocolate overlay for warmth and readability */}
+          <div className="absolute inset-0 pointer-events-none" style={{background: 'linear-gradient(to bottom, rgba(78,46,30,0.32) 60%, rgba(78,46,30,0.62) 100%)', zIndex:1}} />
           <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow">Our Story</h2>
             <p className="font-inter text-lg md:text-xl text-white leading-relaxed drop-shadow" style={{textShadow:'0 2px 8px #1a0d06'}}>
