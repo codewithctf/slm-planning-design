@@ -98,7 +98,7 @@ const About = () => {
         <meta name="twitter:description" content="Meet the team and discover the values behind SLM Planning & Design, a leader in sustainable urban planning, landscape architecture, and 3D visualization." />
         <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#e3dac9]">
         <Navigation />
         
         {/* Hero Section */}
@@ -153,7 +153,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row gap-12 md:gap-28 justify-center items-center">
               {/* Vision Card */}
-              <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#712B29] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
+              <div className="w-full md:w-1/2 bg-[#e3dac9] rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#754322] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
                 {/* Animated Icon */}
                 <span className="mb-4 relative flex items-center justify-center">
                   <svg className="absolute animate-spin-slow w-14 h-14 text-[#712B29] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
@@ -169,7 +169,7 @@ const About = () => {
                 </div>
               </div>
               {/* Mission Card */}
-              <div className="w-full md:w-1/2 bg-white rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
+              <div className="w-full md:w-1/2 bg-[#e3dac9] rounded-2xl shadow py-10 px-8 flex flex-col items-center justify-between border-b-0 border-l-8 border-[#3B6B3B] relative group transition-shadow duration-300 hover:shadow-lg" style={{ minHeight: 300 }}>
                 {/* Animated Icon */}
                 <span className="mb-4 relative flex items-center justify-center">
                   <svg className="absolute animate-spin-slow w-14 h-14 text-[#3B6B3B] opacity-30" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="3"/></svg>
@@ -189,38 +189,23 @@ const About = () => {
           <style>{`.animate-spin-slow { animation: spin 3s linear infinite; } @keyframes spin { 100% { transform: rotate(360deg); } }`}</style>
         </section>
 
-        {/* Our Story */}
-        <section className="py-20">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center gap-10">
-              {/* Image with overlay and quote */}
-              <div className="relative w-full md:w-1/2 h-80 rounded-2xl overflow-hidden group mb-8 md:mb-0">
-                <img
-                  src="/assets/Our story image.webp"
-                  alt="Our Story"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-95"
-                />
-                {/* Soft overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#FCEFEF]/80 to-transparent" />
-                {/* Quote */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11/12 text-center z-10">
-                  <span className="font-playfair text-xl md:text-2xl font-semibold text-white drop-shadow-lg">
-                    "Shaping environments where people and nature thrive."
-                  </span>
-                </div>
-                {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
-              </div>
-              {/* Story Text */}
-              <div className="w-full md:w-1/2">
-                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-6 text-left">
-                  Our Story
-                </h2>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed text-left">
-                  SLM Planning & Design was established by a team of passionate professionals dedicated to shaping the future of urban and regional environments. Our firm is built on a foundation of collaboration, innovation, and a deep respect for both people and the planet. We offer a comprehensive suite of services including urban and regional development plans, spatial and land use planning, environmental management, GIS services, sector plans, development control, and development applications. By integrating digital innovation, ecological sensitivity, and stakeholder engagement, we deliver tailored solutions that empower communities, institutions, and ecosystems to flourish sustainably.
-                </p>
-              </div>
-            </div>
+        {/* Our Story Section - Refined Overlay */}
+        <section
+          className="relative py-20 w-full flex items-center justify-center min-h-[420px]"
+          style={{
+            backgroundImage: "url('/assets/about-us.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          {/* Subtle gradient only at bottom for text readability */}
+          <div className="absolute inset-0 pointer-events-none" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 60%, rgba(30,20,10,0.55) 100%)', zIndex:1}} />
+          <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow">Our Story</h2>
+            <p className="font-inter text-lg md:text-xl text-white leading-relaxed drop-shadow" style={{textShadow:'0 2px 8px #1a0d06'}}>
+              SLM Planning & Design was established by a team of passionate professionals dedicated to shaping the future of urban and regional environments. Our firm is built on a foundation of collaboration, innovation, and a deep respect for both people and the planet. We offer a comprehensive suite of services including urban and regional development plans, spatial and land use planning, environmental management, GIS services, sector plans, development control, and development applications. By integrating digital innovation, ecological sensitivity, and stakeholder engagement, we deliver tailored solutions that empower communities, institutions, and ecosystems to flourish sustainably.
+            </p>
           </div>
         </section>
 
