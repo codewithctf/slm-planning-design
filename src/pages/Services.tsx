@@ -288,23 +288,34 @@ const Services = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               {serviceCards.map((service, idx) => (
-                <div key={idx} className="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full min-h-[420px]">
-                  <div className="h-56 w-full bg-gray-100 flex items-center justify-center overflow-hidden">
-                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                <div
+                  key={idx}
+                  className="flex flex-col rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full min-h-[420px] border-2 border-[#b86a28] bg-[#f2ece0] group"
+                  style={{ boxShadow: '0 6px 32px 0 rgba(123,75,42,0.10)' }}
+                >
+                  <div className="h-56 w-full bg-gradient-to-t from-[#7b4b2a]/80 via-[#b86a28]/60 to-[#f2ece0]/40 flex items-center justify-center overflow-hidden relative">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105"
+                      style={{ filter: 'brightness(0.92) contrast(1.08)' }}
+                    />
+                    {/* Subtle chocolate overlay for image */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#7b4b2a]/60 via-transparent to-transparent pointer-events-none" />
                   </div>
-                  <div className="flex flex-col flex-1 p-4 sm:p-6">
-                    <h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-2">{service.title}</h3>
-                    <p className="font-inter text-gray-700 mb-3">{service.description}</p>
+                  <div className="flex flex-col flex-1 p-4 sm:p-6 bg-[#f2ece0]">
+                    <h3 className="font-playfair text-2xl font-bold text-black mb-2 drop-shadow-sm">{service.title}</h3>
+                    <p className="font-inter text-[#4d4942] mb-3">{service.description}</p>
                     <div className="mb-2">
-                      <h4 className="font-playfair text-lg font-semibold text-slm-brown-600 mb-1">Key Features:</h4>
-                      <ul className="list-disc list-inside text-gray-600 font-inter text-lg sm:text-base space-y-1">
+                      <h4 className="font-playfair text-lg font-semibold text-[#b86a28] mb-1">Key Features:</h4>
+                      <ul className="list-disc list-inside text-[#7b4b2a] font-inter text-lg sm:text-base space-y-1">
                         {service.features.map((f, i) => <li key={i}>{f}</li>)}
                       </ul>
                     </div>
                     <div className="mt-auto pt-3">
                       <Link
                         to={service.link}
-                        className="w-full flex items-center justify-center gap-2 bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold rounded-lg px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slm-green-400 focus:ring-offset-2 text-center"
+                        className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] hover:from-[#7b4b2a] hover:to-[#b86a28] text-[#fff8e1] font-semibold rounded-xl px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#b86a28] focus:ring-offset-2 text-center shadow-md"
                       >
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1">
@@ -319,28 +330,35 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Additional Services Section (standalone, bg-[#F0F8F4]) */}
-        <section className="py-16" style={{ background: '#F0F8F4' }}>
+        {/* Additional Services Section - Chocolate Theme Creative Redesign */}
+        <section className="py-16" style={{ background: 'linear-gradient(135deg, #f2ece0 60%, #b86a28 100%)' }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-slm-green-800 mb-2 animate-fade-in">Additional Services</h2>
-              <p className="font-inter text-lg text-gray-700 animate-fade-in delay-100">Supporting services that complement our core offerings</p>
+              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#7b4b2a] mb-2 animate-fade-in">Additional Services</h2>
+              <p className="font-inter text-lg text-[#7b4b2a] animate-fade-in delay-100">Supporting services that complement our core offerings</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {additionalServiceCards.map((card, idx) => (
-                <div key={idx} className="bg-white rounded-lg border border-[#d1e7dd] shadow-md hover:shadow-xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105 relative">
-                  <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden transition-transform duration-500 group hover:scale-105">
+                <div
+                  key={idx}
+                  className="rounded-3xl border-2 border-[#b86a28] shadow-xl hover:shadow-2xl transition-all duration-300 p-0 flex flex-col items-center text-center animate-fade-in-up additional-service-card overflow-hidden hover:scale-105 relative bg-gradient-to-br from-[#f2ece0] via-[#f7ede5] to-[#b86a28]/20"
+                  style={{ boxShadow: '0 4px 24px 0 rgba(123,75,42,0.10)' }}
+                >
+                  <div className="w-full h-40 bg-gradient-to-t from-[#7b4b2a]/70 via-[#b86a28]/40 to-[#f2ece0]/10 flex items-center justify-center overflow-hidden relative">
                     <img
                       src={card.image}
                       alt={card.title}
-                      className={`w-full h-full object-cover transition-transform duration-700 ${card.title === 'Project Management' ? 'object-top' : ''} group-hover:scale-110`}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110`}
                       style={card.title === 'Project Management' ? { objectPosition: 'center 20%' } : {}}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#7b4b2a]/50 via-transparent to-transparent pointer-events-none" />
                   </div>
-                  <div className="p-6 flex flex-col items-center w-full relative flex-1">
-                    <h3 className="font-playfair text-xl font-bold text-slm-green-700 mb-2">{card.title}</h3>
-                    <p className="font-inter text-gray-800 mb-0">{card.description}</p>
+                  <div className="p-6 flex flex-col items-center w-full relative flex-1 bg-[#f2ece0]/90">
+                    <h3 className="font-playfair text-xl font-bold text-black mb-2 drop-shadow-sm">{card.title}</h3>
+                    <p className="font-inter text-[#4d4942] mb-0">{card.description}</p>
                   </div>
+                  {/* Decorative chocolate bar at bottom */}
+                  <div className="w-full h-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] rounded-b-3xl" />
                 </div>
               ))}
             </div>
