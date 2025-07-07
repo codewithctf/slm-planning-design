@@ -118,7 +118,7 @@ const Index = () => {
               asChild 
               size="lg" 
               variant="outline" 
-              className="border-slm-green-600 text-slm-green-700 font-semibold px-8 py-3"
+              className="border-black bg-none text-black font-semibold px-8 py-3"
             >
               <Link to="/portfolio">View Portfolio</Link>
             </Button>
