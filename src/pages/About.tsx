@@ -47,50 +47,6 @@ const About = () => {
     }
   ];
 
-  const values = [
-    {
-      title: "Sustainability First",
-      description: "Every project prioritizes environmental stewardship and long-term ecological health.",
-      icon: "/assets/Sustainability icon.png"
-    },
-    {
-      title: "Purpose Driven",
-      description: "Guided by a clear mission to create lasting, positive impact.",
-      icon: "/assets/purpose_driven-icon.png"
-    },
-    {
-      title: "Collaborative Approach",
-      description: "Working closely with clients, communities, and stakeholders throughout every project.",
-      icon: "/assets/collaborative approach.png"
-    },
-    {
-      title: "Innovation-Driven",
-      description: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges.",
-      icon: "/assets/innovation icon.png"
-    },
-    {
-      title: "Data Driven Solutions",
-      description: "We harness data and analytics to inform smart, impactful decisions for our clients.",
-      icon: "/assets/data_driven-icon.png"
-    },
-    {
-      title: "Operational Excellence",
-      description: "Delivering projects efficiently, effectively, and to the highest standards.",
-      icon: "/assets/operational_excellence-icon.png",
-      iconClass: "filter-green"
-    },
-    {
-      title: "Intergrated Approach",
-      description: "Seamlessly blending disciplines for holistic, future-ready solutions.",
-      icon: "/assets/Intergrated-approach icon.png"
-    },
-    {
-      title: "Community-Centered",
-      description: "We design with people at the heart, creating spaces that serve diverse communities.",
-      icon: "/assets/community centered.png"
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -223,7 +179,16 @@ const About = () => {
               These principles guide every project we undertake and every relationship we build.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-              {values.map((item, idx) => (
+              {[
+                { title: "Sustainability First", image: coreValue1, desc: "Every project prioritizes environmental stewardship and long-term ecological health." },
+                { title: "Purpose Driven", image: coreValue2, desc: "Guided by a clear mission to create lasting, positive impact." },
+                { title: "Collaborative Approach", image: coreValue3, desc: "Working closely with clients, communities, and stakeholders throughout every project." },
+                { title: "Innovation-Driven", image: coreValue4, desc: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges." },
+                { title: "Data Driven Solutions", image: coreValue5, desc: "We harness data and analytics to inform smart, impactful decisions for our clients." },
+                { title: "Operational Excellence", image: coreValue6, desc: "Delivering projects efficiently, effectively, and to the highest standards." },
+                { title: "Intergrated Approach", image: coreValue7, desc: "Seamlessly blending disciplines for holistic, future-ready solutions." },
+                { title: "Community-Centered", image: coreValue8, desc: "We design with people at the heart, creating spaces that serve diverse communities." },
+              ].map((item, idx) => (
                 <div
                   key={item.title}
                   className="relative group rounded-3xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105 flex flex-col items-center justify-end min-h-[320px]"
@@ -254,7 +219,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Meet Our Team - Chocolate theme, black names, modern layout */}
+        {/* Meet Our Team - Chocolate theme, creative overlay, only image by default */}
         <section className="py-20 w-full" style={{ background: '#f7ede5' }}>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
             <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#7b4b2a]">Meet Our Team</h2>
@@ -265,28 +230,41 @@ const About = () => {
               {teamMembers.map((member, idx) => (
                 <div
                   key={member.name}
-                  className="relative group rounded-3xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fff8f2] transition-transform duration-300 hover:scale-105 focus-within:scale-105 flex flex-col items-center justify-end min-h-[340px]"
+                  className="relative group flex flex-col items-center justify-end min-h-[340px]"
                   style={{ minWidth: 0 }}
                   tabIndex={0}
                 >
-                  <div className="w-full h-48 flex items-center justify-center bg-[#e7d3c0] overflow-hidden">
+                  <div className="w-full h-64 flex items-center justify-center bg-gradient-to-br from-[#7b4b2a] via-[#b86a28] to-[#e7d3c0] rounded-3xl shadow-2xl overflow-hidden relative border-4 border-[#7b4b2a]">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="object-cover h-44 w-full drop-shadow-xl transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 rounded-t-3xl"
-                      style={{ aspectRatio: '1/1' }}
+                      className="object-cover h-60 w-full rounded-2xl transition-transform duration-500 group-hover:scale-105 group-focus:scale-105"
+                      style={{ aspectRatio: '1/1', objectPosition: 'top center' }}
                     />
-                  </div>
-                  <div className="flex-1 flex flex-col justify-end w-full px-4 py-6 text-center">
-                    <h3 className="font-playfair text-lg font-bold text-black mb-1 drop-shadow-sm">{member.name}</h3>
-                    <p className="font-inter text-base text-[#7b4b2a] font-medium mb-2">{member.title}</p>
-                    <p className="font-inter text-base text-[#4d4942] leading-snug mb-0">{member.description}</p>
-                  </div>
-                  {/* Decorative chocolate bar at bottom */}
-                  <div className="w-full h-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] rounded-b-3xl" />
-                  {/* Overlay on hover/tap - subtle, not full coverage */}
-                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300"
-                    style={{background: 'linear-gradient(180deg, rgba(123,75,42,0.13) 60%, rgba(123,75,42,0.09) 100%)'}}>
+                    {/* Overlay slides up from bottom, not covering face */}
+                    <div className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none group-hover:pointer-events-auto group-focus:pointer-events-auto">
+                      <div className="translate-y-full group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-400 ease-in-out w-full px-0 pb-0">
+                        <div className="bg-gradient-to-t from-[#7b4b2a_f2] via-[#b86a28_cc] to-[#7b4b2a_80] rounded-b-3xl px-4 pt-6 pb-4 flex flex-col items-center min-h-[120px] shadow-2xl border-t-2 border-[#b86a28]" style={{backdropFilter:'blur(3px)'}}>
+                          <span className="font-playfair text-lg font-bold text-[#ffe7b3] mb-1 drop-shadow-lg">{member.name}</span>
+                          <span className="font-inter text-base text-[#fff] font-semibold mb-1">{member.title}</span>
+                          <span className="font-inter text-sm text-[#f2ece0] mb-2 text-center">{member.description}</span>
+                          <div className="flex gap-3 mt-1">
+                            <a href="#" aria-label="Instagram" className="hover:scale-110 transition-transform" tabIndex={-1}>
+                              <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="6" fill="#fff"/><rect width="20" height="20" x="2" y="2" rx="6" stroke="#b86a28" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="#b86a28" strokeWidth="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#b86a28"/></svg>
+                            </a>
+                            <a href="#" aria-label="Facebook" className="hover:scale-110 transition-transform" tabIndex={-1}>
+                              <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="6" fill="#fff"/><rect width="20" height="20" x="2" y="2" rx="6" stroke="#b86a28" strokeWidth="2"/><path d="M15.5 8.5h-2a1 1 0 0 0-1 1v2h3l-.5 2h-2.5v6h-2v-6H8v-2h2v-2a3 3 0 0 1 3-3h2v2z" fill="#b86a28"/></svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition-transform" tabIndex={-1}>
+                              <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="6" fill="#fff"/><rect width="20" height="20" x="2" y="2" rx="6" stroke="#b86a28" strokeWidth="2"/><path d="M8.5 10.5v6h2v-6h-2zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm2.5 2v6h2v-3c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v3h2v-3.5c0-2-1.5-3.5-3.5-3.5s-3.5 1.5-3.5 3.5z" fill="#b86a28"/></svg>
+                            </a>
+                            <a href="#" aria-label="X" className="hover:scale-110 transition-transform" tabIndex={-1}>
+                              <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="6" fill="#fff"/><rect width="20" height="20" x="2" y="2" rx="6" stroke="#b86a28" strokeWidth="2"/><path d="M9 9l6 6M15 9l-6 6" stroke="#b86a28" strokeWidth="2" strokeLinecap="round"/></svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
