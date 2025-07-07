@@ -185,37 +185,72 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 mb-8 md:mb-0 flex flex-col justify-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-[#040401]">Why Choose Us?</h2>
-            <div className="w-24 h-1 bg-[#712B29] rounded-full mb-8 mt-6" />
-            <p className="font-inter text-lg md:text-xl text-[#444444] mb-6">
-              Partnering with SLM means more than just great design, it's a commitment to visionary thinking, sustainable impact, and a collaborative journey from concept to completion. We don't just plan spaces; we help shape communities and futures.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#712B29]"></span>
-                <span className="font-inter text-base md:text-lg text-[#444444]">Sustainable design principles in every project</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#712B29]"></span>
-                <span className="font-inter text-base md:text-lg text-[#444444]">Community-centered planning approach</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#712B29]"></span>
-                <span className="font-inter text-base md:text-lg text-[#444444]">Award-winning design excellence</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#712B29]"></span>
-                <span className="font-inter text-base md:text-lg text-[#444444]">Comprehensive project management</span>
-              </li>
-            </ul>
-          </div>
-          <div className="flex-1 flex justify-center">
-            <img src="/assets/A Team Collaborating on an Urban Masterplan.webp" alt="A Team Collaborating on an Urban Masterplan" className="rounded-xl shadow-lg w-full max-w-md object-cover" />
-          </div>
+      <section
+        className="py-20 relative overflow-hidden min-h-[500px] flex items-center justify-center"
+        id="why-choose-us"
+      >
+        {/* Background image with chocolate overlay */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <img
+            src="/assets/why-choose-us.webp"
+            alt="Why Choose Us Background"
+            className="w-full h-full object-cover object-center"
+            style={{ filter: 'brightness(0.7)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#6b3a1aee] via-[#b86a28cc] to-[#f2ece0cc] mix-blend-multiply" />
         </div>
+        {/* Content absolutely centered and responsive, fades in on scroll */}
+        <div className="relative z-10 w-full flex flex-col items-center justify-center max-w-3xl mx-auto px-4 animate-fade-in-up-on-scroll text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Why Choose Us?</h2>
+          <div className="w-24 h-1 bg-[#f2ece0] rounded-full mb-8 mt-6 mx-auto" />
+          <p className="font-inter text-lg md:text-xl text-[#f2ece0] mb-6 drop-shadow max-w-2xl mx-auto">
+            Partnering with SLM means more than just great design—it's a commitment to visionary thinking, sustainable impact, and a collaborative journey from concept to completion. We don't just plan spaces; we help shape communities and futures.
+          </p>
+          <ul className="space-y-3 max-w-xl mx-auto">
+            <li className="flex items-center gap-3 justify-center">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#f2ece0]"></span>
+              <span className="font-inter text-base md:text-lg text-[#f2ece0] drop-shadow">Sustainable design principles in every project</span>
+            </li>
+            <li className="flex items-center gap-3 justify-center">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#f2ece0]"></span>
+              <span className="font-inter text-base md:text-lg text-[#f2ece0] drop-shadow">Community-centered planning approach</span>
+            </li>
+            <li className="flex items-center gap-3 justify-center">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#f2ece0]"></span>
+              <span className="font-inter text-base md:text-lg text-[#f2ece0] drop-shadow">Award-winning design excellence</span>
+            </li>
+            <li className="flex items-center gap-3 justify-center">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#f2ece0]"></span>
+              <span className="font-inter text-base md:text-lg text-[#f2ece0] drop-shadow">Comprehensive project management</span>
+            </li>
+          </ul>
+        </div>
+        <style>{`
+          .animate-fade-in-up-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+          }
+          .animate-fade-in-up-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        `}</style>
+        <script dangerouslySetInnerHTML={{__html: `
+          (function() {
+            function onScrollFadeIn() {
+              var el = document.querySelector('.animate-fade-in-up-on-scroll');
+              if (!el) return;
+              var rect = el.getBoundingClientRect();
+              if (rect.top < window.innerHeight - 100) {
+                el.classList.add('visible');
+                window.removeEventListener('scroll', onScrollFadeIn);
+              }
+            }
+            window.addEventListener('scroll', onScrollFadeIn);
+            window.addEventListener('DOMContentLoaded', onScrollFadeIn);
+          })();
+        `}} />
       </section>
 
       {/* Trusted by Leading Organizations Section (moved below Why Choose Us, no client name placeholders) */}
