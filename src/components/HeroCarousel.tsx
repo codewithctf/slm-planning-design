@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const landscapeImages = [
-  "/assets/Landscape Architecture.webp",
-  "/assets/Landscape Architecture (1).webp",
-  "/assets/Landscape Architecture (2).webp",
+  "/assets/hero-carousel-1.webp",
+  "/assets/hero-carousel-2.webp",
+  "/assets/hero-carousel-3.webp",
+  "/assets/expertise-sec2.webp",
 ];
 
 interface HeroCarouselProps {
