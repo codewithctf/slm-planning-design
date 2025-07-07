@@ -222,8 +222,8 @@ const About = () => {
         {/* Meet Our Team - Chocolate theme, creative overlay, only image by default */}
         <section className="py-20 w-full" style={{ background: '#f7ede5' }}>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
-            <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#7b4b2a]">Meet Our Team</h2>
-            <p className="font-inter text-base text-center text-[#7b4b2a] mb-8">
+            <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-black">Meet Our Team</h2>
+            <p className="font-inter text-base text-center text-gray-600 mb-8">
               Our diverse team of experts brings together decades of experience in urban planning, design, and environmental stewardship.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
@@ -273,9 +273,9 @@ const About = () => {
         </section>
 
         {/* SLM In Numbers */}
-        <section className="py-20 bg-slm-green-50">
+        <section className="py-20 bg-[#e3dbc8]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-2">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-black mb-2">
               SLM In Numbers
             </h2>
             <div className="relative h-1 mb-4 mt-2">
@@ -342,10 +342,10 @@ function NumberCard({ label, value, suffix, circleClass }) {
   }, [value]);
   return (
     <div className="space-y-4">
-      <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto ${circleClass || 'bg-slm-green-600'}`}>
+      <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto ${circleClass || 'bg-white'}`}>
         <span className="text-white text-2xl font-bold">{count}{suffix}</span>
       </div>
-      <h3 className="font-playfair text-xl font-semibold text-slm-green-700">{label}</h3>
+      <h3 className="font-playfair text-xl font-semibold text-black">{label}</h3>
     </div>
   );
 }
@@ -395,7 +395,7 @@ const CoreValuesCards = ({ values }) => {
           >
             <CardHeader>
               <div className="flex justify-center mb-4">
-                <span className="w-16 h-16 rounded-full bg-slm-green-600 flex items-center justify-center core-icon-pop transition-transform duration-200">
+                <span className="w-16 h-16 rounded-full bg-black flex items-center justify-center core-icon-pop transition-transform duration-200">
                   <img
                     src={iconSrc}
                     alt={value.title + ' icon'}
@@ -404,7 +404,7 @@ const CoreValuesCards = ({ values }) => {
                   />
                 </span>
               </div>
-              <CardTitle className="font-playfair text-xl text-slm-green-700">
+              <CardTitle className="font-playfair text-xl text-black">
                 {value.title}
               </CardTitle>
             </CardHeader>
