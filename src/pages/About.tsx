@@ -6,6 +6,14 @@ import { useEffect, useRef, useState } from "react";
 // @ts-ignore
 import gsap from "gsap";
 import { Helmet } from 'react-helmet-async';
+import coreValue1 from '/assets/core-values-1.webp';
+import coreValue2 from '/assets/core-values-2.webp';
+import coreValue3 from '/assets/core-values-3.webp';
+import coreValue4 from '/assets/core-values-4.webp';
+import coreValue5 from '/assets/core-values-5.webp';
+import coreValue6 from '/assets/core-values-6.webp';
+import coreValue7 from '/assets/core-values-7.webp';
+import coreValue8 from '/assets/core-values-8.webp';
 
 const About = () => {
   const teamMembers = [
@@ -207,70 +215,78 @@ const About = () => {
           </div>
         </section>
 
-        {/* Our Values */}
-        <section className="py-20" style={{ background: "#fff" }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
-                Our Core Values
-              </h2>
-              <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto">
-                These principles guide every project we undertake and every relationship we build.
-              </p>
+        {/* Our Core Values Section - 4 per row, all 8 values, unique images, cropped */}
+        <section className="py-20 w-full" style={{ background: "#f2ece0" }}>
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
+            <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#0d0a09] animate-fade-in-up">Our Core Values</h2>
+            <p className="font-inter text-base text-center text-[#4d4942] mb-8 animate-fade-in-up delay-100">
+              These principles guide every project we undertake and every relationship we build.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+              {values.map((item, idx) => (
+                <div
+                  key={item.title}
+                  className="relative group rounded-3xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105 flex flex-col items-center justify-end min-h-[320px]"
+                  style={{ minWidth: 0 }}
+                  tabIndex={0}
+                >
+                  <div className="w-full h-40 flex items-center justify-center bg-[#e7d3c0] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="object-cover h-32 w-full drop-shadow-xl transition-transform duration-500 group-hover:scale-110 group-focus:scale-110"
+                      style={{ aspectRatio: '1/1' }}
+                    />
+                  </div>
+                  <div className="flex-1 flex flex-col justify-end w-full px-4 py-6 text-center">
+                    <h3 className="font-playfair text-lg font-bold text-[#7b4b2a] mb-2 drop-shadow-sm">{item.title}</h3>
+                    <p className="font-inter text-base text-[#4d4942] leading-snug mb-0">{item.desc}</p>
+                  </div>
+                  {/* Decorative chocolate bar at bottom */}
+                  <div className="w-full h-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] rounded-b-3xl" />
+                  {/* Overlay on hover/tap - subtle, not full coverage, no duplicate text */}
+                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300"
+                    style={{background: 'linear-gradient(180deg, rgba(123,75,42,0.13) 60%, rgba(123,75,42,0.09) 100%)'}}>
+                  </div>
+                </div>
+              ))}
             </div>
-            <CoreValuesCards values={values} />
           </div>
         </section>
 
-        {/* Our Team */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
-                Meet Our Team
-              </h2>
-              <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto">
-                Our diverse team of experts brings together decades of experience in 
-                urban planning, design, and environmental stewardship.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Custom order: 1, 3, 2, 4 */}
-              {[teamMembers[0], teamMembers[2], teamMembers[1], teamMembers[3]].map((member, index) => (
+        {/* Meet Our Team - Chocolate theme, black names, modern layout */}
+        <section className="py-20 w-full" style={{ background: '#f7ede5' }}>
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
+            <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#7b4b2a]">Meet Our Team</h2>
+            <p className="font-inter text-base text-center text-[#7b4b2a] mb-8">
+              Our diverse team of experts brings together decades of experience in urban planning, design, and environmental stewardship.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+              {teamMembers.map((member, idx) => (
                 <div
-                  key={index}
-                  className="group block rounded-2xl overflow-hidden shadow-lg transition-all duration-300 bg-white hover:bg-gradient-to-t hover:from-white/90 hover:to-white/60"
-                  style={{ textDecoration: 'none' }}
+                  key={member.name}
+                  className="relative group rounded-3xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fff8f2] transition-transform duration-300 hover:scale-105 focus-within:scale-105 flex flex-col items-center justify-end min-h-[340px]"
+                  style={{ minWidth: 0 }}
+                  tabIndex={0}
                 >
-                  <div className="relative w-full h-48 overflow-hidden">
+                  <div className="w-full h-48 flex items-center justify-center bg-[#e7d3c0] overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      style={{ objectPosition: 'center top' }}
+                      className="object-cover h-44 w-full drop-shadow-xl transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 rounded-t-3xl"
+                      style={{ aspectRatio: '1/1' }}
                     />
-                    {/* Social icons at image bottom, hidden by default, shown on hover */}
-                    <div className="absolute left-0 bottom-3 w-full flex flex-row gap-3 justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/facebook-icon.png" alt="Facebook" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/X-icon.png" alt="X" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/LinkedIn-icon.png" alt="LinkedIn" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                      <a href="#" className="inline-block" tabIndex={-1}><img src="/assets/instagram-icon.jpg" alt="Instagram" className="w-8 h-8 rounded-full bg-white p-1 shadow hover:scale-110 transition-transform duration-200" /></a>
-                    </div>
-                    {/* White gradient overlay on image hover */}
-                    <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                   </div>
-                  <div className="flex flex-col justify-center items-center h-44 w-full px-4 py-6 bg-white">
-                    <CardTitle className="font-playfair text-xl text-slm-green-700 mb-1 text-center">
-                      {member.name}
-                    </CardTitle>
-                    <CardDescription className="font-inter text-slm-brown-600 font-medium mb-2 text-center">
-                      {member.title}
-                    </CardDescription>
-                    <CardContent className="p-0">
-                      <p className="font-inter text-gray-600 text-center text-sm">
-                        {member.description}
-                      </p>
-                    </CardContent>
+                  <div className="flex-1 flex flex-col justify-end w-full px-4 py-6 text-center">
+                    <h3 className="font-playfair text-lg font-bold text-black mb-1 drop-shadow-sm">{member.name}</h3>
+                    <p className="font-inter text-base text-[#7b4b2a] font-medium mb-2">{member.title}</p>
+                    <p className="font-inter text-base text-[#4d4942] leading-snug mb-0">{member.description}</p>
+                  </div>
+                  {/* Decorative chocolate bar at bottom */}
+                  <div className="w-full h-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] rounded-b-3xl" />
+                  {/* Overlay on hover/tap - subtle, not full coverage */}
+                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300"
+                    style={{background: 'linear-gradient(180deg, rgba(123,75,42,0.13) 60%, rgba(123,75,42,0.09) 100%)'}}>
                   </div>
                 </div>
               ))}
