@@ -135,32 +135,34 @@ const Index = () => {
 
       {/* Our Expertise Section */}
       <section className="py-20 w-full" style={{ background: "#f2ece0" }}>
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
           <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-[#0d0a09] animate-fade-in-up">Our Expertise</h2>
           <p className="font-inter text-base text-center text-[#4d4942] mb-8 animate-fade-in-up delay-100">
             Thoughtfully crafted to bring harmony between nature, people, and place.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {expertise.map((item, idx) => (
               <div
                 key={item.title}
-                className="relative group rounded-2xl overflow-hidden shadow-lg border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105"
-                style={{ aspectRatio: "1/1", minHeight: 220 }}
+                className="relative group rounded-2xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105"
+                style={{ aspectRatio: '1/1.1', minHeight: 260, minWidth: 0 }}
+                tabIndex={0}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-95 group-focus:brightness-95"
                   style={{ background: "#b86a28" }}
                 />
-                {/* Title at bottom */}
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#b86a28ee] to-transparent px-3 py-2">
-                  <h3 className="font-playfair text-lg font-bold text-white drop-shadow">{item.title}</h3>
+                {/* Title at bottom always visible, hidden on hover/focus */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#b86a28ee] to-transparent px-3 py-3 flex justify-center transition-opacity duration-300 group-hover:opacity-0 group-focus:opacity-0">
+                  <h3 className="font-playfair text-lg font-bold text-white drop-shadow text-center w-full">{item.title}</h3>
                 </div>
-                {/* Overlay on hover/tap */}
-                <div className="absolute inset-0 flex flex-col justify-end items-center bg-[#712B29cc] bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">
-                  <h3 className="font-playfair text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="font-inter text-base text-white text-center">{item.description}</p>
+                {/* Overlay on hover/tap - semi-transparent, not full coverage */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 p-6"
+                  style={{background: 'linear-gradient(180deg, rgba(107,58,26,0.55) 60%, rgba(107,58,26,0.25) 100%)'}}>
+                  <h3 className="font-playfair text-xl font-bold text-white mb-2 text-center w-full drop-shadow">{item.title}</h3>
+                  <p className="font-inter text-base text-white text-center w-full leading-snug" style={{textAlign:'center', margin:0}}>{item.description}</p>
                 </div>
               </div>
             ))}
@@ -169,8 +171,14 @@ const Index = () => {
         <style>{`
           @media (max-width: 640px) {
             .group:hover .group-hover\\:opacity-100,
-            .group:active .group-hover\\:opacity-100 {
+            .group:active .group-hover\\:opacity-100,
+            .group:focus .group-hover\\:opacity-100 {
               opacity: 1 !important;
+            }
+            .group:hover .group-hover\\:opacity-0,
+            .group:active .group-hover\\:opacity-0,
+            .group:focus .group-hover\\:opacity-0 {
+              opacity: 0 !important;
             }
           }
         `}</style>
