@@ -13,17 +13,17 @@ import { Helmet } from 'react-helmet-async';
 const renderingServices = [
 	{
 		title: "Photorealistic 3D Renders",
-		image: "/assets/3D render 3.webp",
+		image: "/assets/3d-render-3.webp",
 		desc: "Stunning, detail-rich visualizations of buildings, landscapes, and spaces that showcase lighting, texture, and realism.",
 	},
 	{
 		title: "Aerial Views & Masterplan Renderings",
-		image: "/assets/Aerial Views & Masterplan Renderings.webp",
+		image: "/assets/aerial-views-masterplan-renderings.webp",
 		desc: "Large-scale overviews that highlight context, scale, and layout for urban plans, campuses, or mixed-use developments.",
 	},
 	{
 		title: "Concept Sketch Renders",
-		image: "/assets/Concept Sketch Renders.webp",
+		image: "/assets/concept-sketch-renders.webp",
 		desc: "Artistic, styled renderings that bring early design ideas to life while maintaining flexibility and creative intent.",
 	},
 	{
@@ -33,12 +33,12 @@ const renderingServices = [
 	},
 	{
 		title: "Interactive Design Presentations",
-		image: "/assets/Interactive Design Presentations.webp",
+		image: "/assets/interactive-design-presentations.webp",
 		desc: "Custom-rendered assets for slide decks, investor pitches, public exhibitions, and community engagements.",
 	},
 	{
 		title: "Augmented & Virtual Reality Ready Assets",
-		image: "/assets/Augmented & Virtual Reality Ready Assets.webp",
+		image: "/assets/augmented-virtual-reality-ready-assets.webp",
 		desc: "Future-proof renderings compatible with AR/VR platforms for immersive presentations and digital co-design sessions.",
 	},
 ];
@@ -138,7 +138,7 @@ const ThreeDRendering = () => (
 				</div>
 				<div className="flex-1 order-2 md:order-2 flex justify-center items-center relative">
 					<img
-						src="/assets/3D render.webp"
+						src="/assets/3d-render.webp"
 						alt="3D Rendering"
 						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl border-4 border-[#FCEFEF] object-cover object-center"
 					/>
@@ -202,7 +202,7 @@ const ThreeDRendering = () => (
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0 px-2 sm:px-4">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
-						src="/assets/Aerial Views & Masterplan Renderings.webp"
+						src="/assets/aerial-views-masterplan-renderings.webp"
 						alt="Why Visualization Matters"
 						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-lg animate-fade-in-up object-cover object-center"
 					/>

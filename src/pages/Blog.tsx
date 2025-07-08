@@ -116,7 +116,7 @@ const Blog = () => {
                     src={
                       featuredArticle.image
                         ? featuredArticle.image.asset?.url
-                        : "/assets/urban planning.webp"
+                        : "/assets/urban-planning.webp"
                     }
                     alt={featuredArticle.title}
                     className="w-full h-full object-cover md:rounded-l-2xl"
@@ -201,7 +201,7 @@ const Blog = () => {
                   >
                     <div className="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
                       <img
-                        src={article.image ? article.image.asset?.url : "/assets/urban planning.webp"}
+                        src={article.image ? article.image.asset?.url : "/assets/urban-planning.webp"}
                         alt={article.title}
                         className="w-full h-full object-cover"
                       />

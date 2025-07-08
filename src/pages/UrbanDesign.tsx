@@ -13,42 +13,42 @@ import { Helmet } from 'react-helmet-async';
 const urbanDesignServices = [
 	{
 		title: "Public Realm Design",
-		image: "/assets/Public Realm-Design.webp",
+		image: "/assets/public-realm-design.webp",
 		desc: "Designing civic spaces, streetscapes, plazas, and parks that are accessible, inclusive, and visually appealing.",
 	},
 	{
 		title: "Urban Streetscapes",
-		image: "/assets/Urban Streetscapes.webp",
+		image: "/assets/urban-streetscapes.webp",
 		desc: "Pedestrian-first street designs that integrate green infrastructure, mobility, safety, and placemaking principles.",
 	},
 	{
 		title: "Mixed-Use & District Design",
-		image: "/assets/Mixed-Use & District Design.webp",
+		image: "/assets/mixed-use-district-design.webp",
 		desc: "Master-planning for neighborhoods and town centers with integrated uses, active frontages, and strong identities.",
 	},
 	{
 		title: "Wayfinding & Urban Experience",
-		image: "/assets/Wayfinding & Urban Experience.webp",
+		image: "/assets/wayfinding-urban-experience.webp",
 		desc: "Crafting legible, intuitive environments through spatial logic, signage, edges, and orientation.",
 	},
 	{
 		title: "Green Infrastructure Integration",
-		image: "/assets/Green Infrastructure Integration.webp",
+		image: "/assets/green-infrastructure-integration.webp",
 		desc: "Seamless integration of nature into urban settings for stormwater, climate resilience, and biodiversity.",
 	},
 	{
 		title: "Transit-Oriented Development (TOD)",
-		image: "/assets/Transit-Oriented Development.webp",
+		image: "/assets/transit-oriented-development.webp",
 		desc: "Design frameworks that prioritize walkability, density, and mixed-use around mobility hubs.",
 	},
 	{
 		title: "Urban Design Guidelines & Toolkits",
-		image: "/assets/Urban Design Guidelines & Toolkits.webp",
+		image: "/assets/urban-design-guidelines-toolkits.webp",
 		desc: "Creating form-based codes and visual design manuals to guide consistent and adaptive urban development.",
 	},
 	{
 		title: "Design Research & Prototyping",
-		image: "/assets/Design Research & Prototyping.webp",
+		image: "/assets/design-research-prototyping.webp",
 		desc: "Using behavioral insights, public prototyping, and data to refine spaces that work for real people.",
 	},
 ];
@@ -159,7 +159,7 @@ const UrbanDesign = () => (
 				</div>
 				<div className="flex-1 order-2 md:order-2 flex justify-center items-center relative">
 					<img
-						src="/assets/Urban design.webp"
+						src="/assets/urban-design.webp"
 						alt="Urban Design"
 						className="w-full max-w-md rounded-2xl shadow-2xl urban-img-animate border-4 border-[#FCEFEF]"
 					/>
@@ -212,7 +212,7 @@ const UrbanDesign = () => (
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-0 px-4 sm:px-6">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
-						src="/assets/urban design (3).webp"
+						src="/assets/urban-design-3.webp"
 						alt="Urban Design Benefits"
 						className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up"
 					/>

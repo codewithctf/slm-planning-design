@@ -3,9 +3,9 @@ import React from "react";
 const trustedImages = [
   "/assets/amref-icon.png",
   "/assets/ukaid-icon.png",
-  "/assets/Un_habitat.png",
-  "/assets/Un_nations.png",
-  "/assets/WFP-icon.png",
+  "/assets/un-habitat.png",
+  "/assets/un-nations.png",
+  "/assets/wfp-icon.png",
 ];
 
 // Duplicate the array for seamless infinite scroll

@@ -140,7 +140,7 @@ const Services = () => {
         "Policy Development",
         "Community Engagement"
       ],
-      image: "/assets/urban planning.webp",
+      image: "/assets/urban-planning.webp",
       link: "/services/urban-planning"
     },
     {
@@ -153,7 +153,7 @@ const Services = () => {
         "Accessibility Planning",
         "Wayfinding Systems"
       ],
-      image: "/assets/Urban design.webp",
+      image: "/assets/urban-design.webp",
       link: "/services/urban-design"
     },
     {
@@ -166,7 +166,7 @@ const Services = () => {
         "Native Plant Design",
         "Urban Forestry"
       ],
-      image: "/assets/Landscape Architecture.webp",
+      image: "/assets/landscape-architecture.webp",
       link: "/services/landscape-architecture"
     },
     {
@@ -179,7 +179,7 @@ const Services = () => {
         "Design Presentations",
         "Marketing Materials"
       ],
-      image: "/assets/3D render.webp",
+      image: "/assets/3d-render.webp",
       link: "/services/3d-rendering"
     }
   ];
@@ -196,22 +196,22 @@ const Services = () => {
   const additionalServiceCards = [
     {
       title: "Community Engagement",
-      image: "/assets/community engagement-service.webp",
+      image: "/assets/community-engagement-service.webp",
       description: "Facilitated workshops, public meetings, and stakeholder consultation processes."
     },
     {
       title: "Feasibility Studies",
-      image: "/assets/Feasiblity-studies.webp",
+      image: "/assets/feasiblity-studies.webp",
       description: "Comprehensive analysis of project viability including financial and environmental factors."
     },
     {
       title: "Project Management",
-      image: "/assets/project management.webp",
+      image: "/assets/project-management.webp",
       description: "End-to-end project coordination from initial concept through implementation."
     },
     {
       title: "Regulatory Compliance",
-      image: "/assets/Regulatory-compliance.webp",
+      image: "/assets/regulatory-compliance.webp",
       description: "Ensuring all designs meet local building codes and environmental regulations."
     }
   ];

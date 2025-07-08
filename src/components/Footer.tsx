@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const authorSocials = (author?: any) => {
   if (!author) return null;
   const links = [
-    author.twitter && { href: author.twitter, icon: "/assets/X-icon.png", label: "X" },
-    author.linkedin && { href: author.linkedin, icon: "/assets/LinkedIn-icon.png", label: "LinkedIn" },
+    author.twitter && { href: author.twitter, icon: "/assets/x-icon.png", label: "X" },
+    author.linkedin && { href: author.linkedin, icon: "/assets/linkedIn-icon.png", label: "LinkedIn" },
     author.facebook && { href: author.facebook, icon: "/assets/facebook-icon.png", label: "Facebook" },
     author.instagram && { href: author.instagram, icon: "/assets/instagram-icon.jpg", label: "Instagram" },
     author.website && { href: author.website, icon: null, label: "Website" },
@@ -58,13 +58,13 @@ const Footer = ({ author }: FooterProps) => {
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                  <img src="/assets/phone icone.png" alt="Phone" className="w-5 h-5" />
+                  <img src="/assets/phone-icon.png" alt="Phone" className="w-5 h-5" />
                 </span>
                 (703) 947-7885
               </p>
               <p className="flex items-center gap-2">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                  <img src="/assets/address.png" alt="Address" className="w-5 h-5" />
+                  <img src="/assets/address-icon.png" alt="Address" className="w-5 h-5" />
                 </span>
                 Indianapolis, Indiana, USA
               </p>

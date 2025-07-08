@@ -5,12 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Helmet } from 'react-helmet-async';
 
 const processImages = [
-  "/assets/Feasiblity-studies.webp", // 01 Initial Consultation
-  "/assets/Research-analysis.webp", // 02 Research & Analysis
+  "/assets/feasiblity-studies.webp", // 01 Initial Consultation
+  "/assets/research-analysis.webp", // 02 Research & Analysis
   "/assets/conceptual-design.webp", // 03 Conceptual Design
-  "/assets/urban planning (2).webp", // 04 Detailed Planning 
-  "/assets/3D render 2.webp", // 05 Implementation Oversight 
-  "/assets/Post-completion.webp" // 06 Post-Completion Review 
+  "/assets/urban-planning-2.webp", // 04 Detailed Planning 
+  "/assets/3d-render-2.webp", // 05 Implementation Oversight 
+  "/assets/post-completion.webp" // 06 Post-Completion Review 
 ];
 
 const principles = [

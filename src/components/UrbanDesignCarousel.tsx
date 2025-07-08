@@ -1,10 +1,10 @@
 import React from "react";
 
 const images = [
-  "/assets/Urban design.webp",
-  "/assets/Urban design (1).webp",
-  "/assets/Urban design (2).webp",
-  "/assets/urban design (3).webp",
+  "/assets/urban-design.webp",
+  "/assets/urban-design-1.webp",
+  "/assets/urban-design-2.webp",
+  "/assets/urban-design-3.webp",
 ];
 
 const UrbanDesignCarousel = ({ heightClass = "h-[38rem]" }) => {

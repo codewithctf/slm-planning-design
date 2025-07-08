@@ -12,12 +12,12 @@ const Index = () => {
     {
       title: "Integrated Urban Solutions",
       description: "Holistic planning that unites infrastructure, mobility, and community for thriving cities.",
-      image: "/assets/expertise-sec1.webp",
+      image: "/assets/expertise-sec-1.webp",
     },
     {
       title: "Contextual Landscape Design",
       description: "Designs rooted in local ecology and culture, creating sustainable, beautiful outdoor spaces.",
-      image: "/assets/expertise-sec2.webp",
+      image: "/assets/expertise-sec-2.webp",
     },
     {
       title: "3D Storytelling",
@@ -27,7 +27,7 @@ const Index = () => {
     {
       title: "Collaborative Design Thinking",
       description: "Engaging stakeholders at every step to co-create innovative, people-centered solutions.",
-      image: "/assets/collaborative design thinking.webp",
+      image: "/assets/collaborative-design-thinking.webp",
     },
   ];
 

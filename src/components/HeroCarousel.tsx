@@ -4,7 +4,7 @@ const landscapeImages = [
   "/assets/hero-carousel-1.webp",
   "/assets/hero-carousel-2.webp",
   "/assets/hero-carousel-3.webp",
-  "/assets/expertise-sec2.webp",
+  "/assets/expertise-sec-2.webp",
 ];
 
 interface HeroCarouselProps {

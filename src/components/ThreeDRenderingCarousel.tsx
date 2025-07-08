@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/assets/3D render 1.webp",
-  "/assets/3D render 2.webp",
-  "/assets/3D render 3.webp",
-  "/assets/3D render 4.webp",
-  "/assets/3D render.webp",
+  "/assets/3d-render-1.webp",
+  "/assets/3d-render-2.webp",
+  "/assets/3d-render-3.webp",
+  "/assets/3d-render-4.webp",
+  "/assets/3d-render.webp",
 ];
 
 const ThreeDRenderingCarousel = () => {

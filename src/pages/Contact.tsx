@@ -221,7 +221,7 @@ const Contact = () => {
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
-                          <img src="/assets/address.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/address-icon.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Address</p>
@@ -234,7 +234,7 @@ const Contact = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
-                          <img src="/assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/phone-icon.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Phone</p>
@@ -252,7 +252,7 @@ const Contact = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
-                          <img src="/assets/time.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/clock-icon.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
                           <p className="font-inter font-semibold text-gray-800">Office Hours</p>
@@ -306,12 +306,12 @@ const Contact = () => {
                       </a>
                       <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
+                          <img src="/assets/x-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                         </Button>
                       </a>
                       <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
+                          <img src="/assets/linkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                         </Button>
                       </a>
                       <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -321,7 +321,7 @@ const Contact = () => {
                       </a>
                       <a href="https://www.tiktok.com/@slm.planning?_t=ZP-8xktNGfhS50&_r=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                         <Button variant="outline" size="sm" className="border-gray-300 text-black  hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
-                          <img src="/assets/tiktok icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
+                          <img src="/assets/tiktok-icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
                         </Button>
                       </a>
                     </div>

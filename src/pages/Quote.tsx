@@ -345,13 +345,13 @@ const Quote = () => {
                       </p>
                       <p className="font-inter text-sm text-gray-700 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/assets/phone icone.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/phone-icon.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         (703) 947-7885
                       </p>
                       <p className="font-inter text-sm text-gray-700 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
-                          <img src="/assets/time.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
+                          <img src="/assets/clock-icon.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         Monday - Friday, 9AM - 6PM EST
                       </p>

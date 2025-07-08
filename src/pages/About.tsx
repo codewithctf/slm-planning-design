@@ -12,28 +12,28 @@ const About = () => {
     {
       name: "Michael Kimani",
       title: "Principal Urban Planner",
-      image: "/assets/Team member 1.webp",
+      image: "/assets/team-member-1.webp",
       description: "15+ years of experience in sustainable urban development",
       gender: "man"
     },
     {
       name: "Samuel Otieno",
       title: "Lead Landscape Architect",
-      image: "/assets/Team Member 2.webp",
+      image: "/assets/team-member-2.webp",
       description: "Expert in ecological design and green infrastructure",
       gender: "woman"
     },
     {
       name: "Grace Mwende",
       title: "Senior Urban Designer",
-      image: "/assets/Team Member 3.webp",
+      image: "/assets/team-member-3.webp",
       description: "Specializes in community-centered design solutions",
       gender: "man"
     },
     {
       name: "Aisha Njeri",
       title: "3D Visualization Director",
-      image: "/assets/Team Member 4.webp",
+      image: "/assets/team-member-4.webp",
       description: "Award-winning expertise in architectural visualization",
       gender: "woman"
     }
@@ -179,7 +179,7 @@ const About = () => {
                 { title: "Data Driven Solutions", image: "/assets/core-values-6.webp", desc: "We harness data and analytics to inform smart, impactful decisions for our clients." },
                 { title: "Operational Excellence", image: "/assets/core-values-7.webp", desc: "Delivering projects efficiently, effectively, and to the highest standards." },
                 { title: "Intergrated Approach", image: "/assets/core-values-8.webp", desc: "Seamlessly blending disciplines for holistic, future-ready solutions." },
-                { title: "Community-Centered", image: "/assets/core-values-8.webp", desc: "We design with people at the heart, creating spaces that serve diverse communities." },
+                { title: "Community-Centered", image: "/assets/core-values.webp", desc: "We design with people at the heart, creating spaces that serve diverse communities." },
               ].map((item, idx) => (
                 <div
                   key={item.title}
