@@ -13,11 +13,27 @@ const processImages = [
   "/assets/Post-completion.webp" // 06 Post-Completion Review (valid)
 ];
 
-const principleIcons = [
-  "/assets/transparency icon.png",
-  "/assets/collaborative approach.png",
-  "/assets/innovation icon.png",
-  "/assets/Sustainability icon.png"
+const principles = [
+  {
+    title: "Transparency",
+    description: "Open communication and clear documentation throughout every phase of the project.",
+    image: "/assets/core-values-3.webp"
+  },
+  {
+    title: "Collaboration",
+    description: "Active involvement of all stakeholders in the planning and design process.",
+    image: "/assets/core-values-4.webp"
+  },
+  {
+    title: "Innovation",
+    description: "Leveraging cutting-edge tools and methodologies to solve complex challenges.",
+    image: "/assets/core-values-2.webp"
+  },
+  {
+    title: "Sustainability",
+    description: "Environmental stewardship and long-term thinking in every decision.",
+    image: "/assets/core-values.webp"
+  }
 ];
 
 const Process = () => {
@@ -93,29 +109,6 @@ const Process = () => {
         "Ongoing maintenance planning"
       ],
       duration: "Ongoing"
-    }
-  ];
-
-  const principles = [
-    {
-      title: "Transparency",
-      description: "Open communication and clear documentation throughout every phase of the project.",
-      icon: principleIcons[0]
-    },
-    {
-      title: "Collaboration",
-      description: "Active involvement of all stakeholders in the planning and design process.",
-      icon: principleIcons[1]
-    },
-    {
-      title: "Innovation",
-      description: "Leveraging cutting-edge tools and methodologies to solve complex challenges.",
-      icon: principleIcons[2]
-    },
-    {
-      title: "Sustainability",
-      description: "Environmental stewardship and long-term thinking in every decision.",
-      icon: principleIcons[3]
     }
   ];
 
@@ -293,7 +286,7 @@ const Process = () => {
           `}</style>
         </section>
 
-        {/* Core Principles - Chocolate Expertise Style */}
+        {/* Core Principles - Chocolate Expertise Style, matches expertise grid, uses images not icons */}
         <section className="py-20 w-full" style={{ background: "#fbf0de" }}>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
             <div className="text-center mb-12">
@@ -301,49 +294,27 @@ const Process = () => {
               <p className="font-inter text-base text-center text-[#797572] mb-8">These fundamental values guide our approach and ensure consistent, high-quality outcomes for every client.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {/**
-                title: "Transparency",
-                description: "Open communication and clear documentation throughout every phase of the project.",
-                image: "/assets/core-values-3.webp"
-              },
-              {
-                title: "Collaboration",
-                description: "Active involvement of all stakeholders in the planning and design process.",
-                image: "/assets/core-values-4.webp"
-              },
-              {
-                title: "Innovation",
-                description: "Leveraging cutting-edge tools and methodologies to solve complex challenges.",
-                image: "/assets/core-values-4.webp"
-              },
-              {
-                title: "Sustainability",
-                description: "Environmental stewardship and long-term thinking in every decision.",
-                image: "/assets/core-values.webp"
-              }
-              */}
               {principles.map((principle, idx) => {
                 return (
                   <div
                     key={principle.title}
-                    className="relative group rounded-2xl overflow-hidden shadow-xl border-2 border-[#422c21] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105 cursor-pointer"
+                    className="relative group rounded-2xl overflow-hidden shadow-xl border-2 border-[#b86a28] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105"
                     style={{ aspectRatio: '1/1.1', minHeight: 260, minWidth: 0 }}
                     tabIndex={0}
                   >
-                    {/* Card as image background */}
                     <img
-                      src={principle.icon}
+                      src={principle.image}
                       alt={principle.title}
-                      className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-all duration-500 group-hover:brightness-100 group-hover:scale-105 brightness-75 blur-[1px] group-hover:blur-0"
-                      style={{transition:'all 0.5s'}}
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-100 group-hover:scale-105 group-focus:brightness-100 group-focus:scale-105"
+                      style={{ background: "#b86a28" }}
                     />
-                    {/* Overlay for text visibility */}
-                    <div className="absolute bottom-0 left-0 w-full px-3 py-3 flex justify-center z-10 transition-opacity duration-300" style={{background:'linear-gradient(90deg, #422c21 60%, rgba(66,44,33,0.7) 100%)', borderBottomLeftRadius:'1rem', borderBottomRightRadius:'1rem'}}>
+                    {/* Title at bottom always visible, hidden on hover/focus */}
+                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#b86a28ee] to-transparent px-3 py-3 flex justify-center transition-opacity duration-300 group-hover:opacity-0 group-focus:opacity-0">
                       <h3 className="font-playfair text-lg font-bold text-white drop-shadow text-center w-full">{principle.title}</h3>
                     </div>
-                    {/* Overlay on hover/tap - glassmorphism, title + description */}
-                    <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 p-6 z-20"
-                      style={{backdropFilter:'blur(8px)', background:'rgba(66,44,33,0.45)'}}>
+                    {/* Overlay on hover/tap - semi-transparent, not full coverage, image remains visible */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 p-6"
+                      style={{background: 'linear-gradient(180deg, rgba(107,58,26,0.45) 60%, rgba(107,58,26,0.15) 100%)'}}>
                       <h3 className="font-playfair text-xl font-bold text-white mb-2 text-center w-full drop-shadow">{principle.title}</h3>
                       <p className="font-inter text-base text-white text-center w-full leading-snug" style={{textAlign:'center', margin:0}}>{principle.description}</p>
                     </div>
@@ -354,18 +325,18 @@ const Process = () => {
           </div>
         </section>
 
-        {/* Project Timeline - Glassmorphism, Chocolate, White Text, More Visible Image */}
+        {/* Project Timeline - More visible, aesthetic image, glassmorphism, white text */}
         <section className="py-20 relative min-h-[500px] flex items-center justify-center overflow-hidden" style={{background:'#422c21'}}>
-          {/* Background image with less dark overlay for more visibility */}
-          <img src="/assets/core-values-2.webp" alt="Project Timeline Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 select-none pointer-events-none" style={{filter:'brightness(0.7)'}} />
-          <div className="absolute inset-0 bg-[#422c21]/60 z-10" />
+          {/* Background image with minimal overlay for high visibility */}
+          <img src="/assets/core-values-2.webp" alt="Project Timeline Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 select-none pointer-events-none" style={{filter:'brightness(0.85) saturate(1.1)'}} />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#422c21cc] via-[#422c2100] to-[#422c21cc] z-10" />
           <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-8 relative inline-block drop-shadow-lg">
               Typical <span className="relative">Project
                 <span className="absolute left-0 right-0 -bottom-2 h-1 w-full bg-white animate-underline-green" style={{borderRadius:'2px'}}></span>
               </span> Timeline
             </h2>
-            <div className="backdrop-blur-md bg-white/10 border border-[#fbf0de] rounded-2xl shadow-2xl p-8 w-full max-w-xl mx-auto" style={{boxShadow:'0 8px 32px 0 rgba(31, 38, 135, 0.18)'}}>
+            <div className="backdrop-blur-lg bg-white/10 border border-[#fbf0de] rounded-2xl shadow-2xl p-8 w-full max-w-xl mx-auto" style={{boxShadow:'0 8px 32px 0 rgba(31, 38, 135, 0.18)'}}>
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <span className="font-inter font-semibold text-white">Small Projects</span>
