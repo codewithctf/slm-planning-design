@@ -4,7 +4,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
-import { sanityClient } from "@/lib/sanityClient";
+import { usePayloadApi } from "@/hooks/usePayloadApi";
 import { Helmet } from 'react-helmet-async';
 
 const HARDCODED_CATEGORIES = [
@@ -19,30 +19,16 @@ const Portfolio = () => {
   const [filter, setFilter] = useState("All");
   const [projects, setProjects] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { callApi } = usePayloadApi();
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      setLoading(true);
-      const query = `*[_type == "project"] | order(year desc){
-        _id,
-        title,
-        description,
-        categories[]-> { title },
-        mainImage,
-        year,
-        tags,
-        location,
-      }`;
-      try {
-        const data = await sanityClient.fetch(query);
-        setProjects(data);
-      } catch (err) {
-        setProjects([]);
-      } finally {
-        setLoading(false);
+    setLoading(true);
+    callApi("/api/portfolio-projects", "GET").then(res => {
+      if (res.data) {
+        setProjects(res.data.docs || []);
       }
-    };
-    fetchProjects();
+      setLoading(false);
+    });
   }, []);
 
   const categories = HARDCODED_CATEGORIES;
@@ -156,7 +142,7 @@ const Portfolio = () => {
                     <div className="relative overflow-hidden group">
                       <div
                         className="h-64 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                        style={{ backgroundImage: `url(${project.mainImage?.asset?._ref ? sanityImageUrl(project.mainImage) : ''})` }}
+                        style={{ backgroundImage: `url(${project.mainImage?.asset?._ref ? project.mainImage.asset._ref : ''})` }}
                       />
                       <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
                         {project.categories?.map((cat: any, idx: number) => (
@@ -255,15 +241,6 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-// Helper for Sanity image URLs
-function sanityImageUrl(image: any) {
-  if (!image?.asset?._ref) return '';
-  // Basic Sanity CDN URL builder for images
-  const ref = image.asset._ref;
-  const [, id, dimension, format] = ref.split('-');
-  return `https://cdn.sanity.io/images/3qxalk7v/production/${id}-${dimension}.${format}`;
-}
 
 // AnimatedCounter component
 import { useRef } from "react";

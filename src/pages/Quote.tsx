@@ -9,8 +9,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
-import { supabase } from "@/lib/supabaseClient";
 import { Helmet } from 'react-helmet-async';
+import { usePayloadApi } from "@/hooks/usePayloadApi";
 
 const Quote = () => {
   const [formData, setFormData] = useState({
@@ -25,14 +25,26 @@ const Quote = () => {
   });
 
   const { toast } = useToast();
+  const { callApi, loading } = usePayloadApi();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const { error } = await supabase.from('quote_requests').insert([
-        formData
-      ]);
-      if (error) throw error;
+    const payloadData = {
+      fullName: formData.full_name,
+      email: formData.email,
+      phoneNumber: formData.phone_number,
+      organization: formData.organization,
+      projectType: formData.project_type,
+      projectDescription: formData.project_description,
+      timeline: formData.timeline,
+      budgetRange: formData.budget_range
+    };
+    const res = await callApi(
+      "/api/quote-requests",
+      "POST",
+      payloadData
+    );
+    if (!res.error) {
       toast({
         title: "Quote Request Submitted",
         description: "We'll review your request and get back to you within 24-48 hours.",
@@ -47,10 +59,10 @@ const Quote = () => {
         timeline: "",
         budget_range: ""
       });
-    } catch (error) {
+    } else {
       toast({
         title: "Submission Failed",
-        description: (error as Error).message || "An error occurred. Please try again.",
+        description: res.error || "An error occurred. Please try again.",
         variant: "destructive",
       });
     }

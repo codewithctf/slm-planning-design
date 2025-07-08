@@ -3,9 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import UrbanPlanningCarousel from "@/components/UrbanPlanningCarousel";
 import { Button } from "@/components/ui/button";
-import { client } from "../../react-router-slm/app/sanity/client";
-import { supabase } from "@/lib/supabaseClient";
-import intersection from "lodash/intersection";
+import { usePayloadApi } from "@/hooks/usePayloadApi";
 import { Helmet } from 'react-helmet-async';
 
 const blogTopics = [
@@ -19,8 +17,6 @@ const blogTopics = [
   "Climate",
 ];
 
-const POSTS_QUERY = `*[_type == "post" && defined(slug.current)]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, image, body, tag, categories[]->{title}}`;
-
 const Blog = () => {
   const [selectedTopic, setSelectedTopic] = useState<string>("All");
   const [posts, setPosts] = useState<any[]>([]);
@@ -28,10 +24,13 @@ const Blog = () => {
   // Newsletter state
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState<string | null>(null);
+  const { callApi } = usePayloadApi();
 
   useEffect(() => {
-    client.fetch(POSTS_QUERY).then((data) => {
-      setPosts(data);
+    callApi("/api/blogs", "GET").then(res => {
+      if (res.data) {
+        setPosts(res.data.docs || []);
+      }
       setLoading(false);
     });
   }, []);
@@ -59,16 +58,14 @@ const Blog = () => {
       setNewsletterStatus("Please enter a valid email address.");
       return;
     }
-    try {
-      const { error } = await supabase.from('newsletter_subscribers').insert([{ email: newsletterEmail }]);
-      if (!error) {
-        setNewsletterStatus("Thank you for subscribing!");
-        setNewsletterEmail("");
-      } else {
-        setNewsletterStatus(error.message || "Subscription failed. Please try again.");
-      }
-    } catch (err) {
-      setNewsletterStatus("Network error. Please try again later.");
+    // Use Payload API for newsletter
+    const { callApi } = usePayloadApi();
+    const res = await callApi("/api/newsletter-subscribers", "POST", { email: newsletterEmail });
+    if (!res.error) {
+      setNewsletterStatus("Thank you for subscribing!");
+      setNewsletterEmail("");
+    } else {
+      setNewsletterStatus(res.error || "Subscription failed. Please try again.");
     }
   };
 

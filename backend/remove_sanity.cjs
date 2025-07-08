@@ -1,0 +1,3 @@
+// Change extension to .cjs for CommonJS compatibility
+
+// ...existing code...

@@ -1,0 +1,87 @@
+/*
+  Custom admin CSS for SLM Planning & Design Payload CMS
+  - Chocolate theme accents
+  - Modern, clean, professional
+*/
+:root {
+  --slm-chocolate: #402920;
+  --slm-cream: #fbf0de;
+  --slm-accent: #b86a28;
+  --slm-bg: #f2ece0;
+}
+
+body, .payload__app {
+  background: var(--slm-bg) !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.payload__app .payload__sidebar {
+  background: var(--slm-chocolate) !important;
+}
+
+.payload__app .payload__sidebar .payload__sidebar__logo {
+  filter: brightness(1.2) drop-shadow(0 2px 8px #b86a28cc);
+}
+
+.payload__app .payload__sidebar__nav-link--active {
+  background: var(--slm-accent) !important;
+  color: #fff !important;
+}
+
+.payload__app .payload__header {
+  background: var(--slm-chocolate) !important;
+  color: #fff !important;
+}
+
+.payload__app .payload__card {
+  background: var(--slm-cream) !important;
+  border-radius: 1.2rem !important;
+  box-shadow: 0 2px 12px 0 #40292022 !important;
+}
+
+.payload__app .payload__button--primary {
+  background: var(--slm-chocolate) !important;
+  color: #fff !important;
+  border-radius: 0.5rem !important;
+  transition: background 0.2s;
+}
+
+.payload__app .payload__button--primary:hover {
+  background: var(--slm-accent) !important;
+}
+
+.payload__app .payload__form-label {
+  color: var(--slm-chocolate) !important;
+  font-weight: 600;
+}
+
+.payload__app .payload__input, .payload__app .payload__textarea {
+  border: 1.5px solid var(--slm-accent) !important;
+  border-radius: 0.5rem !important;
+  background: #fff !important;
+}
+
+.payload__app .payload__login {
+  background: var(--slm-cream) !important;
+  border-radius: 1.2rem !important;
+  box-shadow: 0 2px 12px 0 #40292022 !important;
+}
+
+.payload__app .payload__login__oauth {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.payload__app .payload__login__oauth button {
+  background: #fff !important;
+  color: var(--slm-chocolate) !important;
+  border: 1.5px solid var(--slm-accent) !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.payload__app .payload__login__oauth button:hover {
+  background: var(--slm-accent) !important;
+  color: #fff !important;
+}

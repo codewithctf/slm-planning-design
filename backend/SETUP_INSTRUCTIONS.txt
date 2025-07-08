@@ -1,0 +1,55 @@
+# Payload CMS, PostgreSQL, and Google Auth setup for SLM Planning & Design
+
+# 1. Install dependencies
+npm install payload @payloadcms/plugin-auth-google pg dotenv
+
+# 2. Create .env file (edit values as needed)
+echo "DATABASE_URL=postgres://USER:PASSWORD@localhost:5432/slm_db
+PAYLOAD_PUBLIC_SERVER_URL=http://localhost:3001
+FRONTEND_URL=http://localhost:5173
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_CALLBACK_URL=http://localhost:3001/api/auth/google/callback
+NODE_ENV=development
+" > ../.env
+
+# 3. Add start script to backend/package.json
+# (Add this inside "scripts": { ... })
+# "dev": "payload dev --config payload.config.ts",
+# "build": "payload build --config payload.config.ts",
+# "start": "payload start --config payload.config.ts"
+
+# 4. Run Payload locally
+echo "To start Payload locally:"
+echo "cd backend && npm run dev"
+
+# 5. Digital Ocean/Production notes
+# - Set DATABASE_URL, PAYLOAD_PUBLIC_SERVER_URL, FRONTEND_URL, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and GOOGLE_CALLBACK_URL in your production environment.
+# - Use NGINX as a reverse proxy for /api and /admin routes.
+# - Ensure PostgreSQL is running and accessible.
+# - For SSL, terminate at NGINX.
+
+# 6. Remove Sanity
+# - Delete the studio-slm folder and all Sanity dependencies from your project.
+# - Remove any Sanity API calls from your frontend and replace with Payload API endpoints.
+
+# 7. API Endpoints
+# - Blogs:        /api/blogs
+# - Portfolio:    /api/portfolio-projects
+# - Contacts:     /api/contact-messages
+# - Users/Admin:  /api/users
+# - Media:        /api/media
+
+# 8. Customization
+# - The admin UI is fully customizable via payload.config.ts and admin.css.
+# - You can add custom dashboard widgets, branding, and more.
+
+# 9. Security
+# - All schemas are parameterized and validated by Payload.
+# - Google OAuth is enabled for admin login/signup.
+# - Rate limiting is enabled.
+
+# 10. Next Steps
+# - Migrate your existing blog and portfolio data from Sanity to Payload (can be scripted or manual import).
+# - Test all admin and API features.
+# - Deploy backend and frontend to Digital Ocean.

@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
-import { supabase } from "@/lib/supabaseClient";
+import { usePayloadApi } from "@/hooks/usePayloadApi";
 import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
@@ -20,35 +20,36 @@ const Contact = () => {
   });
 
   const { toast } = useToast();
+  const { callApi, loading } = usePayloadApi();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const { error } = await supabase.from('contacts').insert([
-        formData
-      ]);
-      if (!error) {
-        toast({
-          title: "Message Sent",
-          description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-        });
-        setFormData({
-          full_name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
-      } else {
-        toast({
-          title: "Submission Failed",
-          description: error.message || "There was an error submitting your message. Please try again.",
-          variant: "destructive"
-        });
-      }
-    } catch (err) {
+    const payloadData = {
+      fullName: formData.full_name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    };
+    const res = await callApi(
+      "/api/contact-messages",
+      "POST",
+      payloadData
+    );
+    if (!res.error) {
       toast({
-        title: "Network Error",
-        description: "Could not connect to Supabase.",
+        title: "Message Sent",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      });
+      setFormData({
+        full_name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } else {
+      toast({
+        title: "Submission Failed",
+        description: res.error || "There was an error submitting your message. Please try again.",
         variant: "destructive"
       });
     }
