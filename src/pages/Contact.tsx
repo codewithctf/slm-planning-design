@@ -129,12 +129,12 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
-                <Card className="border-0 shadow-xl">
+                <Card className="border-0 shadow-xl bg-[#fbf0de]">
                   <CardHeader>
                     <CardTitle className="font-playfair text-2xl text-black">
                       Send Us a Message
                     </CardTitle>
-                    <CardDescription className="font-inter text-gray-600">
+                    <CardDescription className="font-inter text-gray-700">
                       Have a question or want to discuss a potential project? We'd love to hear from you.
                     </CardDescription>
                   </CardHeader>
@@ -142,7 +142,7 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="name" className="font-inter font-medium text-black">
                             Full Name *
                           </Label>
                           <Input
@@ -150,11 +150,11 @@ const Contact = () => {
                             value={formData.full_name}
                             onChange={(e) => handleChange("full_name", e.target.value)}
                             required
-                            className="border-gray-300 focus:border-gray-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="email" className="font-inter font-medium text-black">
                             Email Address *
                           </Label>
                           <Input
@@ -163,13 +163,13 @@ const Contact = () => {
                             value={formData.email}
                             onChange={(e) => handleChange("email", e.target.value)}
                             required
-                            className="border-slm-green-300 focus:border-slm-green-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="subject" className="font-inter font-medium text-slm-green-700">
+                        <Label htmlFor="subject" className="font-inter font-medium text-black">
                           Subject *
                         </Label>
                         <Input
@@ -177,12 +177,12 @@ const Contact = () => {
                           value={formData.subject}
                           onChange={(e) => handleChange("subject", e.target.value)}
                           required
-                          className="border-slm-green-300 focus:border-slm-green-500"
+                          className="border-gray-400 focus:border-[#402920]"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message" className="font-inter font-medium text-slm-green-700">
+                        <Label htmlFor="message" className="font-inter font-medium text-black">
                           Message *
                         </Label>
                         <Textarea
@@ -192,13 +192,13 @@ const Contact = () => {
                           rows={6}
                           placeholder="Tell us about your project or inquiry..."
                           required
-                          className="border-slm-green-300 focus:border-slm-green-500"
+                          className="border-gray-400 focus:border-[#402920]"
                         />
                       </div>
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold py-3"
+                        className="w-full bg-[#402920] hover:bg-[#2d1a10] text-white font-semibold py-3 transition-colors duration-200"
                       >
                         Send Message
                       </Button>
@@ -210,9 +210,9 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 {/* Office Information */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-slm-green-700">
+                    <CardTitle className="font-playfair text-xl text-black">
                       Our Office
                     </CardTitle>
                   </CardHeader>
@@ -267,9 +267,9 @@ const Contact = () => {
                 </Card>
 
                 {/* Map Section */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0a0600]">
+                    <CardTitle className="font-playfair text-xl text-black">
                       Find Us
                     </CardTitle>
                   </CardHeader>
@@ -290,36 +290,36 @@ const Contact = () => {
                 </Card>
 
                 {/* Social Media */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0a0600]">
+                    <CardTitle className="font-playfair text-xl text-black">
                       Connect With Us
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2 sm:gap-3 md:flex-row md:flex-nowrap md:gap-4 w-full">
                       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-slm-green-50 flex items-center justify-center gap-2 w-full sm:w-auto">
+                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center justify-center gap-2 w-full sm:w-auto">
                           <img src="/assets/facebook-icon.png" alt="Facebook" className="w-5 h-5 min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] object-contain shrink-0" loading="lazy" width="20" height="20" /> Facebook
                         </Button>
                       </a>
                       <a href="https://x.com/slm_planning?s=11" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
+                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
                           <img src="/assets/X-icon.png" alt="X" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> X
                         </Button>
                       </a>
                       <a href="https://www.linkedin.com/company/slmplanning/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
+                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
                           <img src="/assets/LinkedIn-icon.png" alt="LinkedIn" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> LinkedIn
                         </Button>
                       </a>
                       <a href="https://www.instagram.com/slm_planning?igsh=MWt4ZWppd2g3Mm45Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
+                        <Button variant="outline" size="sm" className="border-gray-300 text-black hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
                           <img src="/assets/instagram-icon.jpg" alt="Instagram" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> Instagram
                         </Button>
                       </a>
                       <a href="https://www.tiktok.com/@slm.planning?_t=ZP-8xktNGfhS50&_r=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                        <Button variant="outline" size="sm" className="border-gray-300 text-black  hover:bg-slm-green-50 flex items-center gap-2 w-full sm:w-auto">
+                        <Button variant="outline" size="sm" className="border-gray-300 text-black  hover:bg-[#e4d9c9] flex items-center gap-2 w-full sm:w-auto">
                           <img src="/assets/tiktok icon.png" alt="TikTok" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} /> TikTok
                         </Button>
                       </a>
@@ -340,13 +340,13 @@ const Contact = () => {
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="font-inter text-xl text-slm-green-100 mb-8">
+            <p className="font-inter text-xl text-[#f2ece0] mb-8">
               Get a custom quote and discover how we can help bring your vision to life.
             </p>
             <Button 
               asChild 
               size="lg" 
-              className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3"
+              className="bg-white text-[#402920] hover:bg-[#fbf0de] font-semibold px-8 py-3"
             >
               <a href="/quote">Get Your Quote</a>
             </Button>

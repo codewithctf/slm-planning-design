@@ -75,7 +75,7 @@ const Quote = () => {
         <meta name="twitter:description" content="Request a custom quote for your urban planning, landscape architecture, or 3D rendering project with SLM Planning & Design." />
         <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#e3dac9]">
         <Navigation />
         
         {/* Hero Section */}
@@ -131,12 +131,12 @@ const Quote = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Form */}
               <div className="lg:col-span-2">
-                <Card className="border-0 shadow-xl">
+                <Card className="border-0 shadow-xl bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-2xl text-slm-green-700">
+                    <CardTitle className="font-playfair text-2xl text-black">
                       Project Details
                     </CardTitle>
-                    <CardDescription className="font-inter text-gray-600">
+                    <CardDescription className="font-inter text-gray-700">
                       Please provide as much detail as possible to help us prepare an accurate quote.
                     </CardDescription>
                   </CardHeader>
@@ -144,7 +144,7 @@ const Quote = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="name" className="font-inter font-medium text-black">
                             Full Name *
                           </Label>
                           <Input
@@ -152,11 +152,11 @@ const Quote = () => {
                             value={formData.full_name}
                             onChange={(e) => handleChange("full_name", e.target.value)}
                             required
-                            className="border-slm-green-300 focus:border-slm-green-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="email" className="font-inter font-medium text-black">
                             Email Address *
                           </Label>
                           <Input
@@ -165,42 +165,42 @@ const Quote = () => {
                             value={formData.email}
                             onChange={(e) => handleChange("email", e.target.value)}
                             required
-                            className="border-slm-green-300 focus:border-slm-green-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="phone" className="font-inter font-medium text-black">
                             Phone Number
                           </Label>
                           <Input
                             id="phone"
                             value={formData.phone_number}
                             onChange={(e) => handleChange("phone_number", e.target.value)}
-                            className="border-slm-green-300 focus:border-slm-green-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="company" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="company" className="font-inter font-medium text-black">
                             Company/Organization
                           </Label>
                           <Input
                             id="company"
                             value={formData.organization}
                             onChange={(e) => handleChange("organization", e.target.value)}
-                            className="border-slm-green-300 focus:border-slm-green-500"
+                            className="border-gray-400 focus:border-[#402920]"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="projectType" className="font-inter font-medium text-slm-green-700">
+                        <Label htmlFor="projectType" className="font-inter font-medium text-black">
                           Project Type *
                         </Label>
                         <Select value={formData.project_type} onValueChange={(value) => handleChange("project_type", value)}>
-                          <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
+                          <SelectTrigger className="border-gray-400 focus:border-[#402920]">
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
                           <SelectContent>
@@ -215,7 +215,7 @@ const Quote = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="projectScope" className="font-inter font-medium text-slm-green-700">
+                        <Label htmlFor="projectScope" className="font-inter font-medium text-black">
                           Project Scope & Description *
                         </Label>
                         <Textarea
@@ -225,17 +225,17 @@ const Quote = () => {
                           rows={4}
                           placeholder="Please describe your project in detail, including size, location, objectives, and any specific requirements..."
                           required
-                          className="border-slm-green-300 focus:border-slm-green-500"
+                          className="border-gray-400 focus:border-[#402920]"
                         />
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="timeline" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="timeline" className="font-inter font-medium text-black">
                             Desired Timeline
                           </Label>
                           <Select value={formData.timeline} onValueChange={(value) => handleChange("timeline", value)}>
-                            <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
+                            <SelectTrigger className="border-gray-400 focus:border-[#402920]">
                               <SelectValue placeholder="Select timeline" />
                             </SelectTrigger>
                             <SelectContent>
@@ -249,11 +249,11 @@ const Quote = () => {
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="budget_range" className="font-inter font-medium text-slm-green-700">
+                          <Label htmlFor="budget_range" className="font-inter font-medium text-black">
                             Budget Range (Optional)
                           </Label>
                           <Select value={formData.budget_range} onValueChange={(value) => handleChange("budget_range", value)}>
-                            <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
+                            <SelectTrigger className="border-gray-400 focus:border-[#402920]">
                               <SelectValue placeholder="Select budget range" />
                             </SelectTrigger>
                             <SelectContent>
@@ -270,7 +270,7 @@ const Quote = () => {
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold py-3"
+                        className="w-full bg-[#402920] hover:bg-[#2d1a10] text-white font-semibold py-3 transition-colors duration-200"
                       >
                         Submit Quote Request
                       </Button>
@@ -282,34 +282,34 @@ const Quote = () => {
               {/* Sidebar */}
               <div className="space-y-8">
                 {/* What Happens Next */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-slm-green-700">
+                    <CardTitle className="font-playfair text-xl text-black">
                       What Happens Next?
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-slm-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-[#402920] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xs font-bold">1</span>
                       </div>
-                      <p className="font-inter text-sm text-gray-600">
+                      <p className="font-inter text-sm text-gray-700">
                         We'll review your request within 24 hours
                       </p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-slm-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-[#402920] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xs font-bold">2</span>
                       </div>
-                      <p className="font-inter text-sm text-gray-600">
+                      <p className="font-inter text-sm text-gray-700">
                         Schedule a consultation call to discuss details
                       </p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-slm-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-[#402920] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xs font-bold">3</span>
                       </div>
-                      <p className="font-inter text-sm text-gray-600">
+                      <p className="font-inter text-sm text-gray-700">
                         Receive a detailed proposal within 48 hours
                       </p>
                     </div>
@@ -317,27 +317,27 @@ const Quote = () => {
                 </Card>
 
                 {/* Contact Info */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-slm-green-700">
+                    <CardTitle className="font-playfair text-xl text-black">
                       Need Immediate Assistance?
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
-                      <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
+                      <p className="font-inter text-sm text-gray-700 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                           <img src="/assets/email.png" alt="Email" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         sandy@slmplanning.com
                       </p>
-                      <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
+                      <p className="font-inter text-sm text-gray-700 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                           <img src="/assets/phone icone.png" alt="Phone" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         (703) 947-7885
                       </p>
-                      <p className="font-inter text-sm text-gray-600 flex items-center gap-2">
+                      <p className="font-inter text-sm text-gray-700 flex items-center gap-2">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white transition-transform duration-200 hover:scale-110">
                           <img src="/assets/time.png" alt="Office Hours" className="w-5 h-5" loading="lazy" width="20" height="20" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
@@ -348,14 +348,14 @@ const Quote = () => {
                 </Card>
 
                 {/* Service Areas */}
-                <Card className="border-0 shadow-lg">
+                <Card className="border-0 shadow-lg bg-[#fbf0de]">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-slm-green-700">
+                    <CardTitle className="font-playfair text-xl text-black">
                       Our Services
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-2 font-inter text-sm text-gray-600">
+                    <ul className="space-y-2 font-inter text-sm text-gray-700">
                       <li>• Urban Design & Planning</li>
                       <li>• 3D Visualization & Rendering</li>
                       <li>• Landscape Architecture</li>

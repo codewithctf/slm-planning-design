@@ -209,7 +209,7 @@ const About = () => {
                   </div>
                   {/* Decorative chocolate bar at bottom */}
                   <div className="w-full h-2 bg-gradient-to-r from-[#b86a28] via-[#7b4b2a] to-[#b86a28] rounded-b-3xl" />
-                  {/* Overlay on hover/tap - subtle, not full coverage, no duplicate text */}
+                  {/* Overlay on hover/tap - subtle, not full coverage */}
                   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300"
                     style={{background: 'linear-gradient(180deg, rgba(123,75,42,0.13) 60%, rgba(123,75,42,0.09) 100%)'}}>
                   </div>
@@ -219,7 +219,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Meet Our Team - Chocolate theme, creative overlay, only image by default */}
+        {/* Meet Our Team */}
         <section className="py-20 w-full" style={{ background: '#f7ede5' }}>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
             <h2 className="font-playfair text-4xl font-bold text-center mb-12 text-black">Meet Our Team</h2>

@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet-async';
 
 const processImages = [
   "/assets/Feasiblity-studies.webp", // 01 Initial Consultation
-  "/assets/community engagement-service.webp", // 02 Research & Analysis (valid)
-  "/assets/Design Research & Prototyping.webp", // 03 Conceptual Design (valid)
-  "/assets/urban planning (2).webp", // 04 Detailed Planning (valid)
-  "/assets/3D render 2.webp", // 05 Implementation Oversight (valid)
-  "/assets/Post-completion.webp" // 06 Post-Completion Review (valid)
+  "/assets/Research-analysis.webp", // 02 Research & Analysis
+  "/assets/conceptual-design.webp", // 03 Conceptual Design
+  "/assets/urban planning (2).webp", // 04 Detailed Planning 
+  "/assets/3D render 2.webp", // 05 Implementation Oversight 
+  "/assets/Post-completion.webp" // 06 Post-Completion Review 
 ];
 
 const principles = [
@@ -177,59 +177,53 @@ const Process = () => {
           `}</style>
         </section>
 
-        {/* Process Overview */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-8">
-              How We Work
-            </h2>
-            <p className="font-inter text-lg text-gray-600 leading-relaxed">
-              Our proven methodology ensures that every project benefits from systematic planning, 
-              collaborative design, and expert implementation. We believe that great outcomes come 
-              from great processes, and we've refined our approach over more than a decade of 
-              successful project delivery.
+        {/* How We Work Section - Standalone, Chocolate Background, White Text */}
+        <section className="py-16 w-full" style={{ background: '#f2ece0' }}>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-black mb-6 animate-fade-in-up">How We Work</h2>
+            <p className="font-inter text-lg md:text-xl text-gray-700 mb-4 animate-fade-in-up delay-100">
+              Our proven methodology ensures that every project benefits from systematic planning, collaborative design, and expert implementation. We believe that great outcomes come from great processes, and we've refined our approach over more than a decade of successful project delivery.
             </p>
           </div>
         </section>
 
-        {/* Process Steps */}
-        <section className="py-0 pb-20">
+        {/* Process Steps - Cream background, black titles, gray-700 text, chocolate vibe, subtle animation */}
+        <section className="py-0 pb-20 w-full" style={{ background: '#f2ece0' }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-16 relative">
-              {/* Interlinking arrows for process flow */}
               {processSteps.map((step, index) => (
-                <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center relative`}> 
+                <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center relative animate-fade-in-up`} style={{animationDelay: `${index * 0.1}s`}}> 
                   <div className="lg:w-1/2 w-full">
-                    <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up">
+                    <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl">
                       <CardHeader>
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-16 h-16 bg-slm-green-600 rounded-full flex items-center justify-center">
+                          <div className="w-16 h-16 bg-[#402920] rounded-full flex items-center justify-center shadow-lg">
                             <span className="text-white font-bold text-xl">{step.step}</span>
                           </div>
                         </div>
-                        <CardTitle className="font-playfair text-2xl text-slm-green-700 mb-2">
+                        <CardTitle className="font-playfair text-2xl text-black mb-2 drop-shadow-sm">
                           {step.title}
                         </CardTitle>
-                        <CardDescription className="font-inter text-gray-600 text-lg">
+                        <CardDescription className="font-inter text-gray-700 text-lg">
                           {step.description}
                         </CardDescription>
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <div>
-                          <h4 className="font-inter font-semibold text-slm-brown-600 mb-3">
+                          <h4 className="font-inter font-semibold text-black mb-3">
                             Key Activities:
                           </h4>
                           <ul className="space-y-2">
                             {step.details.map((detail, idx) => (
-                              <li key={idx} className="font-inter text-gray-600 flex items-start">
-                                <span className="text-slm-green-500 mr-2">•</span>
+                              <li key={idx} className="font-inter text-gray-700 flex items-start">
+                                <span className="text-[#b86a28] mr-2">•</span>
                                 {detail}
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div className="pt-4 border-t border-gray-100">
-                          <span className="inline-block bg-slm-green-100 text-slm-green-700 px-3 py-1 rounded-full font-inter text-sm font-medium">
+                          <span className="inline-block bg-[#402920] text-white px-3 py-1 rounded-full font-inter text-sm font-medium">
                             Duration: {step.duration}
                           </span>
                         </div>
@@ -253,10 +247,10 @@ const Process = () => {
                     {index < processSteps.length - 1 && (
                       <div className={`hidden lg:block absolute ${index % 2 === 0 ? 'right-[-40px]' : 'left-[-40px]'} top-1/2 z-10`} style={{transform: 'translateY(-50%)'}}>
                         <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5 20 Q30 0 55 20" stroke="#2B7151" strokeWidth="4" fill="none" markerEnd="url(#arrowhead)"/>
+                          <path d="M5 20 Q30 0 55 20" stroke="#b86a28" strokeWidth="4" fill="none" markerEnd="url(#arrowhead)"/>
                           <defs>
                             <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
-                              <polygon points="0 0, 8 4, 0 8" fill="#2B7151" />
+                              <polygon points="0 0, 8 4, 0 8" fill="#b86a28" />
                             </marker>
                           </defs>
                         </svg>
@@ -268,13 +262,9 @@ const Process = () => {
             </div>
           </div>
           <style>{`
-            @keyframes fade-in-up {
-              0% { opacity: 0; transform: translateY(40px); }
-              100% { opacity: 1; transform: translateY(0); }
-            }
-            .animate-fade-in-up {
-              animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1);
-            }
+            .animate-fade-in-up { opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+            .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+            @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
             @keyframes process-img-fade {
               0% { opacity: 0; transform: scale(0.96) rotate(-2deg); }
               60% { opacity: 1; transform: scale(1.04) rotate(2deg); }
