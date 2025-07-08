@@ -418,15 +418,15 @@ const Services = () => {
         </section>
 
         {/* Ready to Get Started Section (now matches blog Stay Updated) */}
-        <section className="py-16 bg-slm-green-600">
+        <section className="py-16 bg-[#472c1b]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="font-inter text-lg md:text-xl text-slm-green-100 mb-8">Let's discuss how our services can help bring your vision to life.</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button asChild size="lg" className="bg-white text-slm-green-700 font-semibold px-8 py-3 border-2 border-slm-green-600 hover:bg-slm-green-50">
+              <Button asChild size="lg" className="bg-white text-black font-semibold px-8 py-3 border-2 border-black hover:bg-slm-green-50">
                 <Link to="/contact">Contact Us</Link>
               </Button>
-              <Button asChild size="lg" className="bg-white text-slm-green-700 font-semibold px-8 py-3 hover:bg-slm-green-50">
+              <Button asChild size="lg" className="bg-white text-black font-semibold px-8 py-3 hover:bg-slm-green-50">
                 <Link to="/quote">Request a Quote</Link>
               </Button>
             </div>
