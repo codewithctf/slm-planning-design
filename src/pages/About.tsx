@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 // @ts-ignore
 import gsap from "gsap";
 import { Helmet } from 'react-helmet-async';
-import coreValue2 from '/assets/core-values-2.webp';
 import coreValue3 from '/assets/core-values-3.webp';
 import coreValue4 from '/assets/core-values-4.webp';
 import coreValue5 from '/assets/core-values-5.webp';
@@ -179,7 +178,7 @@ const About = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { title: "Sustainability First", image: coreValue2, desc: "Every project prioritizes environmental stewardship and long-term ecological health." },
+                { title: "Sustainability First", image: "/assets/core-values-2.webp", desc: "Every project prioritizes environmental stewardship and long-term ecological health." },
                 { title: "Purpose Driven", image: coreValue3, desc: "Guided by a clear mission to create lasting, positive impact." },
                 { title: "Collaborative Approach", image: coreValue4, desc: "Working closely with clients, communities, and stakeholders throughout every project." },
                 { title: "Innovation-Driven", image: coreValue5, desc: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges." },
