@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 // @ts-ignore
 import gsap from "gsap";
 import { Helmet } from 'react-helmet-async';
-import coreValue1 from '/assets/core-values-1.webp';
 import coreValue2 from '/assets/core-values-2.webp';
 import coreValue3 from '/assets/core-values-3.webp';
 import coreValue4 from '/assets/core-values-4.webp';
@@ -180,14 +179,14 @@ const About = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { title: "Sustainability First", image: coreValue1, desc: "Every project prioritizes environmental stewardship and long-term ecological health." },
-                { title: "Purpose Driven", image: coreValue2, desc: "Guided by a clear mission to create lasting, positive impact." },
-                { title: "Collaborative Approach", image: coreValue3, desc: "Working closely with clients, communities, and stakeholders throughout every project." },
-                { title: "Innovation-Driven", image: coreValue4, desc: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges." },
-                { title: "Data Driven Solutions", image: coreValue5, desc: "We harness data and analytics to inform smart, impactful decisions for our clients." },
-                { title: "Operational Excellence", image: coreValue6, desc: "Delivering projects efficiently, effectively, and to the highest standards." },
-                { title: "Intergrated Approach", image: coreValue7, desc: "Seamlessly blending disciplines for holistic, future-ready solutions." },
-                { title: "Community-Centered", image: coreValue8, desc: "We design with people at the heart, creating spaces that serve diverse communities." },
+                { title: "Sustainability First", image: coreValue2, desc: "Every project prioritizes environmental stewardship and long-term ecological health." },
+                { title: "Purpose Driven", image: coreValue3, desc: "Guided by a clear mission to create lasting, positive impact." },
+                { title: "Collaborative Approach", image: coreValue4, desc: "Working closely with clients, communities, and stakeholders throughout every project." },
+                { title: "Innovation-Driven", image: coreValue5, desc: "Leveraging cutting-edge technology and methodologies to solve complex urban challenges." },
+                { title: "Data Driven Solutions", image: coreValue6, desc: "We harness data and analytics to inform smart, impactful decisions for our clients." },
+                { title: "Operational Excellence", image: coreValue7, desc: "Delivering projects efficiently, effectively, and to the highest standards." },
+                { title: "Intergrated Approach", image: coreValue8, desc: "Seamlessly blending disciplines for holistic, future-ready solutions." },
+                { title: "Community-Centered", image: "/assets/core-values-8.webp", desc: "We design with people at the heart, creating spaces that serve diverse communities." },
               ].map((item, idx) => (
                 <div
                   key={item.title}
