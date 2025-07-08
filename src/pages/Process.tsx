@@ -293,85 +293,98 @@ const Process = () => {
           `}</style>
         </section>
 
-        {/* Core Principles */}
-        <section className="py-20" style={{ background: "#F0F8F4" }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">
-                Our Core Principles
-              </h2>
-              <p className="font-inter text-lg text-slm-green-800 max-w-2xl mx-auto">
-                These fundamental values guide our approach and ensure consistent, 
-                high-quality outcomes for every client.
-              </p>
+        {/* Core Principles - Chocolate Expertise Style */}
+        <section className="py-20 w-full" style={{ background: "#fbf0de" }}>
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
+            <div className="text-center mb-12">
+              <h2 className="font-playfair text-4xl font-bold text-center mb-4 text-[#0d0706]">Our Core Principles</h2>
+              <p className="font-inter text-base text-center text-[#797572] mb-8">These fundamental values guide our approach and ensure consistent, high-quality outcomes for every client.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {principles.map((principle, index) => (
-                <Card key={index} className="text-center border-0 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl animate-principle-pop group relative overflow-visible">
-                  <div className="flex flex-col items-center justify-center pt-8 pb-4 px-4">
-                    <div className="w-20 h-20 mb-4 flex items-center justify-center relative">
-                      {/* Spinning rectangle border */}
-                      <span className="absolute inset-0 rounded-lg border-2 border-slm-green-700 animate-spin-slow z-0" style={{borderStyle:'solid'}}></span>
-                      <span className="relative z-10 w-16 h-16 flex items-center justify-center bg-white rounded-lg">
-                        <img src={principle.icon} alt={principle.title + ' icon'} className="w-12 h-12 object-contain" />
-                      </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {/**
+                title: "Transparency",
+                description: "Open communication and clear documentation throughout every phase of the project.",
+                image: "/assets/core-values-3.webp"
+              },
+              {
+                title: "Collaboration",
+                description: "Active involvement of all stakeholders in the planning and design process.",
+                image: "/assets/core-values-4.webp"
+              },
+              {
+                title: "Innovation",
+                description: "Leveraging cutting-edge tools and methodologies to solve complex challenges.",
+                image: "/assets/core-values-4.webp"
+              },
+              {
+                title: "Sustainability",
+                description: "Environmental stewardship and long-term thinking in every decision.",
+                image: "/assets/core-values.webp"
+              }
+              */}
+              {principles.map((principle, idx) => {
+                return (
+                  <div
+                    key={principle.title}
+                    className="relative group rounded-2xl overflow-hidden shadow-xl border-2 border-[#422c21] bg-[#fbf0de] transition-transform duration-300 hover:scale-105 focus-within:scale-105 cursor-pointer"
+                    style={{ aspectRatio: '1/1.1', minHeight: 260, minWidth: 0 }}
+                    tabIndex={0}
+                  >
+                    {/* Card as image background */}
+                    <img
+                      src={principle.icon}
+                      alt={principle.title}
+                      className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-all duration-500 group-hover:brightness-100 group-hover:scale-105 brightness-75 blur-[1px] group-hover:blur-0"
+                      style={{transition:'all 0.5s'}}
+                    />
+                    {/* Overlay for text visibility */}
+                    <div className="absolute bottom-0 left-0 w-full px-3 py-3 flex justify-center z-10 transition-opacity duration-300" style={{background:'linear-gradient(90deg, #422c21 60%, rgba(66,44,33,0.7) 100%)', borderBottomLeftRadius:'1rem', borderBottomRightRadius:'1rem'}}>
+                      <h3 className="font-playfair text-lg font-bold text-white drop-shadow text-center w-full">{principle.title}</h3>
                     </div>
-                    <CardHeader>
-                      <CardTitle className="font-playfair text-xl text-slm-green-700 mb-2 group-hover:text-white transition-colors duration-300">
-                        {principle.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="font-inter text-base text-slm-green-800 group-hover:text-white transition-colors duration-300">
-                        {principle.description}
-                      </CardDescription>
-                    </CardContent>
+                    {/* Overlay on hover/tap - glassmorphism, title + description */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 p-6 z-20"
+                      style={{backdropFilter:'blur(8px)', background:'rgba(66,44,33,0.45)'}}>
+                      <h3 className="font-playfair text-xl font-bold text-white mb-2 text-center w-full drop-shadow">{principle.title}</h3>
+                      <p className="font-inter text-base text-white text-center w-full leading-snug" style={{textAlign:'center', margin:0}}>{principle.description}</p>
+                    </div>
                   </div>
-                </Card>
-              ))}
+                );
+              })}
             </div>
           </div>
-          <style>{`
-            .group:hover .border-slm-green-700 {
-              border-color: #2B7151 !important;
-            }
-            .group:hover .text-slm-green-700, .group:hover .text-slm-green-800 {
-              color: #fff !important;
-            }
-            .group:hover {
-              background: #2B7151 !important;
-            }
-          `}</style>
         </section>
 
-        {/* Project Timeline */}
-        <section className="py-20 bg-slm-green-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-8 relative inline-block">
+        {/* Project Timeline - Glassmorphism, Chocolate, White Text, More Visible Image */}
+        <section className="py-20 relative min-h-[500px] flex items-center justify-center overflow-hidden" style={{background:'#422c21'}}>
+          {/* Background image with less dark overlay for more visibility */}
+          <img src="/assets/core-values-2.webp" alt="Project Timeline Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 select-none pointer-events-none" style={{filter:'brightness(0.7)'}} />
+          <div className="absolute inset-0 bg-[#422c21]/60 z-10" />
+          <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-8 relative inline-block drop-shadow-lg">
               Typical <span className="relative">Project
                 <span className="absolute left-0 right-0 -bottom-2 h-1 w-full bg-white animate-underline-green" style={{borderRadius:'2px'}}></span>
               </span> Timeline
             </h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="backdrop-blur-md bg-white/10 border border-[#fbf0de] rounded-2xl shadow-2xl p-8 w-full max-w-xl mx-auto" style={{boxShadow:'0 8px 32px 0 rgba(31, 38, 135, 0.18)'}}>
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <span className="font-inter font-semibold text-slm-green-700">Small Projects</span>
-                  <span className="font-inter text-gray-600">3-6 months</span>
+                  <span className="font-inter font-semibold text-white">Small Projects</span>
+                  <span className="font-inter text-white">3-6 months</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="font-inter font-semibold text-slm-green-700">Medium Projects</span>
-                  <span className="font-inter text-gray-600">6-12 months</span>
+                  <span className="font-inter font-semibold text-white">Medium Projects</span>
+                  <span className="font-inter text-white">6-12 months</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="font-inter font-semibold text-slm-green-700">Large Projects</span>
-                  <span className="font-inter text-gray-600">12-24 months</span>
+                  <span className="font-inter font-semibold text-white">Large Projects</span>
+                  <span className="font-inter text-white">12-24 months</span>
                 </div>
-                <div className="flex items-center justify-between border-t pt-4">
-                  <span className="font-inter font-semibold text-slm-green-700">Master Plans</span>
-                  <span className="font-inter text-gray-600">18-36 months</span>
+                <div className="flex items-center justify-between border-t border-[#fbf0de]/30 pt-4">
+                  <span className="font-inter font-semibold text-white">Master Plans</span>
+                  <span className="font-inter text-white">18-36 months</span>
                 </div>
               </div>
-              <p className="font-inter text-gray-500 text-sm mt-6">
+              <p className="font-inter text-white text-sm mt-6 opacity-80">
                 *Timelines vary based on project complexity, scope, and regulatory requirements
               </p>
             </div>

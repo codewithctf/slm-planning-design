@@ -73,17 +73,17 @@ const Contact = () => {
         <meta name="twitter:description" content="Contact SLM Planning & Design for inquiries about urban planning, landscape architecture, or 3D rendering services." />
         <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
-      <div className="min-h-screen bg-[#e3dbc8]">
+      <div className="min-h-screen bg-[#e4d9c9]">
         <Navigation />
         
         {/* Hero Section */}
         <section className="relative h-[38rem] flex items-center justify-center overflow-hidden">
           <HeroCarousel heightClass="h-[38rem]" />
-          <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in text-white drop-shadow-lg">
+          <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
               Let's Build the Future Together
             </h1>
-            <p className="font-inter text-xl md:text-2xl animate-fade-in text-white drop-shadow">
+            <p className="font-inter text-xl md:text-2xl animate-fade-in">
               Ready to start your next urban development project? We're here to help.
             </p>
           </div>
@@ -129,10 +129,12 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
-                <Card className="border-0 shadow-xl bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-xl">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-2xl text-[#0d0706] drop-shadow">Send Us a Message</CardTitle>
-                    <CardDescription className="font-inter text-[#797572]">
+                    <CardTitle className="font-playfair text-2xl text-black">
+                      Send Us a Message
+                    </CardTitle>
+                    <CardDescription className="font-inter text-gray-600">
                       Have a question or want to discuss a potential project? We'd love to hear from you.
                     </CardDescription>
                   </CardHeader>
@@ -140,63 +142,63 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="name" className="font-inter font-medium text-slm-green-700">
                             Full Name *
                           </Label>
                           <Input
                             id="name"
                             value={formData.full_name}
-                            onChange={(e) => handleChange('full_name', e.target.value)}
+                            onChange={(e) => handleChange("full_name", e.target.value)}
                             required
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-gray-300 focus:border-gray-500"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="email" className="font-inter font-medium text-slm-green-700">
                             Email Address *
                           </Label>
                           <Input
                             id="email"
                             type="email"
                             value={formData.email}
-                            onChange={(e) => handleChange('email', e.target.value)}
+                            onChange={(e) => handleChange("email", e.target.value)}
                             required
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-slm-green-300 focus:border-slm-green-500"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="subject" className="font-inter font-medium text-[#0d0706]">
+                        <Label htmlFor="subject" className="font-inter font-medium text-slm-green-700">
                           Subject *
                         </Label>
                         <Input
                           id="subject"
                           value={formData.subject}
-                          onChange={(e) => handleChange('subject', e.target.value)}
+                          onChange={(e) => handleChange("subject", e.target.value)}
                           required
-                          className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                          className="border-slm-green-300 focus:border-slm-green-500"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message" className="font-inter font-medium text-[#0d0706]">
+                        <Label htmlFor="message" className="font-inter font-medium text-slm-green-700">
                           Message *
                         </Label>
                         <Textarea
                           id="message"
                           value={formData.message}
-                          onChange={(e) => handleChange('message', e.target.value)}
+                          onChange={(e) => handleChange("message", e.target.value)}
                           rows={6}
                           placeholder="Tell us about your project or inquiry..."
                           required
-                          className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                          className="border-slm-green-300 focus:border-slm-green-500"
                         />
                       </div>
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-[#422c21] hover:bg-[#2d180c] text-white font-semibold py-3 rounded-lg shadow-lg transition-all duration-200"
+                        className="w-full bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold py-3"
                       >
                         Send Message
                       </Button>
@@ -208,16 +210,16 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 {/* Office Information */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-slm-green-700">
                       Our Office
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#e3dbc8] transition-transform duration-200 hover:scale-110">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
                           <img src="/assets/address.png" alt="Address" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
@@ -230,7 +232,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#e3dbc8] transition-transform duration-200 hover:scale-110">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
                           <img src="/assets/phone icone.png" alt="Phone" className="w-6 h-6 object-contain object-center" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
@@ -239,7 +241,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#e3dbc8] transition-transform duration-200 hover:scale-110">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
                           <img src="/assets/email.png" alt="Email" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
@@ -248,7 +250,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#e3dbc8] transition-transform duration-200 hover:scale-110">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#fbf0de] transition-transform duration-200 hover:scale-110">
                           <img src="/assets/time.png" alt="Office Hours" className="w-6 h-6" loading="lazy" width="24" height="24" style={{maxWidth:'100%',height:'auto'}} />
                         </span>
                         <div>
@@ -265,9 +267,9 @@ const Contact = () => {
                 </Card>
 
                 {/* Map Section */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-[#0a0600]">
                       Find Us
                     </CardTitle>
                   </CardHeader>
@@ -288,9 +290,9 @@ const Contact = () => {
                 </Card>
 
                 {/* Social Media */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-[#0a0600]">
                       Connect With Us
                     </CardTitle>
                   </CardHeader>
@@ -335,13 +337,17 @@ const Contact = () => {
         {/* Call to Action */}
         <section className="py-20 bg-[#472c1b]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="font-inter text-xl text-white mb-8">
+            <p className="font-inter text-xl text-slm-green-100 mb-8">
               Get a custom quote and discover how we can help bring your vision to life.
             </p>
-            <Button asChild size="lg" className="bg-white text-black hover:bg-[#e7dad3] font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-200">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3"
+            >
               <a href="/quote">Get Your Quote</a>
             </Button>
           </div>

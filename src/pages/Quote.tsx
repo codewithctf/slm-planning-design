@@ -75,17 +75,17 @@ const Quote = () => {
         <meta name="twitter:description" content="Request a custom quote for your urban planning, landscape architecture, or 3D rendering project with SLM Planning & Design." />
         <meta name="twitter:image" content="/assets/slm-logo.png" />
       </Helmet>
-      <div className="min-h-screen bg-[#e3dbc8]">
+      <div className="min-h-screen bg-white">
         <Navigation />
         
         {/* Hero Section */}
         <section className="relative h-[38rem] flex items-center justify-center overflow-hidden">
           <HeroCarousel heightClass="h-[38rem]" />
-          <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in text-white drop-shadow-lg">
+          <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
               Start Your Project
             </h1>
-            <p className="font-inter text-xl md:text-2xl animate-fade-in text-white drop-shadow">
+            <p className="font-inter text-xl md:text-2xl animate-fade-in">
               Get a Custom Quote Tailored to Your Needs
             </p>
           </div>
@@ -131,12 +131,12 @@ const Quote = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Form */}
               <div className="lg:col-span-2">
-                <Card className="border-0 shadow-xl bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-xl">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-2xl text-[#0d0706] drop-shadow">
+                    <CardTitle className="font-playfair text-2xl text-slm-green-700">
                       Project Details
                     </CardTitle>
-                    <CardDescription className="font-inter text-[#797572]">
+                    <CardDescription className="font-inter text-gray-600">
                       Please provide as much detail as possible to help us prepare an accurate quote.
                     </CardDescription>
                   </CardHeader>
@@ -144,7 +144,7 @@ const Quote = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="name" className="font-inter font-medium text-slm-green-700">
                             Full Name *
                           </Label>
                           <Input
@@ -152,11 +152,11 @@ const Quote = () => {
                             value={formData.full_name}
                             onChange={(e) => handleChange("full_name", e.target.value)}
                             required
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-slm-green-300 focus:border-slm-green-500"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="email" className="font-inter font-medium text-slm-green-700">
                             Email Address *
                           </Label>
                           <Input
@@ -165,42 +165,42 @@ const Quote = () => {
                             value={formData.email}
                             onChange={(e) => handleChange("email", e.target.value)}
                             required
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-slm-green-300 focus:border-slm-green-500"
                           />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="phone" className="font-inter font-medium text-slm-green-700">
                             Phone Number
                           </Label>
                           <Input
                             id="phone"
                             value={formData.phone_number}
                             onChange={(e) => handleChange("phone_number", e.target.value)}
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-slm-green-300 focus:border-slm-green-500"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="company" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="company" className="font-inter font-medium text-slm-green-700">
                             Company/Organization
                           </Label>
                           <Input
                             id="company"
                             value={formData.organization}
                             onChange={(e) => handleChange("organization", e.target.value)}
-                            className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                            className="border-slm-green-300 focus:border-slm-green-500"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="projectType" className="font-inter font-medium text-[#0d0706]">
+                        <Label htmlFor="projectType" className="font-inter font-medium text-slm-green-700">
                           Project Type *
                         </Label>
                         <Select value={formData.project_type} onValueChange={(value) => handleChange("project_type", value)}>
-                          <SelectTrigger className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]">
+                          <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
                           <SelectContent>
@@ -215,7 +215,7 @@ const Quote = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="projectScope" className="font-inter font-medium text-[#0d0706]">
+                        <Label htmlFor="projectScope" className="font-inter font-medium text-slm-green-700">
                           Project Scope & Description *
                         </Label>
                         <Textarea
@@ -225,17 +225,17 @@ const Quote = () => {
                           rows={4}
                           placeholder="Please describe your project in detail, including size, location, objectives, and any specific requirements..."
                           required
-                          className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]"
+                          className="border-slm-green-300 focus:border-slm-green-500"
                         />
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="timeline" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="timeline" className="font-inter font-medium text-slm-green-700">
                             Desired Timeline
                           </Label>
                           <Select value={formData.timeline} onValueChange={(value) => handleChange("timeline", value)}>
-                            <SelectTrigger className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]">
+                            <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
                               <SelectValue placeholder="Select timeline" />
                             </SelectTrigger>
                             <SelectContent>
@@ -249,11 +249,11 @@ const Quote = () => {
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="budget_range" className="font-inter font-medium text-[#0d0706]">
+                          <Label htmlFor="budget_range" className="font-inter font-medium text-slm-green-700">
                             Budget Range (Optional)
                           </Label>
                           <Select value={formData.budget_range} onValueChange={(value) => handleChange("budget_range", value)}>
-                            <SelectTrigger className="border-[#e3dbc8] focus:border-[#422c21] bg-white text-[#0d0706]">
+                            <SelectTrigger className="border-slm-green-300 focus:border-slm-green-500">
                               <SelectValue placeholder="Select budget range" />
                             </SelectTrigger>
                             <SelectContent>
@@ -270,7 +270,7 @@ const Quote = () => {
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-[#422c21] hover:bg-[#2d180c] text-white font-semibold py-3 rounded-lg shadow-lg transition-all duration-200"
+                        className="w-full bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold py-3"
                       >
                         Submit Quote Request
                       </Button>
@@ -282,9 +282,9 @@ const Quote = () => {
               {/* Sidebar */}
               <div className="space-y-8">
                 {/* What Happens Next */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-slm-green-700">
                       What Happens Next?
                     </CardTitle>
                   </CardHeader>
@@ -317,9 +317,9 @@ const Quote = () => {
                 </Card>
 
                 {/* Contact Info */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-slm-green-700">
                       Need Immediate Assistance?
                     </CardTitle>
                   </CardHeader>
@@ -348,9 +348,9 @@ const Quote = () => {
                 </Card>
 
                 {/* Service Areas */}
-                <Card className="border-0 shadow-lg bg-[#fbf0de] backdrop-blur-md bg-opacity-90">
+                <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="font-playfair text-xl text-[#0d0706]">
+                    <CardTitle className="font-playfair text-xl text-slm-green-700">
                       Our Services
                     </CardTitle>
                   </CardHeader>

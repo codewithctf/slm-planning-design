@@ -220,9 +220,9 @@ const Portfolio = () => {
         </section>
 
         {/* Project Stats */}
-        <section className="py-20 bg-slm-green-50">
+        <section className="py-20 bg-[#e3dbc8]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-12">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-black mb-12">
               Our Impact by the Numbers
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -230,19 +230,19 @@ const Portfolio = () => {
                 <div className="w-20 h-20 bg-slm-green-600 rounded-full flex items-center justify-center mx-auto">
                   <AnimatedCounter to={50} suffix="+" className="text-white text-2xl font-bold" />
                 </div>
-                <h3 className="font-playfair text-xl font-semibold text-slm-green-700">Projects Completed</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="w-20 h-20 bg-slm-green-600 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-white text-2xl font-bold">25+</span>
-                </div>
-                <h3 className="font-playfair text-xl font-semibold text-slm-green-700">Countries Served</h3>
+                <h3 className="font-playfair text-xl font-semibold text-gray-700">Projects Completed</h3>
               </div>
               <div className="space-y-4">
                 <div className="w-20 h-20 bg-slm-brown-600 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-white text-2xl font-bold">25+</span>
+                </div>
+                <h3 className="font-playfair text-xl font-semibold text-gray-700">Countries Served</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="w-20 h-20 bg-slm-green-600 rounded-full flex items-center justify-center mx-auto">
                   <span className="text-white text-2xl font-bold">95%</span>
                 </div>
-                <h3 className="font-playfair text-xl font-semibold text-slm-green-700">Client Satisfaction</h3>
+                <h3 className="font-playfair text-xl font-semibold text-gray-700">Client Satisfaction</h3>
               </div>
             </div>
           </div>

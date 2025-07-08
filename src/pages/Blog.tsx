@@ -249,23 +249,23 @@ const Blog = () => {
           </div>
         </section>
         {/* Newsletter Signup */}
-        <section className="py-16 bg-slm-green-600">
+        <section className="py-16 bg-[#472c1b]">
           <div className="max-w-xl mx-auto px-4 text-center flex flex-col items-center">
             <h4 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">Stay Updated</h4>
-            <p className="font-inter text-lg md:text-xl text-slm-green-100 mb-6 max-w-lg">Subscribe to our newsletter to receive the latest insights, project updates, and industry trends directly in your inbox.</p>
+            <p className="font-inter text-lg md:text-xl text-white mb-6 max-w-lg">Subscribe to our newsletter to receive the latest insights, project updates, and industry trends directly in your inbox.</p>
             <form className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full" onSubmit={handleNewsletterSubmit}>
               <input
                 type="email"
                 value={newsletterEmail}
                 onChange={e => setNewsletterEmail(e.target.value)}
                 placeholder="Enter your email address"
-                className="border border-slm-green-200 rounded-lg px-4 py-3 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-slm-green-400 text-base md:text-lg"
+                className="border border-gray-100 rounded-lg px-4 py-3 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-gray-100 text-base md:text-lg"
                 required
                 autoComplete="email"
                 inputMode="email"
                 style={{maxWidth:'100%'}}
               />
-              <Button type="submit" className="bg-white text-slm-green-600 hover:bg-slm-cream font-semibold px-8 py-3 text-base md:text-lg">
+              <Button type="submit" className="bg-white text-black hover:bg-slm-cream font-semibold px-8 py-3 text-base md:text-lg">
                 Subscribe
               </Button>
             </form>
