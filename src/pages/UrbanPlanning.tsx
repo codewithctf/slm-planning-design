@@ -13,12 +13,12 @@ import { Helmet } from 'react-helmet-async';
 const urbanPlanningServices = [
 	{
 		title: "Master Planning",
-		image: "/assets/master-planning.webp",
+		image: "/assets/master-plan.webp",
 		desc: "Comprehensive long-range planning for communities, districts, and regions that balance growth with sustainability.",
 	},
 	{
 		title: "Zoning & Land Use",
-		image: "/assets/Zoning & Land Use.webp",
+		image: "/assets/zoning-land-use.webp",
 		desc: "Strategic land use planning and zoning code development that supports community vision and economic development.",
 	},
 	{
@@ -43,7 +43,7 @@ const urbanPlanningServices = [
 	},
 	{
 		title: "Training, Research & Capacity Building",
-		image: "/assets/training-and-capacity-building.webp",
+		image: "/assets/training-and-capacity building.webp",
 		desc: "Workshops, research, and training programs to empower communities and professionals.",
 	},
 	{
