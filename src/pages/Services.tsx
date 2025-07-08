@@ -377,33 +377,44 @@ const Services = () => {
           `}</style>
         </section>
 
-        {/* How We Work Section (now white bg) */}
-        <section className="py-20 bg-white" ref={processRef}>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-slm-green-800 mb-4">How We Work</h2>
-              <p className="font-inter text-lg text-gray-700 max-w-2xl mx-auto">
-                Our collaborative approach ensures every project meets your unique needs while exceeding sustainability and design standards.
-              </p>
+        {/* How We Work Section - Chocolate glass, animated, image bg */}
+        <section
+          className="py-20 relative flex items-center justify-center min-h-[600px]"
+          style={{
+            backgroundImage: "url('/assets/core-values.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          ref={processRef}
+        >
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="text-center mb-12 flex flex-col items-center justify-center">
+              {/* Text overlay for enhanced visibility */}
+              <div className="inline-block px-6 py-4 rounded-2xl backdrop-blur-md bg-[#2d160b]/40 shadow-lg" style={{maxWidth:'90vw'}}>
+                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up" style={{textShadow:'0 4px 24px #2d160bcc, 0 1px 0 #0008'}}>
+                  How We Work
+                </h2>
+                <p className="font-inter text-lg text-white max-w-2xl mx-auto animate-fade-in-up delay-100" style={{textShadow:'0 2px 12px #2d160baa, 0 1px 0 #0006'}}>
+                  Our collaborative approach ensures every project meets your unique needs while exceeding sustainability and design standards.
+                </p>
+              </div>
             </div>
             {/* Process Steps Flow with interlinked cards */}
             <div className="relative flex flex-col md:flex-row justify-center items-stretch gap-8 md:gap-12 animate-fade-in-up">
               {processSteps.map((step, idx) => (
-                <React.Fragment key={step.number}>
-                  <div className="flex-1 bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 relative z-10">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-slm-green-600 text-white font-bold text-2xl mb-4 border-4 border-white shadow">
-                      {step.number}
-                    </div>
-                    <h3 className="font-playfair text-xl font-bold text-slm-green-800 mb-2">{step.title}</h3>
-                    <p className="font-inter text-gray-700">{step.desc}</p>
+                <div
+                  key={step.number}
+                  className="flex-1 bg-white/80 bg-gradient-to-br from-[#f2ece0]/95 via-[#b86a28]/40 to-[#7b4b2a]/20 rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2 relative z-10 border-2 border-[#b86a28] backdrop-blur-xl animate-fade-in-up"
+                  style={{animationDelay: `${0.2 + idx * 0.15}s`, boxShadow: '0 8px 40px 0 rgba(78,46,30,0.18)'}}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#7b4b2a] text-[#ffe7b3] font-bold text-2xl mb-4 border-4 border-[#f2ece0] shadow-lg animate-bounce-slow">
+                    {step.number}
                   </div>
-                </React.Fragment>
+                  <h3 className="font-playfair text-xl font-bold text-[#7b4b2a] mb-2 drop-shadow-sm">{step.title}</h3>
+                  <p className="font-inter text-[#4d4942]">{step.desc}</p>
+                </div>
               ))}
-            </div>
-            <div className="text-center mt-10">
-              <Button asChild size="lg" className="bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold px-8 py-3">
-                <Link to="/process">View Our Complete Process</Link>
-              </Button>
             </div>
           </div>
           <style>{`
@@ -413,6 +424,16 @@ const Services = () => {
             }
             .animate-fade-in-up {
               animation: fade-in-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+            }
+            .delay-100 { animation-delay: 0.1s; }
+            .delay-200 { animation-delay: 0.2s; }
+            .delay-300 { animation-delay: 0.3s; }
+            @keyframes bounce-slow {
+              0%,100% { transform: translateY(0); }
+              50% { transform: translateY(-12px); }
+            }
+            .animate-bounce-slow {
+              animation: bounce-slow 2.2s infinite cubic-bezier(0.4,0,0.2,1);
             }
           `}</style>
         </section>
