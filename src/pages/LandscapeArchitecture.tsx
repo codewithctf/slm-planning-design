@@ -40,7 +40,7 @@ const landscapeServices = [
 ];
 
 const LandscapeArchitecture = () => (
-	<div className="min-h-screen bg-white">
+	<div className="min-h-screen bg-[#f7ede2]">
 		<Helmet>
 			<title>Landscape Architecture | SLM Planning & Design</title>
 			<meta name="description" content="Explore SLM's landscape architecture services, blending nature and design for beautiful, sustainable outdoor spaces." />
@@ -55,10 +55,10 @@ const LandscapeArchitecture = () => (
 			<meta name="twitter:image" content="/assets/slm-logo.png" />
 		</Helmet>
 		<Navigation />
-		{/* Hero Carousel Section */}
-		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full" style={{ backgroundColor: '#000' }}>
-			<LandscapeArchitectureCarousel />
-			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center text-white px-4">
+		{/* Hero Section with background image and chocolate overlay */}
+		<section className="relative h-[28rem] md:h-[38rem] overflow-hidden w-full flex items-center justify-center" style={{ backgroundColor: '#472c1b', backgroundImage: "url('/assets/landscape-architecture.webp')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+			<div className="absolute inset-0 z-10 pointer-events-none" style={{background: "linear-gradient(180deg, rgba(71,44,27,0.85) 60%, rgba(71,44,27,0.6) 100%)"}} />
+			<div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center text-[#f7ede2] px-4">
 				<h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
 					Landscape Architecture
 				</h1>
@@ -106,20 +106,20 @@ const LandscapeArchitecture = () => (
         }
       `}</style>
 		</section>
-		{/* Section 1: Design Philosophy */}
-		<section className="py-10 md:py-20 bg-white">
+		{/* Section 1: Design Philosophy (cream bg) */}
+		<section className="py-10 md:py-20 bg-[#f7ede2]">
 			<div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10 mb-16 px-2 xs:px-4">
 				<div className="flex-1 order-1 md:order-1">
-					<h3 className="font-playfair text-2xl font-bold text-slm-green-700 mb-4">
+					<h3 className="font-playfair text-2xl font-bold text-[#b8895c] mb-4">
 						Nature-Led Design for Impactful Outdoor Environments
 					</h3>
-					<p className="font-inter text-lg text-gray-700 mb-4">
+					<p className="font-inter text-lg text-[#472c1b] mb-4">
 						At SLM Planning and Design, our landscape architecture philosophy fuses
 						ecological intelligence with creative place-making. We design sustainable,
 						functional, and culturally relevant landscapes that enhance biodiversity,
 						promote health, and strengthen climate resilience.
 					</p>
-					<p className="font-inter text-lg text-gray-700 mb-4">
+					<p className="font-inter text-lg text-[#472c1b] mb-4">
 						Whether it's a city park, green infrastructure system, or a commercial
 						courtyard, our solutions bring together people, nature, and design to
 						crеate places that thrive for generations.
@@ -127,7 +127,7 @@ const LandscapeArchitecture = () => (
 					<div className="flex flex-col sm:flex-row gap-4 mt-4">
 						<Button
 							asChild
-							className="bg-slm-green-600 hover:bg-slm-green-700 text-white font-semibold px-6 py-3 w-full sm:w-auto"
+							className="bg-[#b8895c] hover:bg-[#a06d3b] text-white font-semibold px-6 py-3 w-full sm:w-auto shadow-md"
 						>
 							<a href="/quote">Start a Landscape Project</a>
 						</Button>
@@ -135,72 +135,72 @@ const LandscapeArchitecture = () => (
 				</div>
 				<div className="flex-1 order-2 md:order-2 flex justify-center items-center relative">
 					<img
-						src="/assets/landscape-architecture (1).webp"
+						src="/assets/landscape-architecture-1.webp"
 						alt="Nature-Led Design for Impactful Outdoor Environments"
-						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl border-4 border-[#FCEFEF] object-cover object-center"
+						className="w-full max-w-xs sm:max-w-md rounded-2xl shadow-2xl border-4 border-[#b8895c] object-cover object-center bg-[#fff8f3]"
 					/>
 				</div>
 			</div>
 		</section>
-		{/* Landscape Services Section */}
-		<section className="pt-6 md:pt-10 pb-10 md:pb-20 w-full" style={{ background: "#F0F8F4" }}>
-			<div className="max-w-7xl mx-auto mb-10 md:mb-16 py-8 md:py-16 px-2 sm:px-4 rounded-3xl">
-				<h3 className="font-playfair text-2xl sm:text-4xl font-bold mb-4 md:mb-8 text-center text-[#2B7151]">
+		{/* Landscape Services Section - chocolate/cream cards */}
+		<section className="pt-6 md:pt-10 pb-10 md:pb-20 w-full" style={{ background: "#472c1b" }}>
+			<div className="max-w-7xl mx-auto mb-10 md:mb-16 py-8 md:py-16 px-2 sm:px-4 rounded-3xl bg-[#f7ede2] shadow-xl">
+				<h3 className="font-playfair text-2xl sm:text-4xl font-bold mb-4 md:mb-8 text-center text-[#472c1b]">
 					Our Landscape Architecture Services
 				</h3>
-				<p className="font-inter text-sm sm:text-base text-center text-slm-green-800 mb-4 md:mb-8">
+				<p className="font-inter text-sm sm:text-base text-center text-[#b8895c] mb-4 md:mb-8">
 					Design solutions tailored to your project's unique needs and vision.
 				</p>
 				<div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
 					{landscapeServices.map((service, idx) => (
 						<Card
 							key={service.title}
-							className="group text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border-2 border-[#b6e2c7] rounded-2xl overflow-hidden flex flex-col p-0"
+							className="group text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-[#fff8f3] border-2 border-[#b8895c] rounded-2xl overflow-hidden flex flex-col p-0"
 							style={{ minHeight: '320px' }}
 						>
-							<div className="h-32 sm:h-40 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+							<div className="h-32 sm:h-40 w-full overflow-hidden bg-[#f7ede2] flex items-center justify-center">
 								<img
 									src={service.image}
 									alt={service.title}
 									className="w-full h-full object-cover service-img-animate group-hover:scale-105 transition-transform duration-500"
-									style={{ maxWidth: '100%', height: '100%' }}
-								/>
-							</div>
-							<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#2B7151] bg-white p-4 sm:p-6">
-								<CardHeader className="flex flex-col justify-end items-center px-2 pt-4 pb-2">
-									<CardTitle className="font-playfair text-base sm:text-lg transition-colors duration-300 group-hover:text-white text-[#2B7151]">
-										{service.title}
-									</CardTitle>
-								</CardHeader>
-								<CardContent className="pb-2 sm:pb-4 px-2 md:px-4">
-									<CardDescription className="font-inter text-gray-700 transition-colors duration-300 group-hover:text-white text-sm xs:text-base sm:text-lg md:text-base">
-										{service.desc}
-									</CardDescription>
-								</CardContent>
-							</div>
-						</Card>
+								style={{ maxWidth: '100%', height: '100%' }}
+							/>
+						</div>
+						<div className="flex-1 flex flex-col justify-end transition-colors duration-300 group-hover:bg-[#b8895c] bg-[#fff8f3] p-4 sm:p-6">
+							<CardHeader className="flex flex-col justify-end items-center px-2 pt-4 pb-2">
+								<CardTitle className="font-playfair text-base sm:text-lg transition-colors duration-300 group-hover:text-white text-[#472c1b]">
+									{service.title}
+								</CardTitle>
+							</CardHeader>
+							<CardContent className="pb-2 sm:pb-4 px-2 md:px-4">
+								<CardDescription className="font-inter text-[#472c1b] transition-colors duration-300 group-hover:text-white text-sm xs:text-base sm:text-lg md:text-base">
+									{service.desc}
+								</CardDescription>
+							</CardContent>
+						</div>
+					</Card>
 					))}
 				</div>
 			</div>
 		</section>
 		{/* Section 3: Benefits + Image */}
-		<section className="py-10 md:py-20 bg-white">
+		<section className="py-10 md:py-20 bg-[#f7ede2]">
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10 mb-0 px-2 xs:px-4">
 				<div className="flex-1 order-1 md:order-1 flex justify-center items-center relative">
 					<img
 						src="/assets/green-infrastructure-design.webp"
 						alt="Landscape Benefits"
-						className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up"
+						className="w-full max-w-md rounded-2xl shadow-lg animate-fade-in-up border-4 border-[#b8895c] bg-[#fff8f3]"
 					/>
 				</div>
 				<div className="flex-1 order-2 md:order-2">
-					<h3 className="font-playfair text-3xl md:text-4xl font-bold text-[#2B7151] mb-4">
+					<h3 className="font-playfair text-3xl md:text-4xl font-bold text-[#b8895c] mb-4">
 						Landscape Architecture Benefits
 					</h3>
-					<p className="font-inter text-base text-gray-700 mb-4">
+					<p className="font-inter text-base text-[#472c1b] mb-4">
 						Sustainable landscape design delivers measurable value for communities, the environment, and future generations. Our approach enhances resilience, health, and beauty in every project.
 					</p>
-					<ul className="list-disc list-inside text-gray-700 font-inter text-base space-y-2 mb-4">
+					<ul className="list-disc list-inside text-[#472c1b] font-inter text-base space-y-2 mb-4">
 						<li>Improves public health and wellbeing</li>
 						<li>Enhances stormwater and climate resilience</li>
 						<li>Boosts property and neighborhood value</li>
@@ -212,12 +212,12 @@ const LandscapeArchitecture = () => (
 			</div>
 		</section>
 		{/* Section 4: Call to Action */}
-		<section className="py-10 md:py-20 bg-slm-green-600">
+		<section className="py-10 md:py-20 bg-[#472c1b]">
 			<div className="max-w-3xl mx-auto px-2 sm:px-4 lg:px-8 text-center">
-				<h3 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
+				<h3 className="font-playfair text-4xl md:text-5xl font-bold text-[#f7ede2] mb-6">
 					Ready to Create Lasting Landscapes?
 				</h3>
-				<p className="font-inter text-xl text-slm-green-100 mb-8">
+				<p className="font-inter text-xl text-[#b8895c] mb-8">
 					Let's design outdoor spaces that inspire, protect, and serve your
 					community.
 				</p>
@@ -225,14 +225,14 @@ const LandscapeArchitecture = () => (
 					<Button
 						asChild
 						size="lg"
-						className="bg-white text-[#2B7151] hover:bg-green-50 font-semibold px-8 py-3 w-full sm:w-auto"
+						className="bg-[#b8895c] text-white hover:bg-[#a06d3b] font-semibold px-8 py-3 w-full sm:w-auto shadow-md"
 					>
 						<a href="/contact">Request Landscape Consultation</a>
 					</Button>
 					<Button
 						asChild
 						size="lg"
-						className="bg-white text-[#2B7151] hover:bg-green-50 font-semibold px-8 py-3 w-full sm:w-auto"
+						className="bg-[#b8895c] text-white hover:bg-[#a06d3b] font-semibold px-8 py-3 w-full sm:w-auto shadow-md"
 					>
 						<a href="/portfolio">Explore Landscape Projects</a>
 					</Button>
