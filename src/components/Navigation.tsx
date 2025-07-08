@@ -212,7 +212,12 @@ const Navigation = () => {
                   >
                     <button
                       className="font-inter font-medium flex items-center gap-1 transition-colors duration-200 text-[#0d0904] hover:text-[#0d0904] w-full text-left px-0"
-                      onClick={() => setServicesDropdownOpen((v) => !v)}
+                      onClick={() => {
+                        // On mobile, clicking 'Services' navigates to /services and closes menu
+                        setIsOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.location.href = '/services';
+                      }}
                       aria-haspopup="listbox"
                       aria-expanded={servicesDropdownOpen}
                       type="button"

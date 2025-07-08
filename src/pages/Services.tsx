@@ -438,7 +438,7 @@ const Services = () => {
           `}</style>
         </section>
 
-        {/* Ready to Get Started Section (now matches blog Stay Updated) */}
+        {/* Ready to Get Started Section */}
         <section className="py-16 bg-[#472c1b]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
