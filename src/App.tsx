@@ -22,41 +22,43 @@ import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
+const App = () => {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+  };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/urban-planning" element={<UrbanPlanning />} />
-          <Route path="/services/urban-design" element={<UrbanDesign />} />
-          <Route path="/services/landscape-architecture" element={<LandscapeArchitecture />} />
-          <Route path="/services/3d-rendering" element={<ThreeDRendering />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      <Analytics />
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        {/* <Toaster /> */}
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/urban-planning" element={<UrbanPlanning />} />
+            <Route path="/services/urban-design" element={<UrbanDesign />} />
+            <Route path="/services/landscape-architecture" element={<LandscapeArchitecture />} />
+            <Route path="/services/3d-rendering" element={<ThreeDRendering />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/quote" element={<Quote />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogArticle />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <ScrollToTop />
+        </BrowserRouter>
+        <Analytics />
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
